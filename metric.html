@@ -1,0 +1,494 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Topologie des espaces métriques &#8212; Cours Complément de Mathématiques Générales</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" />
+    <link rel="next" title="Exercices espace metriques - espaces vectoriels normes" href="exo_metric.html" />
+    <link rel="prev" title="Topologie des espaces métriques" href="content.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Cours Complément de Mathématiques Générales</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Rechercher dans ce livre ..." aria-label="Rechercher dans ce livre ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Complément de Mathématiques Générales
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="content.html">
+   Topologie des espaces métriques
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Topologie des espaces métriques
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exo_metric.html">
+     Exercices espace metriques - espaces vectoriels normes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fctplsvar.html">
+     Fonction a plusieures variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exo_fctplsvar.html">
+     Exercices fonctions a plusieures variables
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Basculer la navigation" aria-controls="site-navigation"
+                title="Basculer la navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Téléchargez cette page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/metric.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Télécharger le fichier source" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimer au format PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Dépôt source"><i
+                    class="fab fa-github"></i>dépôt</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fmetric.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Ouvrez un problème"><i class="fas fa-lightbulb"></i>signaler un problème</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Mode plein écran"
+        title="Mode plein écran"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contenu
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Topologie des espaces métriques
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#espaces-vectoriels-normes-espaces-metriques">
+     Espaces vectoriels normés - Espaces métriques
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#distances-et-espaces-metriques">
+       Distances et espaces métriques
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#norme-et-espace-vectoriel-norme">
+       Norme et espace vectoriel normé
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       Topologie des espaces métriques
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#denombrabilite">
+   Dénombrabilité
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#compacite-et-completude">
+   Compacité et complétude
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#theory-de-mesure">
+   Theory de mesure
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="topologie-des-espaces-metriques">
+<h1>Topologie des espaces métriques<a class="headerlink" href="#topologie-des-espaces-metriques" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Les espaces vectoriels seront des <span class="math notranslate nohighlight">\(K\)</span>-espaces vectoriels ou le corps <span class="math notranslate nohighlight">\(K\)</span> est égal à <span class="math notranslate nohighlight">\(\mathbb R\)</span> ou <span class="math notranslate nohighlight">\(\mathbb C\)</span>.</p>
+<div class="section" id="espaces-vectoriels-normes-espaces-metriques">
+<h2>Espaces vectoriels normés - Espaces métriques<a class="headerlink" href="#espaces-vectoriels-normes-espaces-metriques" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="distances-et-espaces-metriques">
+<h3>Distances et espaces métriques<a class="headerlink" href="#distances-et-espaces-metriques" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Soit <span class="math notranslate nohighlight">\(X\)</span> un ensemble et <span class="math notranslate nohighlight">\( d : X \times X \to \mathbb R^+\)</span> une application</p>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Définition</p>
+<p>On dit que <span class="math notranslate nohighlight">\(d\)</span> est une distance sur <span class="math notranslate nohighlight">\(X\)</span> si :</p>
+<p>i) <span class="math notranslate nohighlight">\(d(x,y) = 0\)</span> si, et seulement si, <span class="math notranslate nohighlight">\(x=y\)</span> (séparation));</p>
+<p>ii) <span class="math notranslate nohighlight">\(\forall x, y \in X, d(x,y) = d(y,x)\)</span> (symétrie);</p>
+<p>iii) <span class="math notranslate nohighlight">\(\forall x,y, z \in X, d(x,y) \leq d(x,y) + d(y,z)\)</span> (inégalité triangulaire)</p>
+</div>
+<p>L’ensemble <span class="math notranslate nohighlight">\(E\)</span> muni de cette distance est appelé espace métrique.</p>
+<p>Si <span class="math notranslate nohighlight">\(Y \subset X\)</span> est un sous-ensemble de <span class="math notranslate nohighlight">\(X\)</span>, alors la restriction de <span class="math notranslate nohighlight">\(d\)</span> à <span class="math notranslate nohighlight">\(Y\)</span> est une distance. Donc <span class="math notranslate nohighlight">\(Y\)</span> muni de cette restriction est bel et bien un espace métrique. On parlera alors de <strong>métrique induite sur <span class="math notranslate nohighlight">\(Y\)</span></strong>.</p>
+<div class="admonition-exemple admonition">
+<p class="admonition-title">Exemple</p>
+<p>1- Soit <span class="math notranslate nohighlight">\(X\)</span> un ensemble non vide. On peut définir la distance suivante :</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+d(x,y) = \begin{cases}
+0 \mbox{ si } x = y \\\\
+1 \mbox{ si } x \neq y
+\end{cases}
+\end{split}\]</div>
+<p>2 - Sur <span class="math notranslate nohighlight">\(\mathbb R\)</span>, on dispose de la distance usuelle suivante :</p>
+<div class="math notranslate nohighlight">
+\[
+d(x,y)=|x-y|
+\]</div>
+</div>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Définition</p>
+<p>Soit <span class="math notranslate nohighlight">\((X,d)\)</span> un espace métrique. Pour tout <span class="math notranslate nohighlight">\(x\in X\)</span> et pour tout <span class="math notranslate nohighlight">\(r&gt;0\)</span>, on note :</p>
+<div class="math notranslate nohighlight">
+\[
+B(x,r) = \left\{y\in X: d(x,y)&lt;r  \right\} 
+\]</div>
+<p>la boule ouverte de centre <span class="math notranslate nohighlight">\(x\in X\)</span> et de rayon <span class="math notranslate nohighlight">\(r&gt;0\)</span>.
+et</p>
+<div class="math notranslate nohighlight">
+\[
+B_f(x,r) = \left\{y\in X: d(x,y)\leq r  \right\}
+\]</div>
+<p>la boule fermée de centre <span class="math notranslate nohighlight">\(x\in X\)</span> et de rayon <span class="math notranslate nohighlight">\(r&gt;0\)</span>.</p>
+</div>
+</div>
+<div class="section" id="norme-et-espace-vectoriel-norme">
+<h3>Norme et espace vectoriel normé<a class="headerlink" href="#norme-et-espace-vectoriel-norme" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Définition</p>
+<p>Soit <span class="math notranslate nohighlight">\(E\)</span> un <span class="math notranslate nohighlight">\(K\)</span>-espace vectoriel. Une application <span class="math notranslate nohighlight">\(\mathcal N : E \to \mathbb R^+\)</span> est dite une norme sur <span class="math notranslate nohighlight">\(E\)</span> si les propriétés suivantes sont vérifiées :</p>
+<ul class="simple">
+<li><p>(i) <span class="math notranslate nohighlight">\(\mathcal N(x) = 0\)</span> si et seulement si <span class="math notranslate nohighlight">\(x=0\)</span> (séparation);</p></li>
+<li><p>(ii) <span class="math notranslate nohighlight">\(\forall x \in E\)</span> et <span class="math notranslate nohighlight">\(\forall \lambda \in \mathcal K, \mathcal N(\lambda x) = |\lambda| \mathcal N(x)\)</span> (Homogénéité);</p></li>
+<li><p>(iii) <span class="math notranslate nohighlight">\(\forall x, y \in E, N(x+y) \leq \mathcal N(x) + \mathcal N(y)\)</span> (inégalité triangulaire).</p></li>
+</ul>
+</div>
+<p>On dit alors que <span class="math notranslate nohighlight">\((E, \mathcal N)\)</span> est un espace vectoriel normé.</p>
+<p>Soit <span class="math notranslate nohighlight">\((E, \mathcal N)\)</span> un espace vectoriel normé, Si <span class="math notranslate nohighlight">\(X=E\)</span>, on peut définir la distance suivante:</p>
+<div class="math notranslate nohighlight">
+\[
+d(x,y)=\mathcal N(x-y)
+\]</div>
+<p>On dit que <span class="math notranslate nohighlight">\(d\)</span> est la distance associée à la norme <span class="math notranslate nohighlight">\(\mathcal N\)</span>.</p>
+<div class="admonition-exemples admonition">
+<p class="admonition-title">Exemples</p>
+<p>1- Sur <span class="math notranslate nohighlight">\(\mathbb K^N\)</span>, on peut définir les normes suivantes :</p>
+<div class="math notranslate nohighlight">
+\[
+\|x\|_1=\sum_{i=1}^N |x_i| ~~~~~~~ \|x\|_2=\left(\sum_{i=1}^N |x_i|^2 \right)^{\frac{1}{2}} ~~~~~~~ \|x\|_\infty=\max_{i=1,\ldots,N} |x_i| 
+\]</div>
+<p>Pour démontrer que <span class="math notranslate nohighlight">\(\|.\|_2\)</span> vérifie l’inégalité triangulaire, on utilise l’inégalité de Cauchy-Schwarz:</p>
+<div class="math notranslate nohighlight">
+\[
+\left | \sum_{i=1}^N x_iy_i \right| \leq \left(\sum_{i=1}^N |x_i|^2 \right)^{\frac{1}{2}}\left(\sum_{i=1}^N |y_i|^2\right)^{\frac{1}{2}}
+\]</div>
+</div>
+<p>Dans un même espace, la courbe des boules (ouvertes ou fermées) change, de manière considérable, en fonction de la distance choisie. Par exemple, dans <span class="math notranslate nohighlight">\(\mathbb R^2\)</span>, les distances associées aux normes suivantes :</p>
+<div class="math notranslate nohighlight">
+\[
+\|(x_1, x_2)\|_1=|x_1|+|x_2| ~~~~~~~ \|(x_1, x_2)\|_2=\sqrt{x_1^2+ x_2^2} ~~ \mbox{ et }~~~ \|(x_1, x_2)\|_\infty=\max(|x_1|,|x_2|)\]</div>
+<p>Voici les courbes des boules ouvertes associées à chaque distance (norme)</p>
+<a class="bg-primary mb-1 reference internal image-reference" href="_images/fig1.PNG"><img alt="fig1" class="bg-primary mb-1 align-center" src="_images/fig1.PNG" style="width: 450px;" /></a>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Définition</p>
+<p>Soit <span class="math notranslate nohighlight">\(E\)</span> un espace vectoriel. On dit que deux normes <span class="math notranslate nohighlight">\(\mathcal N_1\)</span> et <span class="math notranslate nohighlight">\(\mathcal N_2\)</span> définies sur <span class="math notranslate nohighlight">\(E\)</span> sont équivalentes s’il existe deux constantes <span class="math notranslate nohighlight">\(C_1, C_2 &gt;0\)</span> telles que :</p>
+<div class="math notranslate nohighlight">
+\[
+\forall x \in E, \mathcal N_1(x) \leq C_1\mathcal N_2(x) ~~~~ \mbox{ et } ~~~~ \mathcal N_2(x) \leq C_2\mathcal N_1(x)
+\]</div>
+</div>
+</div>
+<div class="section" id="id1">
+<h3>Topologie des espaces métriques<a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Définition</p>
+<p>Soit <span class="math notranslate nohighlight">\((X, d)\)</span> un espace métrique. On dit qu’un sous-ensemble <span class="math notranslate nohighlight">\(U\)</span> de <span class="math notranslate nohighlight">\(X\)</span> est un ouvert de  <span class="math notranslate nohighlight">\((X, d)\)</span> si, pour tout <span class="math notranslate nohighlight">\(x\)</span> de <span class="math notranslate nohighlight">\(U\)</span>, il existe <span class="math notranslate nohighlight">\(r &gt; 0\)</span> tel que <span class="math notranslate nohighlight">\(B(x,r)\)</span>, la boule ouverte centrée en <span class="math notranslate nohighlight">\(x\)</span> et de rayon <span class="math notranslate nohighlight">\(r\)</span>, est incluse dans <span class="math notranslate nohighlight">\(U\)</span>. On appelle topologie associée à la métrique <span class="math notranslate nohighlight">\(d\)</span> et l’on note <span class="math notranslate nohighlight">\(\mathcal T_d\)</span>,  l’ensemble des ouverts de <span class="math notranslate nohighlight">\((X, d)\)</span>.</p>
+</div>
+<div class="admonition-exemple admonition">
+<p class="admonition-title">Exemple</p>
+<ul class="simple">
+<li><p>On vérifie que les ensembles <span class="math notranslate nohighlight">\(\emptyset\)</span> et <span class="math notranslate nohighlight">\(X\)</span> sont toujours des ouverts de <span class="math notranslate nohighlight">\((X, d)\)</span>.</p></li>
+<li><p>Soit <span class="math notranslate nohighlight">\(x \in X\)</span> et <span class="math notranslate nohighlight">\(r&gt;0\)</span>. Alors <span class="math notranslate nohighlight">\(B(x,r)\)</span>, la boule ouverte de centre <span class="math notranslate nohighlight">\(x\)</span> et de rayon <span class="math notranslate nohighlight">\(r\)</span> est un ouvert de <span class="math notranslate nohighlight">\((X, d)\)</span>.</p></li>
+</ul>
+</div>
+<p>Les ouverts d’un espace métrique vérifient les deux propriétés suivantes:</p>
+<div class="admonition-proposition admonition">
+<p class="admonition-title">Proposition</p>
+<ul class="simple">
+<li><p>Une intersection finie d’ouverts est un ouvert.</p></li>
+<li><p>Une réunion quelconque d’ouverts est ouvert.</p></li>
+</ul>
+</div>
+<div class="admonition-proposition admonition">
+<p class="admonition-title">Proposition</p>
+<p>Soit <span class="math notranslate nohighlight">\((X, d)\)</span> un espace métrique.
+Un ensemble <span class="math notranslate nohighlight">\(V\)</span> est dit voisinage d’un point <span class="math notranslate nohighlight">\(x \in X\)</span> (ou un ensemble <span class="math notranslate nohighlight">\(Y\subset X\)</span>) s’il contient un ouvert qui lui-même contient le point <span class="math notranslate nohighlight">\(x\)</span> (ou l’ensemble <span class="math notranslate nohighlight">\(Y\)</span>).</p>
+</div>
+<p>On remarque qu’un ouvert est un voisinage de chacun de ses points.</p>
+<div class="admonition-proposition admonition">
+<p class="admonition-title">Proposition</p>
+<p>Soit <span class="math notranslate nohighlight">\((X, d)\)</span> un espace métrique.
+Un ensemble <span class="math notranslate nohighlight">\(F \subset X\)</span> est dit fermé si son complémentaire <span class="math notranslate nohighlight">\(X\setminus F\)</span> est un ouvert.</p>
+</div>
+<div class="admonition-exemples admonition">
+<p class="admonition-title">Exemples</p>
+<ul class="simple">
+<li><p>On peut vérifier facilement, par passage au complémentaire, que <span class="math notranslate nohighlight">\(\emptyset, X\)</span> sont des fermés de <span class="math notranslate nohighlight">\((X, d)\)</span>.</p></li>
+<li><p>Soit <span class="math notranslate nohighlight">\(x\in X\)</span> et <span class="math notranslate nohighlight">\(r&gt;0\)</span>. Alors, la boule fermée de centre <span class="math notranslate nohighlight">\(x\)</span> et de rayon <span class="math notranslate nohighlight">\(r\)</span>, <span class="math notranslate nohighlight">\(B_f(x,r)\)</span> est un fermé de <span class="math notranslate nohighlight">\((X, d)\)</span>.</p></li>
+</ul>
+</div>
+<p>Les fermés d’un espace métrique vérifient les deux propriétés suivantes :</p>
+<div class="admonition-proposition admonition">
+<p class="admonition-title">Proposition</p>
+<ul class="simple">
+<li><p>Une réunion finie de fermés est un fermé.</p></li>
+<li><p>Une intersection quelconque de fermés est un fermé.</p></li>
+</ul>
+</div>
+<div class="admonition-exemple admonition">
+<p class="admonition-title">Exemple</p>
+<p>On considère <span class="math notranslate nohighlight">\(X=\mathbb R\)</span> muni de la distance usuelle <span class="math notranslate nohighlight">\(d(x,y)=|y-x|\)</span>, Soient <span class="math notranslate nohighlight">\(a\)</span> et <span class="math notranslate nohighlight">\(b\)</span> deux réels tels que <span class="math notranslate nohighlight">\(a&lt;b\)</span>. Alors :</p>
+<ul class="simple">
+<li><p>Les ensembles <span class="math notranslate nohighlight">\(]a, b[\)</span>, <span class="math notranslate nohighlight">\(]b, +\infty[\)</span> et <span class="math notranslate nohighlight">\(]-\infty, b[\)</span> sont des ouverts de <span class="math notranslate nohighlight">\((\mathbb R, d)\)</span>;</p></li>
+<li><p>Les ensembles <span class="math notranslate nohighlight">\([a, b]\)</span>, <span class="math notranslate nohighlight">\([b, +\infty[\)</span>, <span class="math notranslate nohighlight">\(]-\infty, b]\)</span> et <span class="math notranslate nohighlight">\({a}\)</span> sont des fermés de <span class="math notranslate nohighlight">\((\mathbb R, d)\)</span>;</p></li>
+<li><p>Les ensembles <span class="math notranslate nohighlight">\([a, b[\)</span> et <span class="math notranslate nohighlight">\(]a, b]\)</span> ne sont ni des ouverts ni des fermés de <span class="math notranslate nohighlight">\((\mathbb R, d)\)</span>.</p></li>
+</ul>
+</div>
+<div class="admonition-topologie-induite admonition">
+<p class="admonition-title">Topologie induite</p>
+<p>Soit <span class="math notranslate nohighlight">\((X, d)\)</span> un espace métrique et <span class="math notranslate nohighlight">\(A \subset X\)</span> un sous-ensemble de <span class="math notranslate nohighlight">\(X\)</span>. Alors :</p>
+<ul class="simple">
+<li><p>un ensemble <span class="math notranslate nohighlight">\(G \subset A\)</span> est un ouvert de <span class="math notranslate nohighlight">\((A, d)\)</span> si et seulement si <span class="math notranslate nohighlight">\(G=A\cap U\)</span> avec <span class="math notranslate nohighlight">\(U\)</span> est un ouvert de <span class="math notranslate nohighlight">\((X, d)\)</span>.</p></li>
+<li><p>un ensemble <span class="math notranslate nohighlight">\(F \subset A\)</span> est un fermé de <span class="math notranslate nohighlight">\((A, d)\)</span> si et seulement si <span class="math notranslate nohighlight">\(F=A\cap V\)</span> avec <span class="math notranslate nohighlight">\(V\)</span> est un ouvert de <span class="math notranslate nohighlight">\((X, d)\)</span>.</p></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="denombrabilite">
+<h1>Dénombrabilité<a class="headerlink" href="#denombrabilite" title="Lien permanent vers ce titre">¶</a></h1>
+</div>
+<div class="section" id="compacite-et-completude">
+<h1>Compacité et complétude<a class="headerlink" href="#compacite-et-completude" title="Lien permanent vers ce titre">¶</a></h1>
+</div>
+<div class="section" id="theory-de-mesure">
+<h1>Theory de mesure<a class="headerlink" href="#theory-de-mesure" title="Lien permanent vers ce titre">¶</a></h1>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="content.html" title="previous page">Topologie des espaces métriques</a>
+    <a class='right-next' id="next-link" href="exo_metric.html" title="next page">Exercices espace metriques - espaces vectoriels normes</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          Par Iaousse M'barek<br/>
+        
+            &copy; droits d'auteur 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

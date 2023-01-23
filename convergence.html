@@ -1,0 +1,482 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Convergence &#8212; Cours Complément de Mathématiques Générales</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" />
+    <link rel="next" title="Complétude" href="complet.html" />
+    <link rel="prev" title="Convergence et Continuite" href="convconttopo.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Cours Complément de Mathématiques Générales</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Rechercher dans ce livre ..." aria-label="Rechercher dans ce livre ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Complément de Mathématiques Générales
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="metric-norme.html">
+   Topologie des espaces métriques
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="mnspace.html">
+     Espaces vectoriels normés - Espaces métriques
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exo_metric.html">
+     Exercices
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="convconttopo.html">
+   Convergence et Continuite
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Convergence
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="complet.html">
+     Complétude
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="continue.html">
+     Continuité
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exo_fctplsvar.html">
+     Exercices
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Basculer la navigation" aria-controls="site-navigation"
+                title="Basculer la navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Téléchargez cette page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/convergence.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Télécharger le fichier source" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimer au format PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Dépôt source"><i
+                    class="fab fa-github"></i>dépôt</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fconvergence.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Ouvrez un problème"><i class="fas fa-lightbulb"></i>signaler un problème</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Mode plein écran"
+        title="Mode plein écran"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contenu
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#suites-bornees-suites-convergentes-et-suites-de-cauchy">
+   Suites bornées, suites convergentes et suites de Cauchy
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#suite-extraite-valeur-d-adherence">
+   Suite extraite, valeur d’adhérence
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="convergence">
+<h1>Convergence<a class="headerlink" href="#convergence" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="suites-bornees-suites-convergentes-et-suites-de-cauchy">
+<h2>Suites bornées, suites convergentes et suites de Cauchy<a class="headerlink" href="#suites-bornees-suites-convergentes-et-suites-de-cauchy" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Dans tout ce qui suit, toutes propriété valide pour un espace métrique <span class="math notranslate nohighlight">\((X, d)\)</span> est en particulier valide pour un espace vectoriel normé <span class="math notranslate nohighlight">\((E,\mathcal N)\)</span> considéré comme un espace métrique <span class="math notranslate nohighlight">\((E,d)\)</span> avec <span class="math notranslate nohighlight">\(\forall x,y \in E, d(x,y)=\mathcal N(x-y)\)</span>. Sauf pour une propriété relative à un espace vectoriel normé ou dans des exemples, nous allons considérer que les espaces métriques.</p>
+<div class="admonition-definition-suite-bornee admonition">
+<p class="admonition-title">Définition (suite bornée)</p>
+<p>Soient <span class="math notranslate nohighlight">\((X, d)\)</span> un espace métrique, et <span class="math notranslate nohighlight">\((a_n)=(a_n)_{n \in \mathbb N}\)</span> une suite d’éléments de <span class="math notranslate nohighlight">\(X\)</span>.
+La suite <span class="math notranslate nohighlight">\((a_n)\)</span> est dite bornée si l’ensemble <span class="math notranslate nohighlight">\(\{a_0, \ldots\}\)</span> est borné.</p>
+</div>
+<div class="admonition-definition-suite-convergente admonition">
+<p class="admonition-title">Définition (suite convergente)</p>
+<p>Soient <span class="math notranslate nohighlight">\((X, d)\)</span> un espace métrique, et <span class="math notranslate nohighlight">\((a_n)=(a_n)_{n \in \mathbb N}\)</span> une suite d’éléments de <span class="math notranslate nohighlight">\(X\)</span>.
+On dit que la suite <span class="math notranslate nohighlight">\((a_n)\)</span> converge (ou encore tend ) vers <span class="math notranslate nohighlight">\(l \in X\)</span> lorsque <span class="math notranslate nohighlight">\(n\)</span> tend vers <span class="math notranslate nohighlight">\(\infty\)</span> si la suite <span class="math notranslate nohighlight">\((d(a_n, l))\)</span> est une suite réelle qui converge vers 0.</p>
+</div>
+<p>Lorsque la suite <span class="math notranslate nohighlight">\((a_n)\)</span> converge vers <span class="math notranslate nohighlight">\(l \)</span>, on note <span class="math notranslate nohighlight">\(a_n \underset{n \to +\infty}{\overset{d}{\longrightarrow}}l\)</span> ou <span class="math notranslate nohighlight">\(a_n \underset{n \to +\infty}{{\longrightarrow}}l\)</span> si on ne doit pas spécifier la distance <span class="math notranslate nohighlight">\(d\)</span> ou encore <span class="math notranslate nohighlight">\(a_n \longrightarrow l\)</span>.</p>
+<div class="admonition-proposition admonition">
+<p class="admonition-title">Proposition</p>
+<p>Les expressions suivantes sont équivalentes :</p>
+<ul class="simple">
+<li><p>la suite <span class="math notranslate nohighlight">\((a_n)\)</span> converge vers <span class="math notranslate nohighlight">\(l \in X\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\forall \epsilon &gt; 0, \exists N \geq 0, \forall n \geq N, d(a_n, l) &lt;\epsilon\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\forall \epsilon &gt; 0, \exists N \geq 0\)</span> l’ensemble <span class="math notranslate nohighlight">\(\{a_n, n \geq N\} \subset B(l, \epsilon)\)</span>,</p></li>
+<li><p>Pour toute boule ouverte de centre <span class="math notranslate nohighlight">\(l\)</span>, la suite est incluse dans cette boule à partir d’un certain rang.</p></li>
+<li><p>Pour tout ouvert contenant <span class="math notranslate nohighlight">\(l\)</span>, la suite est incluse dans cet ouvert à partir d’un certain rang.</p></li>
+<li><p>Pour tout voisinage de <span class="math notranslate nohighlight">\(l\)</span>, la suite est incluse dans ce voisinage à partir d’un certain rang.</p></li>
+</ul>
+</div>
+<div class="admonition-proposition admonition">
+<p class="admonition-title">Proposition</p>
+<p>Si <span class="math notranslate nohighlight">\(a_n \longrightarrow l\)</span> et <span class="math notranslate nohighlight">\(b_n \longrightarrow l'\)</span> alors la suite réelle <span class="math notranslate nohighlight">\((d(a_n, b_n))\)</span> tend vers <span class="math notranslate nohighlight">\(d(l, l')\)</span></p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Démonstration</p>
+<p>Nous avons</p>
+<div class="math notranslate nohighlight">
+\[
+\left | d(a_n, b_n) -  d(l, l') \right | \leq d(a_n, l) + d(b_n, l')
+\]</div>
+<p>Or, <span class="math notranslate nohighlight">\(a_n \longrightarrow l\)</span> et <span class="math notranslate nohighlight">\(b_n \longrightarrow l'\)</span> donc  <span class="math notranslate nohighlight">\((d(a_n, l)) \longrightarrow 0\)</span> et <span class="math notranslate nohighlight">\((d(b_n, l')) \longrightarrow 0\)</span>. Donc <span class="math notranslate nohighlight">\(d(a_n, b_n) \longrightarrow  d(l, l')\)</span></p>
+</div>
+<p>Dans un espace métrique les limites quand elles existent sont unique.</p>
+<div class="admonition-proposition admonition">
+<p class="admonition-title">Proposition</p>
+<p>Si <span class="math notranslate nohighlight">\(a_n \longrightarrow l\)</span> et <span class="math notranslate nohighlight">\(a_n \longrightarrow l'\)</span> alors  <span class="math notranslate nohighlight">\(l=l'\)</span></p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Démonstration</p>
+<p>Nous avons
+On utilise la proposition précédente (on pose <span class="math notranslate nohighlight">\(b_n=a_n\)</span>)</p>
+<p>la suite <span class="math notranslate nohighlight">\((d(a_n, b_n))=(d(a_n, a_n))\)</span> qui vaut 0 pour toute <span class="math notranslate nohighlight">\(n \in \mathbb N\)</span> tend vers <span class="math notranslate nohighlight">\(d(l, l')\)</span> donc <span class="math notranslate nohighlight">\(d(l, l')=0\)</span>.</p>
+</div>
+<div class="admonition-proposition admonition">
+<p class="admonition-title">Proposition</p>
+<p>Si <span class="math notranslate nohighlight">\(a_n \longrightarrow l\)</span> alors la suite <span class="math notranslate nohighlight">\((a_n)\)</span> est bornée.</p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Démonstration</p>
+<p>Soit <span class="math notranslate nohighlight">\(\epsilon&gt;0)\)</span>, alors il existe <span class="math notranslate nohighlight">\(N \geq 0\)</span> tel que <span class="math notranslate nohighlight">\(\{a_n, n \geq N+1\} \subset \{a_n, n \geq N\} \subset B(l, \epsilon)\)</span></p>
+<p>D’autre part, soient <span class="math notranslate nohighlight">\(M_0 = d(a_0, l), M_1 = d(a_1, l), \ldots, M_{N} = d(a_N, l)\)</span>.</p>
+<p>Posons <span class="math notranslate nohighlight">\(M= max\{M_0, M_1, \ldots, M_N, \epsilon \}\)</span>. Alors <span class="math notranslate nohighlight">\(\forall n \in \mathbb N, d(a_n,l)&lt;M\)</span>. Donc <span class="math notranslate nohighlight">\(\{a_n, n \in \mathbb N\} \subset B(l, M)\)</span>.</p>
+<p>La suite <span class="math notranslate nohighlight">\((a_n)\)</span> est bornée.</p>
+</div>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Définition</p>
+<p>Soit <span class="math notranslate nohighlight">\((a_n)_{n\geq 0}\)</span> une suite d’un espace métrique <span class="math notranslate nohighlight">\((X, d)\)</span>. La suite <span class="math notranslate nohighlight">\((a_n)\)</span> est dite une <strong>suite de Cauchy</strong> si:</p>
+<div class="math notranslate nohighlight">
+\[
+\forall \epsilon &gt; 0 ~~ \exists N \in \mathbb N, ~~ \forall n, m \geq N, ~~ d(a_n, a_m) &lt; \epsilon
+\]</div>
+</div>
+<div class="admonition-proposition admonition">
+<p class="admonition-title">Proposition</p>
+<p>Soient <span class="math notranslate nohighlight">\(E\)</span> un espace vectoriel, <span class="math notranslate nohighlight">\(l\in E\)</span>, <span class="math notranslate nohighlight">\(\mathcal N_1, \mathcal N_2\)</span> deux norme sur <span class="math notranslate nohighlight">\(X\)</span>, et <span class="math notranslate nohighlight">\((a_n)\)</span> une suite d’éléments de <span class="math notranslate nohighlight">\(E\)</span>. Si <span class="math notranslate nohighlight">\(\mathcal N_1\)</span> et <span class="math notranslate nohighlight">\(\mathcal N_2\)</span> sont équivalentes alors : <span class="math notranslate nohighlight">\(a_n \underset{n \to +\infty}{\overset{\mathcal N_1}{\longrightarrow}}l\)</span> si, et seulement si, <span class="math notranslate nohighlight">\(a_n \underset{n \to +\infty}{\overset{\mathcal N_2}{\longrightarrow}}l\)</span></p>
+</div>
+<div class="admonition-proposition admonition">
+<p class="admonition-title">Proposition</p>
+<ul class="simple">
+<li><p>Une suite qui converge est une suite de Cauchy.</p></li>
+<li><p>Une suite de Cauchy est bornée</p></li>
+</ul>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Démonstration</p>
+<ul class="simple">
+<li><p>Soit <span class="math notranslate nohighlight">\((a_n)\)</span> une suite d’élément d’un espace métrique <span class="math notranslate nohighlight">\((X,d)\)</span> qui converge vers <span class="math notranslate nohighlight">\(l \in X\)</span>.</p></li>
+</ul>
+<p>Soit <span class="math notranslate nohighlight">\(\epsilon&gt;0\)</span>.</p>
+<p>Pour <span class="math notranslate nohighlight">\(\dfrac{\epsilon}{2}\)</span>, il existe <span class="math notranslate nohighlight">\(N\geq 0 \)</span> , <span class="math notranslate nohighlight">\(\forall n \geq N\)</span>, <span class="math notranslate nohighlight">\(d(a_n, l)&lt;\dfrac{\epsilon}{2}\)</span></p>
+<p>Soit <span class="math notranslate nohighlight">\(n, m \geq N\)</span>, donc nous avons <span class="math notranslate nohighlight">\(d(a_n, l)&lt;\dfrac{\epsilon}{2}\)</span> et <span class="math notranslate nohighlight">\(d(a_m, l)&lt;\dfrac{\epsilon}{2}\)</span></p>
+<p>D’après l’inégalité triangulaire :  <span class="math notranslate nohighlight">\(d(a_n, a_m) \leq  d(a_n, l) +  d(a_m, l) &lt; \epsilon\)</span>.</p>
+<p>et ça pour tout <span class="math notranslate nohighlight">\(n, m \geq N\)</span>.
+Par suite, pour tout <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>, il existe <span class="math notranslate nohighlight">\(N \geq 0\)</span>, <span class="math notranslate nohighlight">\(\forall n, m \geq N, d(a_n, a_m) &lt; \epsilon\)</span>.</p>
+<p>Donc la suite <span class="math notranslate nohighlight">\((a_n)\)</span> est une suite de Cauchy.</p>
+<ul class="simple">
+<li><p>Soit <span class="math notranslate nohighlight">\((a_n)\)</span> une suite d’éléments d’un espace métrique <span class="math notranslate nohighlight">\((X,d)\)</span> qui est de Cauchy.</p></li>
+</ul>
+<p>Donc</p>
+<div class="math notranslate nohighlight">
+\[
+\forall \epsilon &gt; 0 ~~ \exists N \in \mathbb N, ~~ \forall n, m \geq N, ~~ d(a_n, a_m) &lt; \epsilon
+\]</div>
+<p>Soit <span class="math notranslate nohighlight">\(\epsilon&gt;0\)</span>
+Nous avons,</p>
+<div class="math notranslate nohighlight">
+\[
+\exists N \in \mathbb N^{*}, ~~ \forall n, m \geq N, ~~ d(a_n, a_m) &lt; \epsilon
+\]</div>
+<p>Pour <span class="math notranslate nohighlight">\(m=N\)</span> nous avons <span class="math notranslate nohighlight">\(\forall n\geq N, ~~ d(a_n, a_{N}) &lt; \epsilon\)</span></p>
+<p>On pose <span class="math notranslate nohighlight">\(M = max(\epsilon, d(a_0, a_{N}), d(a_1, a_{N}), \dots, d(a_{N-1}, a_{N}))\)</span></p>
+<p>Donc <span class="math notranslate nohighlight">\(\forall n \in \mathbb N, d(a_n, a_N)&lt;M\)</span>.</p>
+<p>Les éléments de la suite appartiennent à la boule ouverte de centre <span class="math notranslate nohighlight">\(a_N\)</span> et de rayon <span class="math notranslate nohighlight">\(M\)</span>.</p>
+<p>Donc la suite est bornée.</p>
+</div>
+</div>
+<div class="section" id="suite-extraite-valeur-d-adherence">
+<h2>Suite extraite, valeur d’adhérence<a class="headerlink" href="#suite-extraite-valeur-d-adherence" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Définition</p>
+<p>Soit <span class="math notranslate nohighlight">\((a_n)_{n\geq 0}\)</span> une suite d’un espace métrique <span class="math notranslate nohighlight">\((X, d)\)</span>. Une suite <span class="math notranslate nohighlight">\((v_n)_{n\in \mathbb N}\)</span> est appelée suite extraite, ou sous-suite, de  <span class="math notranslate nohighlight">\((a_n)\)</span> s’il existe une application <span class="math notranslate nohighlight">\(\varphi\)</span> strictement croissante de <span class="math notranslate nohighlight">\(\mathbb N\)</span> dans <span class="math notranslate nohighlight">\(\mathbb N\)</span>, vérifiant:</p>
+<div class="math notranslate nohighlight">
+\[
+\forall n \in \mathbb N, v_n = a_{\varphi(n)}
+\]</div>
+</div>
+<div class="admonition-exemples admonition">
+<p class="admonition-title">Exemples</p>
+<ul class="simple">
+<li><p>La suite <span class="math notranslate nohighlight">\((a_{n+1})_{n\in \mathbb N}\)</span> est une suite extraite de la suite <span class="math notranslate nohighlight">\((a_{n})_{n\in \mathbb N}\)</span>.</p></li>
+<li><p>Les suites <span class="math notranslate nohighlight">\((a_{2n})_{n\in \mathbb N}\)</span> et <span class="math notranslate nohighlight">\((a_{2n+1})_{n\in \mathbb N}\)</span> sont deux suites extraites de <span class="math notranslate nohighlight">\((a_{n})_{n\in \mathbb N}\)</span>.</p></li>
+</ul>
+</div>
+<p><strong>Remarque</strong>: si <span class="math notranslate nohighlight">\(\varphi\)</span> est une application strictement croissante de <span class="math notranslate nohighlight">\(\mathbb N\)</span> dans <span class="math notranslate nohighlight">\(\mathbb N\)</span>, on a <span class="math notranslate nohighlight">\(\forall n \in \mathbb N, \varphi(n)\geq n\)</span> (récurrence).</p>
+<div class="admonition-proposition admonition">
+<p class="admonition-title">Proposition</p>
+<p>Soit <span class="math notranslate nohighlight">\((a_n)_{n\geq 0}\)</span> une suite d’un espace métrique <span class="math notranslate nohighlight">\((X, d)\)</span> qui converge vers <span class="math notranslate nohighlight">\(l \in X\)</span>. Si <span class="math notranslate nohighlight">\((v_n)_{n\in \mathbb N}\)</span> est une suite extraite de  <span class="math notranslate nohighlight">\((a_n)\)</span> alors <span class="math notranslate nohighlight">\((v_n)\)</span> converge vers <span class="math notranslate nohighlight">\(l\in X\)</span>.</p>
+</div>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Définition</p>
+<p>Soit <span class="math notranslate nohighlight">\((a_n)_{n\geq 0}\)</span> une suite d’un espace métrique <span class="math notranslate nohighlight">\((X, d)\)</span>. On dit que <span class="math notranslate nohighlight">\(l\in X\)</span> est une valeur d’adhérence de la suite s’il existe une suite extraite de <span class="math notranslate nohighlight">\((a_n)_{n\geq 0}\)</span> qui converge vers <span class="math notranslate nohighlight">\(l\)</span></p>
+</div>
+<div class="admonition-exemples admonition">
+<p class="admonition-title">Exemples</p>
+<ul class="simple">
+<li><p>la limite d’une suite convergente est une valeur d’adhérence de cette suite, en particulier, <strong>c’est la seule valeur d’adhérence</strong>. (Pourquoi ?)</p></li>
+<li><p>En considère <span class="math notranslate nohighlight">\(\mathbb R\)</span> menu de la distance usuelle. Alors la suite <span class="math notranslate nohighlight">\(u_n = (-1)^n\)</span> a deux valeurs d’adhérence : <span class="math notranslate nohighlight">\(-1\)</span> et <span class="math notranslate nohighlight">\(1\)</span>.</p></li>
+</ul>
+</div>
+<div class="admonition-proposition admonition">
+<p class="admonition-title">Proposition</p>
+<p>Soit <span class="math notranslate nohighlight">\((a_n)_{n\geq 0}\)</span> une suite  de Cauchy d’un espace métrique <span class="math notranslate nohighlight">\((X, d)\)</span>. Si <span class="math notranslate nohighlight">\((v_n)_{n\in \mathbb N}\)</span> est une suite extraite de  <span class="math notranslate nohighlight">\((a_n)\)</span> qui converge vers <span class="math notranslate nohighlight">\(l\in X\)</span>, alors <span class="math notranslate nohighlight">\((a_n)\)</span>  converge vers <span class="math notranslate nohighlight">\(l\in X\)</span>.</p>
+<p>Autrementdit, une suite de Cauchy qui possède une valeur d’adherence est convergente.</p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Démonstration</p>
+<p>Soit Soit <span class="math notranslate nohighlight">\((a_n)_{n\geq 0}\)</span> une suite  de Cauchy d’un espace metrique <span class="math notranslate nohighlight">\((X, d)\)</span></p>
+<p>Pour tout <span class="math notranslate nohighlight">\(\epsilon &gt;0\)</span> il existe <span class="math notranslate nohighlight">\(N \in \mathbb N\)</span> tel que pour tout <span class="math notranslate nohighlight">\(n, m \geq N, d(a_n, a_m)&lt;\dfrac{\epsilon}{2}\)</span></p>
+<p>Soit <span class="math notranslate nohighlight">\((v_n)\)</span> une sous suite qui converge vers <span class="math notranslate nohighlight">\(l\in X\)</span>.</p>
+<p>Donc il existe une application <span class="math notranslate nohighlight">\(\varphi \)</span> de <span class="math notranslate nohighlight">\(\mathbb N\)</span> dans <span class="math notranslate nohighlight">\(\mathbb N\)</span> strictement croissante telle que: <span class="math notranslate nohighlight">\(v_n= a_{\varphi(n)}\)</span> pour tout <span class="math notranslate nohighlight">\(n \in \mathbb N\)</span>.</p>
+<p>D’autre part, puisque la sous suite est convergente vers <span class="math notranslate nohighlight">\(l\)</span>,  il existe <span class="math notranslate nohighlight">\(N_1 \in \mathbb N\)</span> tel que pour tout <span class="math notranslate nohighlight">\(n \geq N_1, d(v_n,l)=d(a_{\varphi(n)},l) &lt;\dfrac{\epsilon}{2}\)</span></p>
+<p>On pose, <span class="math notranslate nohighlight">\(N_2 = max(N, N_1)\)</span>.</p>
+<p>Alors,</p>
+<div class="math notranslate nohighlight">
+\[
+\forall n \geq N_2, d(a_n, l)\geq d(a_n, a_{\varphi(n)}) + d(a_{\varphi(n)},l )&lt; \dfrac{\epsilon}{2} + \dfrac{\epsilon}{2} = \epsilon
+\]</div>
+<p>Puisque pour tout <span class="math notranslate nohighlight">\(n \in \mathbb N, \varphi(n)\geq n\)</span> donc <span class="math notranslate nohighlight">\(d(a_{\varphi(n)}, l)&gt;\epsilon\)</span> pour tout <span class="math notranslate nohighlight">\(n \in \mathbb N\)</span>.</p>
+<p>Donc la suite <span class="math notranslate nohighlight">\((a_n)\)</span> converge vers <span class="math notranslate nohighlight">\(l\)</span>.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="convconttopo.html" title="previous page">Convergence et Continuite</a>
+    <a class='right-next' id="next-link" href="complet.html" title="next page">Complétude</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          Par Iaousse M'barek<br/>
+        
+            &copy; droits d'auteur 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

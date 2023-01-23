@@ -1,0 +1,553 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Complétude &#8212; Cours Complément de Mathématiques Générales</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" />
+    <link rel="next" title="Continuité" href="continue.html" />
+    <link rel="prev" title="Convergence" href="convergence.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Cours Complément de Mathématiques Générales</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Rechercher dans ce livre ..." aria-label="Rechercher dans ce livre ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Complément de Mathématiques Générales
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="metric-norme.html">
+   Topologie des espaces métriques
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="mnspace.html">
+     Espaces vectoriels normés - Espaces métriques
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exo_metric.html">
+     Exercices
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="convconttopo.html">
+   Convergence et Continuite
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="convergence.html">
+     Convergence
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Complétude
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="continue.html">
+     Continuité
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exo_fctplsvar.html">
+     Exercices
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Basculer la navigation" aria-controls="site-navigation"
+                title="Basculer la navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Téléchargez cette page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/complet.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Télécharger le fichier source" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimer au format PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Dépôt source"><i
+                    class="fab fa-github"></i>dépôt</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcomplet.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Ouvrez un problème"><i class="fas fa-lightbulb"></i>signaler un problème</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Mode plein écran"
+        title="Mode plein écran"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contenu
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#espace-totalement-bornes">
+   Espace totalement bornés
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#espace-complet">
+   Espace complet
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="completude">
+<h1>Complétude<a class="headerlink" href="#completude" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="espace-totalement-bornes">
+<h2>Espace totalement bornés<a class="headerlink" href="#espace-totalement-bornes" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Définition</p>
+<p>Soient <span class="math notranslate nohighlight">\((X, d)\)</span> un espace métrique, et <span class="math notranslate nohighlight">\(A\)</span> un sous-ensemble de <span class="math notranslate nohighlight">\(X\)</span> (<span class="math notranslate nohighlight">\(A\subset X\)</span>).</p>
+<p>On appelle <strong>diamètre</strong> de <span class="math notranslate nohighlight">\(A\)</span> :</p>
+<div class="math notranslate nohighlight">
+\[
+diam(A)= sup\{d(a,b), a, b \in A\}
+\]</div>
+<p>qui peut être reel ou <span class="math notranslate nohighlight">\(+\infty\)</span>.</p>
+</div>
+<div class="admonition-exemple admonition">
+<p class="admonition-title">Exemple</p>
+<ul class="simple">
+<li><p>Si <span class="math notranslate nohighlight">\(A\)</span> est un singleton (<span class="math notranslate nohighlight">\(A= \{x\}\)</span> avec <span class="math notranslate nohighlight">\(x\in X\)</span>) alors le diamètre de <span class="math notranslate nohighlight">\(A\)</span> est : <span class="math notranslate nohighlight">\(diam(A)=0\)</span></p></li>
+<li><p>Le diamètre d’une boule ouverte (<span class="math notranslate nohighlight">\(B(x,r)\)</span>) de centre <span class="math notranslate nohighlight">\(x\)</span> est de rayon <span class="math notranslate nohighlight">\(r&gt;0\)</span>  est: <span class="math notranslate nohighlight">\(diam(B(x,r))\leq 2r\)</span></p></li>
+<li><p>Le diamètre d’une boule fermée (<span class="math notranslate nohighlight">\(B_f(x,r)\)</span>) de centre <span class="math notranslate nohighlight">\(x\)</span> est de rayon <span class="math notranslate nohighlight">\(r&gt;0\)</span>  est: <span class="math notranslate nohighlight">\(diam(B_f(x,r))\leq 2r\)</span></p></li>
+</ul>
+</div>
+<div class="admonition-proposition admonition">
+<p class="admonition-title">Proposition</p>
+<p>Si <span class="math notranslate nohighlight">\(A\subset B\)</span> alors <span class="math notranslate nohighlight">\(diam(A)\leq diam(B)\)</span>.</p>
+</div>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Définition</p>
+<p>Soient <span class="math notranslate nohighlight">\((X, d)\)</span> un espace métrique, et <span class="math notranslate nohighlight">\(A\)</span> un sous-ensemble de <span class="math notranslate nohighlight">\(X\)</span> (<span class="math notranslate nohighlight">\(A\subset X\)</span>).</p>
+<p>L’ensemble <span class="math notranslate nohighlight">\(A\)</span> est <strong>totalement borné</strong> si pour tout <span class="math notranslate nohighlight">\(\epsilon&gt;0\)</span>, il existe un nombre fini de points <span class="math notranslate nohighlight">\(x_1, \ldots, x_n \in X\)</span> tels que <span class="math notranslate nohighlight">\(A\subset \cup_{i=1}^nB(x_i, \epsilon)\)</span>.</p>
+<p>On dit que l’ensemble <span class="math notranslate nohighlight">\(A\)</span> est <strong>couvert</strong> par un nombre fini de <span class="math notranslate nohighlight">\(\epsilon\)</span>-boules (boules ouvertes de rayon <span class="math notranslate nohighlight">\(\epsilon\)</span>).</p>
+</div>
+<div class="admonition-exemples admonition">
+<p class="admonition-title">Exemples</p>
+<ul class="simple">
+<li><p>Un ensemble totalement borné est borné.</p></li>
+<li><p>Si <span class="math notranslate nohighlight">\(A\subset X\)</span> est totalement borné et <span class="math notranslate nohighlight">\(B\subset A\)</span> alors <span class="math notranslate nohighlight">\(B\)</span> est aussi totalement borné.</p></li>
+<li><p>Un ensemble fini est totalement borné.</p></li>
+<li><p>Dans <span class="math notranslate nohighlight">\(\mathbb R\)</span> muni de la distance usuelle, un ensemble est totalement borné si, et seulement si, il est borné (voir plus loins dans cette section).</p></li>
+</ul>
+</div>
+<div class="admonition-proposition admonition">
+<p class="admonition-title">Proposition</p>
+<p>Soient <span class="math notranslate nohighlight">\((X, d)\)</span> un espace métrique, et <span class="math notranslate nohighlight">\(A\)</span> un sous-ensemble de <span class="math notranslate nohighlight">\(X\)</span> (<span class="math notranslate nohighlight">\(A\subset X\)</span>).</p>
+<p>L’ensemble <span class="math notranslate nohighlight">\(A\)</span> est <strong>totalement borné</strong> si pour tout <span class="math notranslate nohighlight">\(\epsilon&gt;0\)</span>, il existe un nombre fini de points <span class="math notranslate nohighlight">\(x_1, \ldots, x_n \in A\)</span> tels que <span class="math notranslate nohighlight">\(A\subset \cup_{i=1}^nB(x_i, \epsilon)\)</span>.</p>
+</div>
+<div class="admonition-demonstration admonition">
+<p class="admonition-title">Démonstration</p>
+<p>Soient <span class="math notranslate nohighlight">\((X, d)\)</span> un espace métrique, et <span class="math notranslate nohighlight">\(A\)</span> un sous-ensemble de <span class="math notranslate nohighlight">\(X\)</span> (<span class="math notranslate nohighlight">\(A\subset X\)</span>).</p>
+<p>L’ensemble <span class="math notranslate nohighlight">\(A\)</span> est totalement borné, donc</p>
+<p>Pour tout <span class="math notranslate nohighlight">\(\epsilon&gt;0\)</span>, il existe un nombre fini de points <span class="math notranslate nohighlight">\(x_1, \ldots, x_n \in X\)</span> tels que <span class="math notranslate nohighlight">\(A\subset \cup_{i=1}^nB(x_i, \epsilon)\)</span>.</p>
+<p>Soit <span class="math notranslate nohighlight">\(\epsilon&gt;0\)</span></p>
+<p>Premièrement, il existe un nombre fini de points <span class="math notranslate nohighlight">\(x_1, \ldots, x_n \in X\)</span> tels que <span class="math notranslate nohighlight">\(A\subset \cup_{i=1}^nB(x_i, \dfrac{\epsilon}{2})\)</span>.</p>
+<p>Deuxièmement, on peut supposer que <span class="math notranslate nohighlight">\(A\cap B(x_i, \dfrac{\epsilon}{2}) \neq \emptyset\)</span> (sinon on prend juste les points pour lesquels l’intersection des boules avec <span class="math notranslate nohighlight">\(A\)</span> est non vide).</p>
+<p>Soient <span class="math notranslate nohighlight">\(y_1, \ldots, y_n\)</span> tels que pour tout <span class="math notranslate nohighlight">\(i\)</span> :<span class="math notranslate nohighlight">\(y_i \in A\cap B(x_i, \dfrac{\epsilon}{2})\)</span></p>
+<p>Pour tout <span class="math notranslate nohighlight">\(i\)</span> nous avons <span class="math notranslate nohighlight">\(B(x_i, \dfrac{\epsilon}{2})\subset B(y_i, \epsilon)\)</span> (inégalité triangulaire).</p>
+<p>En fin <span class="math notranslate nohighlight">\(A\subset \cup_{i=1}^nB(x_i, \dfrac{\epsilon}{2})\subset  \cup_{i=1}^nB(y_i, \epsilon)\)</span>.</p>
+</div>
+<div class="admonition-proposition admonition">
+<p class="admonition-title">Proposition</p>
+<p>Soient <span class="math notranslate nohighlight">\((X, d)\)</span> un espace métrique, et <span class="math notranslate nohighlight">\(A\)</span> un sous-ensemble de <span class="math notranslate nohighlight">\(X\)</span> (<span class="math notranslate nohighlight">\(A\subset X\)</span>).</p>
+<p>L’ensemble <span class="math notranslate nohighlight">\(A\)</span> est totalement borné si, et seulement si, pour tout <span class="math notranslate nohighlight">\(\epsilon&gt;0\)</span> il existe un nombre fini d’ensembles <span class="math notranslate nohighlight">\(A_1, \ldots, A_n \subset A\)</span> avec pour tout <span class="math notranslate nohighlight">\(i\)</span> de <span class="math notranslate nohighlight">\(\{1, \ldots, n\}: diam(A_i)&lt;\epsilon\)</span> tels que:</p>
+<div class="math notranslate nohighlight">
+\[
+A\subset \cup_{i=1}^n A_i
+\]</div>
+</div>
+<div class="admonition-proposition admonition">
+<p class="admonition-title">Proposition</p>
+<p>Soient <span class="math notranslate nohighlight">\((X, d)\)</span> un espace métrique, et <span class="math notranslate nohighlight">\((a_n)\)</span> une suite d’éléments de <span class="math notranslate nohighlight">\(X\)</span>. Soit <span class="math notranslate nohighlight">\(A= \{a_n, n\geq 0\}\)</span>. Alors :</p>
+<ul class="simple">
+<li><p>Si <span class="math notranslate nohighlight">\((a_n)\)</span> est de Cauchy alors <span class="math notranslate nohighlight">\(A\)</span> est totalement borné.</p></li>
+<li><p>Si <span class="math notranslate nohighlight">\(A\)</span> est totalement borné, alors la suite <span class="math notranslate nohighlight">\((a_n)\)</span> admet une suite extraite qui est de Cauchy (admis)</p></li>
+</ul>
+</div>
+<div class="admonition-demonstration admonition">
+<p class="admonition-title">Démonstration</p>
+<p>Soit <span class="math notranslate nohighlight">\(\epsilon&gt;0\)</span>, puisque la suite <span class="math notranslate nohighlight">\((a_n)\)</span> est de Cauchy, donc il existe <span class="math notranslate nohighlight">\(N\in \mathbb N\)</span> tel que pour tout <span class="math notranslate nohighlight">\(n, m \geq N+1, d(a_n, a_m)&lt;\dfrac{\epsilon}{2}\)</span></p>
+<p>Donc <span class="math notranslate nohighlight">\( diam(\{a_n, n\geq N+1\}) \leq \dfrac{\epsilon}{2} &lt; \epsilon\)</span></p>
+<p>On pose <span class="math notranslate nohighlight">\(A_1=\{a_0\}, A_2=\{a_1\}, \ldots, A_{N+1}=\{a_{N}\}, A_{N+1}=\{a_n, n\geq N+1\}\)</span></p>
+<p>Alors <span class="math notranslate nohighlight">\(A = \cup_{i=1}^{N+1}A_i\)</span> et chaque <span class="math notranslate nohighlight">\(A_i\)</span> a un diamètre inferieur a <span class="math notranslate nohighlight">\(\epsilon\)</span> (pourquoi?)</p>
+<p>Donc <span class="math notranslate nohighlight">\(A\)</span> est totalement borné.</p>
+</div>
+<div class="admonition-theoreme admonition">
+<p class="admonition-title">Théorème</p>
+<p>Un ensemble <span class="math notranslate nohighlight">\(A\)</span> est totalement borné si, et seulement si, tout suite d’éléments de <span class="math notranslate nohighlight">\(A\)</span> admet une sous-suite qui est de Cauchy.</p>
+</div>
+<div class="admonition-demonstration admonition">
+<p class="admonition-title">Démonstration</p>
+<ul class="simple">
+<li><p>Si <span class="math notranslate nohighlight">\(A\)</span> est totalement borné :</p></li>
+</ul>
+<p>Soit <span class="math notranslate nohighlight">\((a_n)\)</span> une suite d’éléments de <span class="math notranslate nohighlight">\(A\)</span>. Alors l’ensemble <span class="math notranslate nohighlight">\(\{a_n, n\geq 0\}\)</span> qui est une partie de <span class="math notranslate nohighlight">\(A\)</span> est totalement borné.</p>
+<p>Donc la suite admet une sous-suite qui est de Cauchy.</p>
+<ul class="simple">
+<li><p>Soit <span class="math notranslate nohighlight">\(A\)</span> une sous ensemble avec la propriété « toute suite d’éléments de <span class="math notranslate nohighlight">\(A\)</span> admet une sous-suite qui est de Cauchy »</p></li>
+</ul>
+<p>Si <span class="math notranslate nohighlight">\(A\)</span> est fini alors <span class="math notranslate nohighlight">\(A\)</span> est totalement borné.</p>
+<p>Sinon :</p>
+<p>Supposons (par absurde) que <span class="math notranslate nohighlight">\(A\)</span> n’est pas totalement borné. Donc il existe un <span class="math notranslate nohighlight">\(\epsilon&gt;0\)</span> tel que ne peut pas être couvert par un nombre fini de sous-ensemble de diamètre inferieur a <span class="math notranslate nohighlight">\(\epsilon\)</span>.</p>
+<p>Nous allons construire une suite qui n’admet pas une sous-suite qui est de Cauchy. Si cette suite est construite, nous avons donc une contradiction et <span class="math notranslate nohighlight">\(A\)</span> est totalement borné.</p>
+<p>Soit <span class="math notranslate nohighlight">\(a_0\)</span> un élément de <span class="math notranslate nohighlight">\(A\)</span> (<span class="math notranslate nohighlight">\(A\)</span> est infini donc cet élément existe).</p>
+<p>Il existe au moins un élément <span class="math notranslate nohighlight">\(a_1\)</span> tel que <span class="math notranslate nohighlight">\(d(a_0, a_1)\geq\epsilon\)</span> car sinon alors tous les éléments de <span class="math notranslate nohighlight">\(A\)</span> seront dans la boule <span class="math notranslate nohighlight">\(B(a_0, \epsilon)\)</span> donc <span class="math notranslate nohighlight">\(A\)</span> est totalement borné.</p>
+<p>Supposons que nous avons construit <span class="math notranslate nohighlight">\(a_0, a_1, \ldots, a_n\)</span> tel que la distance entre chaque deux éléments est supérieure ou égale a <span class="math notranslate nohighlight">\(\epsilon\)</span>.</p>
+<p>Nous avons <span class="math notranslate nohighlight">\(A\setminus \{a_0, a_1, \ldots, a_n\}\)</span> est différent de l’ensemble vide (car sinon <span class="math notranslate nohighlight">\(A\)</span> serait fini)
+alors il existe au moins un élément <span class="math notranslate nohighlight">\(a_{n+1}\)</span> tel que <span class="math notranslate nohighlight">\(d(a_{n+1}, a_i)\geq \epsilon\)</span> pour tout <span class="math notranslate nohighlight">\(i \in \{1, \ldots, n\}\)</span> car sinon alors il existe <span class="math notranslate nohighlight">\(i_0 \in \{1, \ldots, n\}\)</span> tel que pour tout élément <span class="math notranslate nohighlight">\(x\)</span> de <span class="math notranslate nohighlight">\(A\setminus \{a_0, a_1, \ldots, a_n\}\)</span>, <span class="math notranslate nohighlight">\(d(a_{i_0}, x)&lt;\epsilon\)</span>. Donc <span class="math notranslate nohighlight">\(A\setminus \{a_0, a_1, \ldots, a_n\}\)</span> est totalement borné et puisque <span class="math notranslate nohighlight">\(\{a_0, a_1, \ldots, a_n\}\)</span> est fini donc il est totalement borné. La réunion de deux ensembles totalement borné et totalement borné (pourquoi ?) donc <span class="math notranslate nohighlight">\(A\)</span> est totalement borné. D’où l’existence de <span class="math notranslate nohighlight">\(a_{n+1}\)</span>. Enfin, par récurrence, nous avons construit une suite <span class="math notranslate nohighlight">\((a_n)_{n\geq 0}\)</span> dont chaque deux éléments différents ont une distance supérieure à <span class="math notranslate nohighlight">\(\epsilon\)</span>. Donc elle n’admet aucune sous-suite de Cauchy.</p>
+</div>
+<div class="admonition-proposition admonition">
+<p class="admonition-title">Proposition</p>
+<p>Toute partie de <span class="math notranslate nohighlight">\(\mathbb R\)</span> bornée est totalement bornée.</p>
+</div>
+<div class="admonition-demonstration admonition">
+<p class="admonition-title">Démonstration</p>
+<p>Une partie de <span class="math notranslate nohighlight">\(\mathbb R\)</span> est bornée si elle est incluse dans une intervalle de la forme <span class="math notranslate nohighlight">\([-R, R]\)</span> (pour quoi?)</p>
+<p>Donc si nous montrons que les intervalles de la forme <span class="math notranslate nohighlight">\([-R, R]\)</span> sont totalement bornés alors toute partie incluse dans cet intervalle est aussi totalement bornée (pourquoi?), en particulier, toute partie bornée est bornée.</p>
+<p>Soit <span class="math notranslate nohighlight">\(R&gt;0\)</span>. Montrons que l’intervalle <span class="math notranslate nohighlight">\([-R, R]\)</span> est totalement borné.</p>
+<p>Soit <span class="math notranslate nohighlight">\(\epsilon&gt;0\)</span>:</p>
+<p>Soit <span class="math notranslate nohighlight">\(k\in \mathbb N\)</span> tel que <span class="math notranslate nohighlight">\(k\geq \dfrac{4R}{\epsilon}\)</span>.</p>
+<p>On pose <span class="math notranslate nohighlight">\(A_1 = ]-R-\dfrac{\epsilon}{2}, - R[, A_2 = ]-R, - R+\dfrac{\epsilon}{2}[, A_3 = ]-R+\dfrac{\epsilon}{2}, - R+2\dfrac{\epsilon}{2}[,\ldots, ]-R+(k-1)\dfrac{\epsilon}{2}, - R+k\dfrac{\epsilon}{2}[\)</span></p>
+<p>Alors il est claire que  <span class="math notranslate nohighlight">\( [-R, R] \subset \cup_{i=1}^{k+1}A_i\)</span> et que <span class="math notranslate nohighlight">\(A_i = B(-2R+(2k-1)\dfrac{\epsilon}{2}\)</span>).
+Par suite <span class="math notranslate nohighlight">\([-R, R]\)</span> est totalement borné
+En fin, Toute partie de <span class="math notranslate nohighlight">\(\mathbb R\)</span> bornée est totalement bornée.</p>
+</div>
+<p>Dans <span class="math notranslate nohighlight">\(\mathbb R\)</span>, l’axiome de la borne supérieure est équivalent au fait que toute suite réelle de Cauchy est convergente. L’axiome de la borne supérieure stipule que : Toute partie de <span class="math notranslate nohighlight">\(\mathbb R\)</span> non vide majorée admet une borne supérieure. Pour bien définir cette borne nous allons définir la notion du majorant.
+Soit <span class="math notranslate nohighlight">\(A\)</span> une partie de <span class="math notranslate nohighlight">\(\mathbb R\)</span> et <span class="math notranslate nohighlight">\(m\)</span> un élément de <span class="math notranslate nohighlight">\(\mathbb R\)</span>:</p>
+<ul class="simple">
+<li><p>On dit que <span class="math notranslate nohighlight">\(m\)</span> est un majorant de <span class="math notranslate nohighlight">\(A\)</span> dans <span class="math notranslate nohighlight">\(\mathbb R\)</span> si: <span class="math notranslate nohighlight">\(\forall x \in A , x \leq m\)</span>.</p></li>
+<li><p>On dit que <span class="math notranslate nohighlight">\(A\)</span> est majorée dans <span class="math notranslate nohighlight">\(\mathbb R\)</span> si <span class="math notranslate nohighlight">\(A\)</span> admet au moins un majorant dans <span class="math notranslate nohighlight">\(\mathbb R\)</span>, c’est à dire si: <span class="math notranslate nohighlight">\(\exists m \in \mathbb R, \forall x \in A , x \leq m\)</span>.</p></li>
+</ul>
+<p>L’axiome de la borne supérieure affirme qu’une telle partie admet un majorant qui est le plus petit des majorant. Cet élément est unique et est note <span class="math notranslate nohighlight">\(sup(A)\)</span>. La borne supérieure est caractérisée par :</p>
+<p><strong>Caractérisation 1</strong>: C’est le plus petit des majorants : Soit <span class="math notranslate nohighlight">\(A\)</span> une partie de <span class="math notranslate nohighlight">\(\mathbb R\)</span> et <span class="math notranslate nohighlight">\(M\)</span> un élément de <span class="math notranslate nohighlight">\(\mathbb R\)</span>, alors <span class="math notranslate nohighlight">\(M\)</span> est la borne supérieure si :</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\forall x \in A, x\leq M\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\(\forall \epsilon&gt;0, \exists x \in A, M-\epsilon &lt; x\)</span>.</p></li>
+</ul>
+<p><strong>Caractérisation 2 (Caractérisation séquentielle)</strong>:</p>
+<ul class="simple">
+<li><p>Soit <span class="math notranslate nohighlight">\(A\)</span> une partie de <span class="math notranslate nohighlight">\(\mathbb R\)</span> majoree. Alors il existe une suite <span class="math notranslate nohighlight">\((a_n)_{n\in \mathbb N}\)</span> d’éléments de <span class="math notranslate nohighlight">\(A\)</span> telle que : <span class="math notranslate nohighlight">\(\lim_{n \to \infty}a_n = sup(A)\)</span>;</p></li>
+<li><p>Soit <span class="math notranslate nohighlight">\(A\)</span> une partie de <span class="math notranslate nohighlight">\(\mathbb R\)</span> et <span class="math notranslate nohighlight">\(M\)</span> un élément de <span class="math notranslate nohighlight">\(\mathbb R\)</span>. Si :</p></li>
+</ul>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(M\)</span> est un majorant de <span class="math notranslate nohighlight">\(A\)</span></p></li>
+<li><p>il existe une suite <span class="math notranslate nohighlight">\((a_n)_{n\in \mathbb N}\)</span> d’elements de <span class="math notranslate nohighlight">\(A\)</span> telle que : <span class="math notranslate nohighlight">\(\lim_{n \to \infty}a_n = M\)</span></p></li>
+</ul>
+<p>Alors <span class="math notranslate nohighlight">\(M=sup(A)\)</span></p>
+</div>
+<div class="section" id="espace-complet">
+<h2>Espace complet<a class="headerlink" href="#espace-complet" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Définition</p>
+<p>Un espace métrique <span class="math notranslate nohighlight">\((X,d)\)</span> est <strong>complet</strong> si tout suite d’éléments de <span class="math notranslate nohighlight">\(X\)</span> qui est de Cauchy est convergente.</p>
+</div>
+<div class="admonition-exemple admonition">
+<p class="admonition-title">Exemple</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\mathbb R\)</span> muni de la distance associe a la valeur absolu est un espace métrique complet (pourquoi ?)</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mathbb R^n\)</span> est complet (parce que <span class="math notranslate nohighlight">\(\mathbb R\)</span> l’est).</p></li>
+<li><p>Soit <span class="math notranslate nohighlight">\(X\)</span> un ensemble muni de la distance <span class="math notranslate nohighlight">\(d\)</span> définie par <span class="math notranslate nohighlight">\(d(x,y)= 1\)</span> si <span class="math notranslate nohighlight">\(x\neq y\)</span> et <span class="math notranslate nohighlight">\(d(x,y)= 0\)</span> si <span class="math notranslate nohighlight">\(x= y\)</span>. Alors <span class="math notranslate nohighlight">\((X,d)\)</span> est complet (pourquoi?).</p></li>
+<li><p>l’ensemble <span class="math notranslate nohighlight">\(]0, 1[\)</span> muni de la distance associée a la valeur absolue n’est pas complet (pourquoi?).</p></li>
+</ul>
+</div>
+<div class="admonition-proposition-caracterisation-sequentielle-des-fermes admonition">
+<p class="admonition-title">proposition (Caractérisation séquentielle des fermés)</p>
+<p>Soient <span class="math notranslate nohighlight">\((X,d)\)</span> un espace métrique et <span class="math notranslate nohighlight">\(F\)</span> un sous-ensemble de <span class="math notranslate nohighlight">\(X\)</span> (<span class="math notranslate nohighlight">\(F\subset X\)</span>). Alors <span class="math notranslate nohighlight">\(F\)</span> est fermé si, et seulement si, toute suite convergente d’éléments de <span class="math notranslate nohighlight">\(F\)</span> converge dans <span class="math notranslate nohighlight">\(F\)</span>.</p>
+</div>
+<div class="admonition-demonstration admonition">
+<p class="admonition-title">Démonstration</p>
+<ul class="simple">
+<li><p>Supposons que <span class="math notranslate nohighlight">\(F\)</span> est fermé :</p></li>
+</ul>
+<p>Soit <span class="math notranslate nohighlight">\((a_n)\)</span> une suite d’éléments de <span class="math notranslate nohighlight">\(F\)</span> et <span class="math notranslate nohighlight">\(l\in X\)</span> tel que <span class="math notranslate nohighlight">\(a_n \longrightarrow l\)</span>. Montrons que <span class="math notranslate nohighlight">\(l\in F\)</span>.</p>
+<p>Par absurde, si <span class="math notranslate nohighlight">\(l \in X\setminus F\)</span>. Puisque <span class="math notranslate nohighlight">\(X\setminus F\)</span> est ouvert et contient <span class="math notranslate nohighlight">\(l\)</span> donc la suite est incluse dans cet ouvert à partir d’un certain rang. Ce qui est absurde car tous les éléments de la suite sont dans <span class="math notranslate nohighlight">\(F\)</span>.</p>
+<p>Alors <span class="math notranslate nohighlight">\(l\in F\)</span>.</p>
+<ul class="simple">
+<li><p>Supposons que toute suite convergente d’éléments de <span class="math notranslate nohighlight">\(F\)</span> converge dans <span class="math notranslate nohighlight">\(F\)</span>:</p></li>
+</ul>
+<p>Montrons que <span class="math notranslate nohighlight">\(F\)</span> est fermé, ceci dit, montrons que <span class="math notranslate nohighlight">\(X\setminus F\)</span> est ouvert.</p>
+<p>Par absurde supposons que  <span class="math notranslate nohighlight">\(X\setminus F\)</span> n’est pas ouvert. Donc <span class="math notranslate nohighlight">\(\exists x \in X\setminus F, \forall \epsilon&gt;0 B(x, \epsilon)\cap F \neq \emptyset\)</span>.</p>
+<p>Cela veut dire que <span class="math notranslate nohighlight">\(\forall n&gt;0 B(x, \dfrac{1}{n})\cap F \neq \emptyset\)</span>.</p>
+<p>Nous allons construire une suite d’éléments de <span class="math notranslate nohighlight">\(F\)</span> qui converge vers <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<p>Soit <span class="math notranslate nohighlight">\(x_0 \in F\)</span> quelconque.</p>
+<p>Pour <span class="math notranslate nohighlight">\(n\geq 1\)</span> <span class="math notranslate nohighlight">\(B(x, \dfrac{1}{n})\cap F \neq \emptyset\)</span>. Donc soit <span class="math notranslate nohighlight">\(x_n\)</span> un élément de <span class="math notranslate nohighlight">\(B(x, \dfrac{1}{n})\cap F\)</span> pour tout <span class="math notranslate nohighlight">\(n\)</span> de <span class="math notranslate nohighlight">\(\mathbb N^{*}\)</span>.</p>
+<p><span class="math notranslate nohighlight">\((x_n)_{n\in \mathbb N}\)</span> est donc une suite d’éléments de <span class="math notranslate nohighlight">\(F\)</span> qui verifie <span class="math notranslate nohighlight">\(d(x_n, x)\leq n\)</span> pour tout <span class="math notranslate nohighlight">\(n\)</span> de <span class="math notranslate nohighlight">\(\mathbb N^{*}\)</span>.</p>
+<p>Donc la suite <span class="math notranslate nohighlight">\(d(x_n, x)\)</span> tend vers 0. Par suite <span class="math notranslate nohighlight">\((x_n)_{n\in \mathbb N}\)</span> tend vers <span class="math notranslate nohighlight">\(x\)</span>. Mais, toute suite convergente d’éléments de <span class="math notranslate nohighlight">\(F\)</span> converge dans <span class="math notranslate nohighlight">\(F\)</span>. Ceci dit <span class="math notranslate nohighlight">\(x\in F\)</span> ce qui est absurde.</p>
+<p>Donc <span class="math notranslate nohighlight">\(X\setminus F\)</span> est ouvert ou encore <span class="math notranslate nohighlight">\(F\)</span> est fermé.</p>
+</div>
+<div class="admonition-theoreme admonition">
+<p class="admonition-title">Théorème</p>
+<p>Soient <span class="math notranslate nohighlight">\((X,d)\)</span> un espace métrique complet et <span class="math notranslate nohighlight">\(A\)</span> un sous-ensemble de <span class="math notranslate nohighlight">\(X\)</span> (<span class="math notranslate nohighlight">\(F\subset X\)</span>). Alors <span class="math notranslate nohighlight">\((A,d)\)</span> est complet si, et seulement si, <span class="math notranslate nohighlight">\(F\)</span> est fermé.</p>
+</div>
+<div class="admonition-demonstration admonition">
+<p class="admonition-title">Démonstration</p>
+<ul class="simple">
+<li><p>Supposons que <span class="math notranslate nohighlight">\((A,d)\)</span> est complet (donc toute suite de Cauchy d’éléments de <span class="math notranslate nohighlight">\(A\)</span> est convergente dans <span class="math notranslate nohighlight">\(A\)</span>)</p></li>
+</ul>
+<p>Montrons que <span class="math notranslate nohighlight">\(A\)</span> est fermé. Nous allons utiliser la caractérisation séquentielle des fermés.</p>
+<p>Soit <span class="math notranslate nohighlight">\((a_n)\)</span> une suite d’éléments de <span class="math notranslate nohighlight">\(A\)</span> qui converge dans <span class="math notranslate nohighlight">\(X\)</span>. Donc <span class="math notranslate nohighlight">\((a_n)\)</span> est une suite de Cauchy dans <span class="math notranslate nohighlight">\(X\)</span>. Donc elle est aussi de Cauchy dans <span class="math notranslate nohighlight">\(A\)</span>, puisque <span class="math notranslate nohighlight">\((A,d)\)</span> est complet donc <span class="math notranslate nohighlight">\((a_n)\)</span> converge dans <span class="math notranslate nohighlight">\(A\)</span>. Et ça pour toute suite d’éléments de <span class="math notranslate nohighlight">\(A\)</span>, donc A est fermé.</p>
+<ul class="simple">
+<li><p>Supposons que <span class="math notranslate nohighlight">\(A\)</span>  est fermé ( toute suite d’éléments de <span class="math notranslate nohighlight">\(A\)</span> convergente dans <span class="math notranslate nohighlight">\(X\)</span> converge dans <span class="math notranslate nohighlight">\(A\)</span>).</p></li>
+</ul>
+<p>Montrons que <span class="math notranslate nohighlight">\((A,d)\)</span> est complet. C’est-à-dire que toute suite de Cauchy de <span class="math notranslate nohighlight">\(A\)</span> est convergente.</p>
+<p>Soit <span class="math notranslate nohighlight">\((a_n)\)</span> une suite d’éléments de <span class="math notranslate nohighlight">\(A\)</span>  qui est de Cauchy. Donc <span class="math notranslate nohighlight">\((a_n)\)</span> est aussi une suite d’éléments de <span class="math notranslate nohighlight">\(X\)</span>. Puisque <span class="math notranslate nohighlight">\((X,d)\)</span> est complet donc <span class="math notranslate nohighlight">\((a_n)\)</span> est convergente. Puisque <span class="math notranslate nohighlight">\(A\)</span> est fermé, donc <span class="math notranslate nohighlight">\((a_n)\)</span> converge dans <span class="math notranslate nohighlight">\(A\)</span>. Et ça pour toute suite de Cauchy d’éléments de <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<p>Donc <span class="math notranslate nohighlight">\((A, d)\)</span> est complet.</p>
+</div>
+<p>On peut maintenant dire que : <strong>si un espace métrique <span class="math notranslate nohighlight">\((X,d)\)</span> est totalement borné et complet alors toute suite d’éléments de <span class="math notranslate nohighlight">\((X, d)\)</span> possède une valeur d’adhérence (ou encore de toute suite d’éléments de <span class="math notranslate nohighlight">\(X\)</span> on peut extraire une sous-suite convergente)</strong>.</p>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Définition</p>
+<p>Un espace métrique est dit compact s’il est totalement borné et complet.</p>
+</div>
+<div class="admonition-exemple admonition">
+<p class="admonition-title">Exemple</p>
+<p>Les sous-ensembles compacts de <span class="math notranslate nohighlight">\(\mathbb R\)</span> sont les fermés bornés.</p>
+</div>
+<div class="admonition-theoreme admonition">
+<p class="admonition-title">Théorème</p>
+<p>Un espace métrique <span class="math notranslate nohighlight">\((X, d)\)</span> est compact si, et seulement si, toute suite d’éléments de <span class="math notranslate nohighlight">\((X, d)\)</span> possède une valeur d’adhérence (ou encore de toute suite d’éléments de <span class="math notranslate nohighlight">\(X\)</span> on peut extraire une sous-suite convergente)</p>
+</div>
+<div class="admonition-demonstration admonition">
+<p class="admonition-title">Démonstration</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\left\{
+\begin{aligned}
+&amp;\mbox{totalement borné}&amp;\\ \\
+&amp;+&amp; \\ \\
+&amp;\mbox{complet}&amp;
+\end{aligned}
+\right\} \Leftrightarrow \left\{
+\begin{aligned}
+&amp;\mbox{toute suite d'éléments de $X$ admet une sous-suite de Cauchy}&amp;\\ \\
+&amp;+&amp; \\ \\
+&amp;\mbox{toute suite de Cauchy est convergente}&amp;
+\end{aligned}
+\right\}
+\end{split}\]</div>
+</div>
+<div class="admonition-corollaire admonition">
+<p class="admonition-title">Corollaire</p>
+<p>Soit <span class="math notranslate nohighlight">\(A\)</span> un sous-ensemble d’un espace métrique <span class="math notranslate nohighlight">\(X\)</span>. Si <span class="math notranslate nohighlight">\(A\)</span> est compact, alors <span class="math notranslate nohighlight">\(A\)</span> est fermé. Si <span class="math notranslate nohighlight">\(X\)</span> est compact et <span class="math notranslate nohighlight">\(A\)</span> est fermé, alors <span class="math notranslate nohighlight">\(A\)</span> est compact.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="convergence.html" title="previous page">Convergence</a>
+    <a class='right-next' id="next-link" href="continue.html" title="next page">Continuité</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          Par Iaousse M'barek<br/>
+        
+            &copy; droits d'auteur 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
