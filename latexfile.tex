@@ -1,0 +1,1562 @@
+\documentclass[11pt,a4paper]{report}
+\newtheorem{prop}{Propriété}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{fontenc}
+\usepackage[french]{babel}
+\usepackage{fancyhdr}
+\usepackage{mathrsfs}
+%\usepackage{tkz-euclide}
+%\usepackage{pgf,tikz,pgfplots}
+\fancyfoot[L]{Email: h.yamoul@gmail.com}
+\newtheorem{theorem}{Théorème}[section]
+\newtheorem{demonstration}{Démonstration}%[section]
+\newtheorem{definition}{Définition}[section]
+\newtheorem{remarque}{Remarque}[section]
+\newtheorem{lemme}{Lemme}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{ex}{Exemple}[section]
+\newtheorem{corollaire}{Corollaire}[section]
+\newtheorem{exo}{Exercice}[section]
+\usepackage{array,multirow,makecell}
+\usepackage{hyperref}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{xcolor}
+%\usepackage{pst-node}
+\usepackage{tikz-cd}
+\usetikzlibrary{calc}
+\usepackage[all]{xy}
+\author{Hicham Yamoul}
+\title{Analyse II}
+%\pagestyle{fancy}
+%\fancyhead[R]{H.Yamoul}
+\begin{document}
+ \begin{titlepage}
+
+\begin{center}
+
+%\textup{\Large {\bf Cours}}\\[0.2in]
+
+% Title
+{\Huge  \textbf{\textmd{Cours d'Outils mathématiques}}\\[0.5in]}
+
+
+
+       \Large{\bf Génie informatique\\
+       Niveau: S4 }\\[0.5in]
+
+% Submitted by
+%\normalsize préparé par: \\
+
+
+\vspace{.1in}
+
+{\Large\textbf{Prof. Hicham Yamoul}}\\[0.2in]
+
+\vfill
+
+% Bottom of the page
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.25]{EST.png}
+
+\end{center}
+\end{figure}
+\Large{Département de Génie informatique}\\
+\normalsize
+\Large\textsc{Ecole Supérieure de Technologie\\Université Hassan II de Casablanca }\\
+
+\vspace{0.2cm}
+2020/2021
+
+\end{center}
+
+\end{titlepage}
+\newpage
+
+
+
+
+\chapter{Espaces vectoriels normés-\\Espaces métriques}
+
+
+\section{Espaces vectoriels normés}
+
+\subsection{Norme}
+
+Soit $E$ un espace vectoriel sur $\mathbb{K}=\mathbb{R}\:ou\:\mathbb{C}.$
+
+On appelle norme sur $E$ toute application $\|\|$ définie sur $E$ à valeurs dans $\mathbb{R}^{+}$ qui vérifie les trois axiomes:
+
+i) $\forall x\in E,\:\|x\|=0\Leftrightarrow x=0,$
+
+ii) $\forall \lambda\in \mathbb{K},\, \forall x\in E,\; \|\lambda x\|=|\lambda|\|x\|$
+
+iii) $\forall (x,y)\in E^2,\:\|x+y\|\leq\|x\|+\|y\|$ (inégalité triangulaire)
+
+$E$ muni de cette norme est appelé espace normé sur $\mathbb{K}.$ On le note $(E,\|\|).$
+
+\begin{exo}
+Soit $\mathbb{C}$ considéré comme un espace vectoriel sur $\mathbb{R}.$
+
+L'application $z\in \mathbb{C}\mapsto|z|$ est une norme sur $\mathbb{C}.$
+\end{exo}
+
+\subsection{Normes sur $\mathbb{R}^n$}
+
+Soit $\mathbb{R}^n:=\{x=(x_1,...,x_n);\;x_i\in\mathbb{R},\;i=1,...,n\}.$ Muni de l'addition
+
+$(x_1,...,x_n)+(y_1,...,y_n)=(x_1+y_1,...,x_n+y_n)$ et de la multiplication par un scalaire
+
+$\lambda(x_1,...,x_n)=(\lambda x_1,...,\lambda x_n),\;\lambda\in \mathbb{R}.$
+
+$\mathbb{R}^n$ est un espace vectoriel sur $\mathbb{R},$ de dimension $n.$
+
+On définit sur $\mathbb{R}^n$ les trois normes suivantes: Pour $x=(x_1,...,x_n)\in \mathbb{R}^n:$
+
+$\|x\|_1:=\sqrt{x_{1}^{2}+...+x_{1}^{2}}$ (norme euclidienne)
+
+$\|x\|_2:=|x_1|+...+|x_n|$
+
+$\|x\|_{\infty}:=\sup_{1\leq i\leq n}|x_i|$
+
+\begin{remarque}
+Il existe une infinité de normes sur $\mathbb{R}^n,$ par exemple l'application $x\mapsto\lambda_1 \|x\|_1+\lambda_2\|x\|_2+\lambda_3\|x\|_{\infty}$ où $(\lambda_1,\lambda_2,\lambda_{\infty})\in \mathbb{R}^3$ est une norme sur $\mathbb{R}^n.$
+
+Comparaison des normes $\| \|_1,\| \|_2\: et\:\| \|_{\infty}$
+
+$\forall x\in \mathbb{R}^n,$ $\|x\|_{\infty}\leq \|x\|_1\leq\sqrt{n}\|x\|_{\infty}$
+
+$\|x\|_{\infty}\leq \|x\|_2\leq n\|x\|_{\infty}$
+
+$\frac{1}{n}\|x\|_2\leq\|x\|_1\leq\sqrt{n}\|x\|_2$
+
+Les normes $\| \|_1,\| \|_2\: et\:\| \|_{\infty}$ sont dites équivalentes.
+\end{remarque}
+
+
+\section{Espaces métriques}
+\begin{definition}
+Soit $E$ un ensemble non vide. On appelle distance sur $E,$ toute application $d$ définie sur $E\times E$ à valeurs dans $\mathbb{R}^+$ qui vérifie les trois axiomes:
+
+i) $\forall(x,y)\in E^2,\;d(x,y)=0\Leftrightarrow x=y$ (séparation).
+
+ii) $\forall(x,y)\in E^2,\; d(x,y)=d(y,x)$  (symétrie).
+
+iii) $\forall(x,y,z)\in E^3,\;d(x,z)\leq d(x,y)+d(y,z) $ (inégalité triangulaire)
+
+$d$ est appelée distance des points $x$ et $y.$
+
+On appelle espace métrique tout couple $(E,d)$ où $E$ est un ensemble non vide et $d$ une distance dans $E.$
+\end{definition}
+
+\begin{exo}
+$(\mathbb{R},d)$ où $d(x,y)=|x-y|$ est un espace métrique.
+\end{exo}
+\begin{proposition}
+
+$\bullet$ $\forall (x,y,z)\in E^3,\,|d(x,y)-d(y,z)|\leq d(x,z),$
+
+$\bullet$ $\forall(x_1,...,x_k)\in E^k,\:d(x_1,x_k)\leq d(x_1,x_2)+...d(x_{k-1},x_k$
+\end{proposition}
+
+\subsection{Distance associée à une norme}
+
+
+
+
+\begin{proposition}
+
+Soit $E$ un espace vectoriel sur $\mathbb{K}.$ Si $(E,\|\|)$ est un espace normé, alors $E$ est un espace métrique muni de la distance, $d(x,y)=\|x-y\|;$ appelée distance associée à la norme $\|\|.$ On a alors,
+
+$\forall x\in E,\:d(o,x)=\|x\|$
+
+$\forall\lambda\in \mathbb{K},\:\forall(x,y)\in E^2,\;d(\lambda x,\lambda y)=|\lambda|d(x,y)$
+
+$\forall(x,y,z)\in E^3,\;d(x+a,y+a)=d(x,y).$
+\end{proposition}
+
+\begin{remarque}
+Attention: Un espace métrique n'est pas nécessairement normé. Tous les résultats établis pour les espaces métriques s'appliquent aux espaces vectoriels normés.
+\end{remarque}
+
+\subsection{Distances usuelles sur $\mathbb{R}^n$}
+
+Soient $x=(x_1,...,x_n)\in \mathbb{R}^n$ et $y=(y_1,...,y_n)\in \mathbb{R}^n.$
+
+La distance euculidienne est définie sur $\mathbb{R}^n$ par:
+
+$d_1:=\|x-y\|_1=\sqrt{(x_1-y_1)^2+...+(x_n-y_n)^2}$
+
+Pour $n=3,$ cette distance coïncide avec la distance habituelle dans l'espace physique à trois dimensions. D'autres distances sur $\mathbb{R}^n$ sont:
+
+$d_2(x,y)=\|x-y\|_2=\sum_{i=1}^{n}|x_i-y_i|$
+
+$d_{\infty}=\|x-y\|_{\infty}=\sup_{1\leq i\leq n}|x_i-y_i|$
+
+\subsection{Distances équivalentes}
+Deux distance $d$ et $d'$ sont dites équivalentes sur $\mathbb{R}^n$ si, et seulement si, il existe
+
+$(\alpha,\beta)\in \mathbb{R}_{+}^{*}\times\mathbb{R}_{+}^{*}$ tel que: $\alpha d(x,y)\leq d'(x,y)\leq\beta d(x,y),\quad\forall(x,y)\in \mathbb{R}^n\times \mathbb{R}^n.$
+
+\begin{proposition}
+Les distances $d_1, d_2\:et\:d_{\infty}$ sur $\mathbb{R}^n$ sont équivalentes: $d_{\infty}\leq d_1\leq d_2\leq nd_{\infty}$
+\end{proposition}
+
+
+\section{Ouverts-Fermés-Voisinages}
+\subsection{Boule ouverte-Boule fermée-Sphère}
+\begin{definition}
+Soit $a$ un point d'un espace métrique $(E,d).$
+
+Une boule ouverte (resp. fermée) de centre $a$ et de rayon $r\in \mathbb{R}_{+}$ est le sous-ensemble de $E$ défini par:
+
+$B(a,r):=\{x\in E;\:d(a,x)< r\}$ (resp. $B'(a,r):=\{x\in E;\:d(a,x)\leq r\}$)
+
+On appelle sphère de centre $a$ et de rayon $r\in \mathbb{R}_{+},$ le sous-ensemble: $S(a,r):=\{x\in E;\:d(a,x)=r\}$
+
+\end{definition}
+
+\begin{ex}
+$\bullet$ Soit $\mathbb{R}$ muni de sa distance naturelle $d(x,y)=|x-y|,$ alors $B(a,r)=]a-r,a+r[,\;B'(a,r)=[a-r,a+r]\;et\:S(a,r)=\{a-r,a+r\}$
+
+$\bullet$ Soit $E=\mathbb{R}^2$
+
+$B_1(0,1):=\{x\in \mathbb{R}^2;\:d_1(0,x)< 1\}$ représente le disque de centre $0$ et de rayon $1$ qu'on note souvent $D(0,1).$
+
+$B_2(0,1):=\{x\in \mathbb{R}^2;\:d_2(0,x)< 1\}$ représente l'intérieur d'un carrée de sommets $(0,1),(0,-1),(-1,0),(1,0).$
+
+$B_{\infty}(0,1)=\{x\in \mathbb{R}^2;\:d_{\infty}(0,x)< 1\}$ reprérente l'intérieur d'un carrée de sommets $(1,1),(-1,1),(-1,-1),(1,-1)$
+\end{ex}
+
+
+\begin{figure}%[H]
+\begin{center}
+\includegraphics[scale=0.5]{Norm.png}
+Les boules $B_{\infty}(O,\frac{1}{2})=\frac{1}{2}B_{\infty}(O,1)\subset B_1 (O,1)\subset B_2 (O,1)\subset B_{\infty}(O,1)$
+\end{center}
+\end{figure}
+
+\subsection{Ouverts et fermés d'un espace métrique}
+Un sous-ensemble $U$ d'un espace métrique $(E,d)$ est dit ouvert si, et seulement si, pour tout $x\in U$ il existe une boule de centre $x$ et de rayon $r$ non nul contenu dans $U:$
+
+$\forall x\in U,\:\exists r>0;\:B(x,r)\subset U.$
+
+On convient que l'ensemble vide est un ouvert.
+
+Un sous-ensemble $F$ de $(E,d)$ est dit fermé si, et seulement si, le complémentaire de $F$ dans $E$ est ouvert:
+
+Soit $a\in E$ tel que $a\notin F,\:\exists r>0:B(a,r)\cap F=\varnothing $
+
+
+
+
+
+\begin{theorem}
+
+Une boule ouverte (resp. fermée) est un ouvert (resp. fermé) de $(E,d).$
+
+Conséquence: l'espace $\mathbb{R}^n$ est à la fois ouvert et fermé de $\mathbb{R}^n.$
+
+\end{theorem}
+
+
+
+\subsection{Propriétés des ouverts et des fermés}
+
+La réunion d'une famille quelconque d'ouverts est un ouvert.
+
+L'intersection d'une famille finie d'ouverts est un ouvert.
+
+Corrélativement, l'intersection d'une famille quelconque de fermés est un fermé et la réunion d'une famille finie de fermés est un fermé.
+
+\begin{exo}
+
+$\bullet$ Soit $(\mathbb{R},d)$ où $d(x,y)=|x-y|$
+
+On pose $B_n=]-\frac{1}{n},\frac{1}{n}[,\:(n\in \mathbb{N}^{*})$
+
+$(B_n)_{n\in \mathbb{N}^{*}}$ est une famille d'ouverts de $(\mathbb{R},d)$
+
+$\bigcap_{n\geq1}B_n=\bigcap_{n\geq1}]-\frac{1}{n},\frac{1}{n}[=\{0\}$
+
+Cette intersection non finie d'ouverts n'est pas un ouvert dans $(\mathbb{R},d).$
+
+On pose $F_n=[\frac{1}{n},1],\:(n\in \mathbb{N}^{*})$
+
+$(F_n)_{n\in \mathbb{N}^{*}})$ est une famille de fermés de $(\mathbb{R},d).$
+
+Alors $\bigcup_{n\geq1}F_n=\bigcup_{n\geq1}[\frac{1}{n},0]=]0,1]$ n'est pas un fermé. Cette réunion non finie de fermés n'est pas un fermé de $(\mathbb{R},d).$
+
+\end{exo}
+
+
+\subsubsection{Pavé ouvert (resp. fermé) de $\mathbb{R}^n$}
+
+Le produit cartésien de deux ouverts (resp. fermés) de $\mathbb{R}^n$ et $\mathbb{R}^m$ respectivement, est un ouvert (resp. fermé) de $\mathbb{R}^{n+m}.$
+
+Application: Soit $(]a_i,b_i[)_{1\leq i\leq n}$ une famille de $n$ intervalles ouverts de $\mathbb{R}.$ On appelle pavé ouvert de $\mathbb{R}^n$ l'ensemble:
+
+$P:=\{x=(x_1,...,x_n)\in \mathbb{R}^n;\:a_i<x_i<b_i,\:1\leq i\leq n\}=\prod_{i=1}^{n}]a_i,b_i[$ , $P$ est un ouvert de $(\mathbb{R}^n,d_{\infty}).$
+
+L'ensemble $\overline{P}=\{x=(x_1,...,x_n)\in \mathbb{R}^n;\:a_i\leq x_i\leq b_i,\:1\leq i\leq n\}=\prod_{i=1}^{n}[a_i,b_i]$ est dit un pavé fermé de $\mathbb{R}^n,$ c'est un fermé de $(\mathbb{R}^n,d_{\infty}).$
+
+Les boules ouvertes (resp. fermées) relatives à $d_{\infty}$ sont des pavés ouverts (resp. fermés).
+
+\subsection{Voisinages}
+
+Soit $(E,d)$ un espace métrique.
+
+On appelle voisinage de $x\in E,$ toute partie $V$ un ouvert $U$ qui contient $x.$
+
+Soit $A$ une partie de $(E,d),$ $A$ est un ouvert de $E$ si, et seulement si, $A$ est voisinage de chacun de ses points.
+
+\begin{exo}
+
+$\bullet$ Une boule ouverte $B(x,r)$ est un voisinage de $x,$ de même qu'une boule fermée $B'(x,r).$
+
+$\bullet$ $V=[-r,r[,\:(r>0)$ est un voisinage de 0 qui n'est ni ouvert, ni fermé dans $\mathbb{R}.$
+
+\end{exo}
+
+
+
+\section{Espaces métriques complets}
+\subsection{Suites convergentes}
+\begin{definition}
+Soit $(x_n)_{n\in \mathbb{N}}$ une suite de points d'un espace métrique $(E,d)$
+
+La suite $(x_n)$ est dite convergente vers sa limite $l\in E$ si, et seulement si,
+
+$\forall\varepsilon >0,\:\exists N(\varepsilon)\in \mathbb{N},\:\forall n\geq N(\varepsilon)\Rightarrow d(x_n,l)<\varepsilon(ou\:x_n\in B(l,\varepsilon)).$
+
+$\bullet$ La limite d'une suite, si elle existe, est unique
+
+\end{definition}
+
+
+
+\subsection{Suite de Cauchy}
+
+Soit $(x_n)_{n\in \mathbb{N}}$ une suite de points de $(E,d).$
+
+La suite $(x_n)$ est dite de Cauchy si, et seulement si,
+$\forall \varepsilon>0,\:\exists N(\varepsilon):\:\forall(p,q)\in \mathbb{N}^2:\;p>N\Rightarrow d(x_p,x_q)<\varepsilon.$
+
+\begin{proposition}
+Toute suite convergente d'un $(E,d)$ est de Cauchy.
+\end{proposition}
+
+
+
+
+
+\subsection{Espace métrique complet}
+\begin{definition}
+Un espace métrique $(E,d)$ est dit complet si, et seulement si, toute suite de Cauchy de $E$ est convergente.
+
+Exemple: $\mathbb{R}$ est complet (muni de la distance $d(x,y)=|x-y|$).
+\end{definition}
+
+\begin{definition}(Suite dans $\mathbb{R}^n$)
+Soit $(x_p)_{p\in \mathbb{N}}$ une suite de $\mathbb{R}^n,\:x_p=(x_{p}^{1},...,x_{p}^{n})\in \mathbb{R}^n,$ $(x_{p}^{i})_{p\in \mathbb{N}},1\leq i\leq n,$ sont des suites réelles.
+\end{definition}
+
+\begin{theorem}
+
+La suite $(x_p)_{p\in \mathbb{N}}$ de $\mathbb{R}^n$ est convergente vers $(l_1,...,l_n)\in \mathbb{R}^n$ si, et seulement si, pour tout $i\in \{1,...,n\},$ la suite réelle $(x_{p}^{i})_{p\in \mathbb{N}}$ converge vers $l.$
+
+\end{theorem}
+
+\begin{theorem}
+$(x_p)_{p\in \mathbb{N}}$ est convergente dans $\mathbb{R}^n$ si, et seulement si, $(x_p)_{p\in \mathbb{N}}$ est de Cauchy dans $\mathbb{R}^n$ si, et seulement si, $(x_{p}^{i})_{p\in \mathbb{N}},i\in \{1,...,n\},$ est de Cauchy dans $\mathbb{R}.$
+
+Conséquence: $\mathbb{R}^n$ est un espace métrique complet.
+\end{theorem}
+
+\section{Fonctions continues}
+
+\subsection{Fonctions continues dans un espace métrique}
+
+Soient $(E,d)$ et $(E',d')$ deux espaces métriques et $f$ une application de $E$ dans $E'$. $f$ est continue en $a\in E$ si et seulement si,
+$\forall\varepsilon>0,\:\exists\eta>0;\:\forall x\in E:\:d(x,a)<\eta\Rightarrow d'(f(x),f(a))<\varepsilon.$
+
+Cette définition est équivalente à chacune des propositions:
+
+i) Pour tout voisinage $V'$ de $f(a),$ il existe un voisinage $V$ de $a$ tel que $f(V)\subset V'.$
+
+ii) Pour toute boule $B_d'$ de centre $f(a)$ et de rayon $\varepsilon,$ il existe une boule $B_d$ de centre $a$ et de rayon $\eta$ telle que $f(B_d)\subset B_d'.$
+
+$\bullet$ $f$ est continue sur $E$ si, et seulement si, $f$ est continue en tout point de $E.$
+
+\subsection{Fonctions continues dans un espace normé}
+
+Soient $(E,\|\|)$ et $(E',\|\|')$ deux espaces normés et $f$ une application de $E$ dans $E'.$
+
+$\bullet$ $f$ est continue en $a\in E$ si, et seulement si,
+
+$\forall\varepsilon>0,\:\exists\eta>0;\:\forall x\in E:\|x-a\|<\eta\Rightarrow \|f(x)-f(a)\|'<\varepsilon.$
+
+\section{Exercices}
+
+
+\begin{exo}
+On note par $\mathcal{C}([0,1])$ l'ensemble des fonctions à valeurs réelles continues sur l'intervalle $[0,1].$ Montrer que pour tout $f\in \mathcal{C}([0,1]),$ $\|f\|:=\sup_{x\in [0,1]}|f(x)|$ définit une norme sur $\mathcal{C}([0,1]).$
+\end{exo}
+
+\begin{exo}
+
+Soient $\{e_1,...,e_n\}$ une base de $\mathbb{R}^n$ et $u\in \mathcal{L}_{\mathbb{C}}(\mathbb{R}^n)$
+
+Pour $x=\sum_{i=1}^{n}x_i e_i\in \mathbb{R}^n,$ on note $\|x\|_{\infty}=\sup_{1\leq i\leq n}|x_i|.$
+
+Soit $E=\{x\in \mathbb{R}^n;\:\|x\|_{\infty}=1\}$
+
+L'endomorphisme $u$ défini par $u(e_j)=\sum_{i=1}^{n}a_{ij}e_i$ où $j\in \{1,...,n\}$ et $a_{ij}\in \mathbb{C}.$
+
+On pose $N(u)=\sup_{x\in E}\|u(x)\|_{\infty}$
+
+Montrer que $N(u)=\sup_{1\leq i\leq n}\sum_{j=1}^{n}|a_{ij}|.$ En déduire que $N$ est une norme.
+\end{exo}
+
+\begin{exo}
+Soient $f$ et $g$ deux fonctions réelles définies sur $\mathbb{R}^{*}\times\mathbb{R}^{*}$ par $f(x,y)=|\frac{1}{x^2}-\frac{1}{y^2}|$ et $g(x,y)=|\frac{1}{x^3}-\frac{1}{y^3}|$
+
+$f$ et $g$ sont-elles des distances sur $\mathbb{R}^{*}\times\mathbb{R}^{*}$?
+\end{exo}
+
+\begin{exo}
+Soit $f$ une application d'un espace métrique complet $(E,d)$ dans lui même telle que:
+
+$(*)\;\forall(x,y)\in E^2,\;d(f(x),f(y))\leq kd(x,y)$ où $k\in [0,1[$
+
+Montrer qu'il existe un point unique $x_0$ de $E$ tel que $f(x_0)=x_0$ ($x_0$ est dit point fixe de $E.$)
+\end{exo}
+\chapter{Fonctions de plusieurs variables}
+\section{Fonctions numériques de plusieurs variables}
+\subsection{Définitions}
+\begin{definition}
+$\bullet$ Une fonction numérique de $n$ variables réelles est une application $f$ définie dans un sous-ensemble non vide $\Omega$ de $\mathbb{R}^n$ à valeurs dans un sous-ensemble non vide $\Omega$ de $\mathbb{R}^n$ à valeurs dans $\mathbb{R}.$
+
+\begin{align*}
+f:\Omega\subset \mathbb{R}^n &\rightarrow \mathbb{R}\\
+x=(x_1,...,x_n)&\mapsto z=f(x_1,...,x_n)
+\end{align*}
+
+$\bullet$ L'ensemble de définition peut être une surface $(n=2),$ un volume $n=3,$ ou dans le cas général un espace à $n$ dimensions.
+
+$\bullet$ Lorsque $n=2,$ le graphe de la fonction $z=f(x,y)$ est une surface dans l'espace dont la projection sur le plan $xoy$ est l'ensemble de définition de $f.$
+\end{definition}
+\begin{ex}
+La fonction définie par $z=f(x,y)=\frac{b}{a}\sqrt{a^2-x^2-y^2}$ où $0<a<b$ est définie à l'intérieur et sur le bord du disque de centre $O$ et de rayon $a.$
+
+Le graphe de $f$ est l'ellipsoïde de révolution:\\
+ $\{(x,y,z)\in \mathbb{R}^3\mid \frac{z^2}{b^2}+\frac{x^2+y^2}{a^2}=1\}$
+\end{ex}
+\subsection{Limite et continuité en un point}
+
+$\mathbb{R}^n$ étant un espace vectoriel normé, on le munit de l'une quelconque de ses trois normes équivalentes définies au chapitre 1.
+
+Soit $f$ une fonction de $n$ variables définies dans un voisinage $V_{x_0}$ d'un point $x_0$ de $\mathbb{R}^n$ (sauf peut être en $x_0$).
+
+\begin{definition}
+On dit que $\ell$ est la limite de $f$ lorsque $x$ tend vers $x_0$ (qu'on note $\ell= \lim\limits_{\substack{x \rightarrow x_0}} f(x)$) si, et seulement si,
+$$\forall \varepsilon>0,\quad\exists \eta>0,\quad \forall x\in V_{x_0},\|x-x_0\|<\eta\Rightarrow |f(x)-\ell|<\varepsilon$$
+
+ou bien
+
+$$\forall \varepsilon>0,\quad\exists \eta>0,\quad \forall x\in B(x_0,\eta)\Rightarrow f(x)\in ]\ell-\varepsilon,\ell+\varepsilon[$$
+\end{definition}
+
+\begin{proposition}
+La limite, quand elle existe, est unique.
+\end{proposition}
+\begin{definition}
+$f$ est continue en $x_0$ si, et seulement si,\\ $\lim\limits_{\substack{x \rightarrow x_0}} f(x)=f(x_0)$
+\end{definition}
+
+On définit $n$ fonctions $f^1,...,f^n$ par:
+
+\begin{align*}
+f:\mathbb{R} &\rightarrow \mathbb{R}\qquad 1\leq i\leq n\\
+x&\mapsto f^i(x)=f(x_{0}^{1},...,x_{0}^{i-1},x,x_{0}^{i+1},...,x_{0}^{n})
+\end{align*}
+
+$\bullet$ Si $f$ est continue en $x_0,$ alors les fonctions $f^1,...,f^n$ sont continues respectivement en $x_{0}^{1},x_{0}^{2},...,x_{0}^{n}$
+
+La réciproque est fausse en général comme le montre l'exemple suivant:
+
+$\bullet$ Soit $f$ une fonction numérique définie dans $\mathbb{R}^2$ par:
+$$\begin{cases}
+f(x,y)=\frac{x^2 y}{x^4+y^2}\quad\mbox{si}\;(x,y)\neq (0,0); \\
+f(0,0)=0
+\end{cases}$$
+
+On a alors $f(x,0)=0,\;\forall x\in \mathbb{R},\, f(0,y)=0\;\forall y\in \mathbb{R}.$
+
+Les fonctions $x\mapsto f(x,0)$ et $y\mapsto f(0,y)$ sont continue respectivement en $x=0$ et $y=0$ car les deux sont constantes.
+
+Pour $x\in \mathbb{R}^{*},\:f(x,x^2)=\frac{1}{2}.$ On a alors la proposition:
+
+$\exists \varepsilon=\frac{1}{2},\:\forall \eta >0,\;\exists (x,x^2)\in B(0,\eta):\;f(x,x^2)-f(0,0)=\frac{1}{2}$
+
+Donc $f$ n'est pas continue en $(0,0).$
+
+Cependant la restriction de $f$ à toute droite $y=\mu x\:(\lambda\in \mathbb{R}^{*}$ est continue en $(0,0)$ puisque $f(x,\lambda x)=\frac{\lambda x}{\lambda^2+x^2}$ tend vers $0$ quand $x$ tend vers $0.$
+
+\begin{definition}(Continuité sur un ensemble)
+
+Soit $f$ une fonction numérique définie dans $\Omega\subset\mathbb{R}^n.$
+
+$f$ est continue sur $\Omega$ si, et seulement si, $f$ est continue en point $x_0$ de $\Omega.$ C'est à dire:
+
+$\forall \varepsilon>0,\:\exists \eta>0,\:\forall x\in B(x_0,\eta)\cap \Omega\Rightarrow f(x)\in ]\ell-\varepsilon,\ell+\varepsilon[$
+\end{definition}
+\begin{proposition}
+Si $f$ et $g$ sont deux fonctions numériques continues sur $\Omega\subset\mathbb{R}^n,$ alors $f+g,\:\alpha.f\,(\alpha\in \mathbb{R}),$ et $f.g$ sont continues sur $\Omega.$
+\end{proposition}
+
+\subsection{Fonctions différentiables}
+
+Soit $f$ une fonction numérique définie dans un ouvert $\Omega\subset\mathbb{R}^n.$
+
+On dit que $f$ est différentiable au point $x\in \Omega$ si, et seulement si, il existe une application linéaire (notée $df_x$) de $\mathbb{R}^n$ dans $\mathbb{R}$ telle que:
+
+$$f(x+h)-f(x)=df_x(h)+\varepsilon_x (h)\|h\|$$ où $\varepsilon_x:\mathbb{R}^n\rightarrow \mathbb{R}$ avec $\lim\limits_{\substack{h \rightarrow 0}}\varepsilon_x (h)=0$ ou bien $\lim\limits_{\substack{h \rightarrow 0}} \frac{f(x+h)-f(x)-df_x}{\|h\|}=0$
+
+$df_x$ si elle existe, est unique, on l'appelle différentielle de $f$ en $x.$
+
+$f$ est dite différentiable dans $\Omega$ si, et seulement si, elle l'est en tout point de $\Omega.$
+\begin{remarque}
+On peut considérer l'égalité:
+$$f(x_0+h)=f(x_0)+df_{x_0}(h)+\varepsilon_{x_0}(h)\|h\|$$
+
+en disant que la valeur approchée de $f$ au voisinage de $x_0$ c'est à dire $f(x_0+h)$ est représentée par $f(x_0)+df_{x_0}(h).$
+\end{remarque}
+\begin{proposition}
+
+Si $f$ est différentiable en un point $x_0$ de $\Omega,$ alors $f$ est continue en $x_0.$
+\end{proposition}
+\begin{ex}
+
+Soit $f$ une application linéaire de $\mathbb{R}^n$ dans $\mathbb{R}.$ On a:
+
+$f(x+h)-f(x)=f(h)$
+
+$f$ est donc différentiable dans $\mathbb{R}^n$ et $df_x=f.$
+\end{ex}
+\subsection{Dérivées partielles}
+Soit $f$ une fonction numérique définie dans un ouvert $\Omega$ de $\mathbb{R}^n.$
+
+On appelle dérivée partielle de $f(x_1,...,x_n)$ par rapport à $x_i$ qu'on note $\frac{\partial f}{\partial x_i}$ (ou $df_x(e_i)$) lorsque $(e_1,...,e_n)$ est la base de $\mathbb{R}^n$ est la base canonique de $\mathbb{R}^n,$ la dérivée par rapport à $x_i$ de la fonction $x_i\mapsto f(x_1,...,x_i,...,x_n$
+
+$$\frac{\partial f}{\partial x_i}(x_1,...,x_n)=\lim\limits_{\substack{h \rightarrow 0}}\frac{f(x_1,...,x_i+h,x_{i+1},...,x_n)-f(x_1,...,x_n)}{h}$$
+\begin{proposition}
+Si $f$ est différentiable au point $x=(x_1,...,x_n),$ alors $f$ admet des dérivées partielles relatives aux différentes variables $x_1,...,x_n.$
+\end{proposition}
+\textbf{Conséquence.}
+
+Soient $(e_1,...,e_n)$ la base canonique de $\mathbb{R}^n$ et $h=\sum_{i=1}^{n}h_i e_i\in \mathbb{R}^n$ alors $df_x(h)=\sum_{i=1}^{n}h_i df_x (e_i)=\sum_{i=1}^{n}\frac{\partial f}{\partial x_i}(x).h_i$
+
+Si on définie les applications projections sur la $i$-ème coordonnée par:
+
+\begin{align*}
+dx_i:\mathbb{R}^n &\rightarrow \mathbb{R}\\
+h&\mapsto d x_i (h)=h_i
+\end{align*}
+
+Alors $df_x=\frac{\partial f}{\partial x_i}(x) dx_i$
+
+\begin{theorem}
+
+Si $f$ admet des dérivées partielles continues en un point $x_0$ de $\Omega$ alors $f$ est différentable en $x_0.$
+
+La réciproque est fausse en général.
+\end{theorem}
+
+\begin{definition}
+On dit que $f$ est continûment différentiable (ou de classe $\mathcal{C}^1$) dans $\Omega$ lorsqu'elle admet en chaque point de $\Omega$ des dérivées partielles continues.
+\end{definition}
+
+\begin{ex}
+
+Soit $f$ une fonction numérique définie sur $\mathbb{R}^2$ par $f(x,y)=e^x \cos y$
+
+On a $\frac{\partial f}{\partial x}(x,y)=e^x \cos y$ et $\frac{\partial f}{\partial y}(x,y)=-e^x \sin y$
+
+Les fonctions $x\mapsto \frac{\partial f}{\partial x}(x,y)$ et $y\mapsto \frac{\partial f}{\partial y}(x,y)$ sont continues dans $\mathbb{R}^2,$ donc, $f$ est continûment différentiable sur $\mathbb{R}^2.$
+\end{ex}
+\subsection{Différentielle d'une fonction composée}
+
+Considérons la fonction $Z=f(x,y,z)$ où $x=\varphi(u,v),\,y=\psi(u,v),$ et $z=\zeta(u,v),$ $f,\,\varphi,\,\psi,\,$ et $\zeta$ sont de classe $\mathcal{C}^1.$\\
+
+On a $dZ=\frac{\partial f}{\partial x} dx+\frac{\partial f}{\partial y} dy+\frac{\partial f}{\partial z} dz$
+
+Or, $dx=\frac{\partial x}{\partial u}du+\frac{\partial x}{\partial v}dv,\,dy=\frac{\partial y}{\partial u}du+\frac{\partial y}{\partial v}dv,\,dz=\frac{\partial z}{\partial u}du+\frac{\partial z}{\partial v}dv.$ Et
+
+\begin{eqnarray*}
+dZ
+&=& [\frac{\partial f}{\partial x}\frac{\partial x}{\partial u}+\frac{\partial f}{\partial y}\frac{\partial y}{\partial u}+\frac{\partial f}{\partial z}\frac{\partial z}{\partial u}]du+[\frac{\partial f}{\partial x}\frac{\partial x}{\partial v}+\frac{\partial f}{\partial y}\frac{\partial y}{\partial v}+\frac{\partial f}{\partial z}\frac{\partial z}{\partial v}]dv\\
+&=&\frac{\partial f}{\partial u}du+\frac{\partial f}{\partial v}dv
+\end{eqnarray*}
+
+Donc, $\frac{\partial f}{\partial u}=\frac{\partial f}{\partial x}\frac{\partial x}{\partial u}+\frac{\partial f}{\partial y}\frac{\partial y}{\partial u}+\frac{\partial f}{\partial z}\frac{\partial z}{\partial u}$ et
+$\frac{\partial f}{\partial v}=\frac{\partial f}{\partial x}\frac{\partial x}{\partial v}+\frac{\partial f}{\partial y}\frac{\partial y}{\partial v}+\frac{\partial f}{\partial z}\frac{\partial z}{\partial v}$\\
+
+
+Dans le cas particulier où $x=x(t),\,y=y(t)$ et $z=z(t)$\\
+$Z(t)=f(x(t),y(t),z(t))$\\
+
+Alors $Z'(t)=\frac{dZ}{dt}=\frac{\partial Z}{\partial x}.\frac{dx}{dt}+\frac{\partial Z}{\partial y}.\frac{dy}{dt}+\frac{\partial Z}{\partial z}.\frac{dz}{dt}$
+
+\subsection{Formule des accroissements finis}
+\begin{theorem}
+Soit $f$ une fonction numérique différentiable dans un ouvert $\Omega$ de $\mathbb{R}^n.$
+
+Soient $a$ et $a+h$ deux points de $\Omega$ tel que le segment $[a,a+h]$ soit inclus dans $\Omega,$ alors il existe $\theta\in ]0,1[$ tel que:
+$$f(a+h)-f(a)=\sum_{i=1}^{n}h_i \frac{\partial f}{\partial x_i}(a+\theta h)\quad\mbox{où}\;h=(h_1,...,h_n) $$
+\end{theorem}
+\begin{ex}
+\end{ex}
+\subsection{Dérivées partielles d'ordre $p\geq 2$}
+
+Soit $f$ une fonction numérique définie dans un ouvert $\Omega$ de $\mathbb{R}^n$ et admettant des dérivées partielles $\frac{\partial f}{\partial x_i}.$ Si $\frac{\partial f}{\partial x_i}$ admet des dérivées partielles alors $\frac{\partial }{\partial x_j}(\frac{\partial f}{\partial x_i})=\frac{\partial^2 f}{\partial x_j \partial x_i}=(f''_{x_j x_i})$ sont des dérivées partielles secondes.
+
+Par récurrence, on définit la dérivée partielle d'ordre $p,$ si elle existe, relative aux variables $x_{i_1},...,x_{i_p},$ par:
+$$f_{x_{i_1}...x_{i_p}}^{(p)}=\frac{\partial }{\partial x_{i_p}}(\frac{\partial^{p-1}f}{\partial x_{i_{p-1}}...\partial x_{i_1}})$$
+
+$f$ est dite de classe $\mathscr{C}^p$ dans $\Omega$ si, et seulement si, $f$ admet sur $\Omega$ des dérivées partielles d'ordre $p,$ continues dans $\Omega.$
+\begin{theorem} (Théorème de Schwarz)
+
+Soit $f$ une fonction numérique définie dans un ouvert $\Omega$ de $\mathbb{R}^2.$
+
+Si $f$ admet des dérivées partielles secondes $\frac{\partial^2 f}{\partial x_i \partial x_j}(a)=\frac{\partial^2 f}{\partial x_j \partial x_i}(a)$
+\end{theorem}
+
+\begin{ex}
+\end{ex}
+\subsection{Laplacien et fonction harmonique}
+
+Soit $f$ une fonction numérique définie dans un ouvert $\Omega$ de $\mathbb{R}^n$ et admettant des dérivées partielles jusqu'à l'ordre 2.
+
+On appelle Laplacien de $f,$ la fonction $\Delta f(x)$ définie par:
+$$\Delta f(x)=\sum_{i=1}^{n}\frac{\partial^2 f}{\partial x_{i}^{2}}(x)$$
+
+On dit que $f$ est harmonique dans $\Omega$ si, et seulement si, son Laplacien est identiquement nul dans $\Omega.$
+\subsection{Formule de Taylor}
+
+Soit $\alpha=(\alpha_1,...,\alpha_n)\in \mathbb{N}^n$
+
+On pose $D_{i}^{\alpha_i}f=\frac{\partial^{\alpha_i}f}{\partial x_{i}^{\alpha_i}}\,(1\leq i\leq n).\quad D^{\alpha}=D_{1}^{\alpha_1}D_{2}^{\alpha_2}...D_{n}^{\alpha_n}$
+
+$$D^{\alpha}f=\frac{\partial^{|\alpha|}f}{\partial x_{1}^{\alpha_1}x_1...\partial x_{n}^{\alpha_n}}\quad\mbox{où}\quad |\alpha|=\alpha_1+\alpha_2+...+\alpha_n$$
+
+Si $h=(h_1,...,h_n)\in \mathbb{R}^n,\,h^{\alpha}=h_{1}^{\alpha_1}...h_{n}^{\alpha_n}$
+
+L'opérateur $(\sum\limits_{i=1}^{n}h_i\frac{\partial}{\partial x_i})^{(p)}$ produit $p$ fois de $\sum\limits_{i=1}^{n}h_i\frac{\partial}{\partial x_i}$ se développe de la façon suivante:
+
+$(\sum\limits_{i=1}^{n}h_i\frac{\partial}{\partial x_i})^{(p)}=\sum\limits_{|\alpha|=p}\frac{p!}{\alpha!}h^{\alpha}D^{\alpha}=\sum\limits_{\alpha_1+...+\alpha_n=p}p!\frac{h_{1}^{\alpha_1}...h_{n}^{\alpha_n}}{\alpha_1 !...\alpha_n !}\frac{\partial^p}{\partial x_{1}^{\alpha_1}x_1...\partial x_{n}^{\alpha_n}}$
+
+avec $\alpha!=\alpha_{1}!...\alpha_{n}!$
+
+Pour $p=n=2,$ on obtient:
+
+$$(h_1\frac{\partial}{\partial x_1}+h_2\frac{\partial}{\partial x_2})^{(2)}=h_{1}^{2}\frac{\partial^2}{\partial x_{1}^{2}}+h_{2}^{2}\frac{\partial^2}{\partial x_{2}^{2}}$$
+
+Si $n=2$ et $p$ quelconque
+
+$$(h_1\frac{\partial}{\partial x_1}+h_2\frac{\partial}{\partial x_2})^{(p)}=\sum\limits_{k=0}^{p}\frac{p!}{k!(p-k)!}h_{1}^{k}h_{2}^{p-k}$$
+\begin{theorem}
+Soit $f$ une fonction numérique de classe $\mathscr{C}^p$ dans un ouvert $\Omega$ de $\mathbb{R}^n,$ soient $a$ et $a+h$ deux points de $\Omega$ tel que $[a,a+h]\subset\Omega$, alors il existe $\theta\in ]0,1[$ tel que:
+
+$f(a+h)=f(a)+(\sum\limits_{i=1}^{n}h_i\frac{\partial}{\partial x_i})f(a)+\frac{1}{2!}(\sum\limits_{i=1}^{n}h_i\frac{\partial}{\partial x_i})^{(2)}f(a)+...+\frac{1}{(p-1)!}(\sum\limits_{i=1}^{n}h_i\frac{\partial}{\partial x_i})^{p-1}f(a)+\frac{1}{p!}(\sum\limits_{i=1}^{n}h_i\frac{\partial}{\partial x_i})^{(p)}f(a+\theta h)$
+
+C'est la formule de Taylor à l'ordre $p.$
+
+La formule de Mac-Laurin est obtenu quand $a=(0,...,0).$
+\end{theorem}
+Pour $p=2,$ on obtient:
+
+$f(a+h)=f(a)+\sum\limits_{i=1}^{n}h_i\frac{\partial}{\partial x_i}f(a)+\frac{1}{2}\sum\limits_{i=1}^{n}\sum\limits_{j=1}^{n}h_i h_j\frac{\partial^2 f(a+\theta h)}{\partial x_i \partial x_j}$
+
+Pour $n=p=2,$ la formule de Mac-Laurin peut se mettre sous la forme:
+
+$f(x,y)=f(0,0)+x\frac{\partial}{\partial x}f(0,0)+y\frac{\partial}{\partial y}f(0,0)+\frac{1}{2!}[x^2\frac{\partial^2 f}{\partial x^2}(0,0)+2xy\frac{\partial^2 f}{\partial x\partial y }(0,0)+x^2\frac{\partial^2 f}{\partial y^2}(0,0)]+(x^2+y^2)\varepsilon(x,y)$ où $\lim\limits_{\substack{x^2+y^2 \rightarrow 0}}\varepsilon(x,y)$
+
+C'est le développement limité à l'ordre 2 de $f(x,y)$ au voisinage de $(0,0).$
+
+\section{Application de $\mathbb{R}^n$ dans $\mathbb{R}^p$}
+\subsection{Définition}
+Soit $f$ une application d'un ouvert $\Omega$ de $\mathbb{R}^n$ dans $\mathbb{R}^p$
+$$\forall x\in \Omega\quad f(x)=(f_1(x),...,f_p(x))$$
+où $f_i$ sont des application de $\Omega$ dans $\mathbb{R},$ appelées fonctions coordonnées de $f.$
+
+Si $p_i$ sont les fonctions projections
+\begin{align*}
+p_i:\mathbb{R}^p &\rightarrow \mathbb{R}\\
+x=(x_1,...,x_n)&\mapsto p_i(x)=x_i
+\end{align*}
+
+Alors $f_i=p_i\circ f,\quad 1\leq i\leq p$
+
+\begin{theorem}(Continuité)
+$f$ est continue en $x_0\in \Omega$ si, et seulement si, $f_i$ est continue en $x_0$ pour chaque $i\in \{1,...,p\}$
+\end{theorem}
+\subsection{Opérations sur les fonctions continues}
+Soient $\Omega\subset\mathbb{R}^n$ et $a\in \Omega$
+
+$\bullet$ Si $f:\Omega\rightarrow \mathbb{R}^m$ et $g:\Omega\rightarrow \mathbb{R}^m$ sont continues en $a,$ alors $f+g$ est continue en $a.$
+
+$\bullet$ Si $f:\Omega\rightarrow \mathbb{R}^m$ et $g:\Omega\rightarrow \mathbb{R}^m$ sont continues en $a,$ alors $fg$ est continue en $a;$ si $g(a)\neq 0$ alors $f/g$ est continue en $a.$
+
+$\bullet$ Si $f:A\subset \mathbb{R}^n\rightarrow \mathbb{R}^m$ et $g:B\subset \mathbb{R}^m\rightarrow \mathbb{R}^p$ telles que $f(A)\subset B$ si $f$ est continue en $a$ et $g$ est continue en $b=f(a),$ alors $g\circ f$ est continue en $a.$
+
+\subsection{Fonctions différentiable. Fonction de classe $\mathscr{C}^q$}
+Soit $f:\Omega\subset \mathbb{R}^n\rightarrow\mathbb{R}^p$
+
+$\bullet$ $f$ est différentiable au point $x$ de $\Omega$ si, et seulement si, il existe une application linéaire notée $df_x$ de $\mathbb{R}^n$ dans $\mathbb{R}^p$ telle que
+$$f(x+h)-f(x)=df_x(h)+\|h\|\varepsilon_x(h)$$
+
+où $\varepsilon_x:\mathbb{R}^n\rightarrow \mathbb{R}^p$ avec $\lim\limits_{\substack{h \rightarrow 0}}\varepsilon_x(h)=0$
+\begin{theorem}
+$f$ est différentiable en $x\in \Omega$ si, et seulement si, pour tout $i\in \{1,...,p\},$ $f_i$ est différentiable en $x.$ $f=(f_1,...,f_n)$
+
+$\bullet$ $f$ est de classe $\mathscr{C}^{q}$ sur $\Omega$ si, et seulement si, pour tout $i\in \{1,...,p\}$ $f_i$ est de classe $\mathscr{C}^q$ sur $\Omega.$
+\end{theorem}
+\subsection{Dérivation de fonctions composées}
+
+Soit $f$ une application de $\Omega\subset\mathbb{R}^n$ dans $\mathbb{R}^p,$ différentiable en $a\in \Omega,$ $\varphi$ une application de $\mathbb{R}^p$ dans $\mathbb{R}$ différentiable en $f(a)\in \mathbb{R}^p,$ alors l'application $F=\varphi\circ f$ est différentiable de $\mathbb{R}^p$ dans $\mathbb{R}$ différentiable en $a$ et $\forall k\in \{1,...,n\}$
+$$\frac{\partial F}{\partial x_k}(a)=\sum\limits_{i=1}^{p}\frac{\partial \varphi}{\partial x_i}(f(a))\frac{\partial f_i}{\partial x_k}(a)$$
+
+\textbf{Matrice jacobienne}\\
+
+Soit $f:\Omega\subset \mathbb{R}^n\rightarrow\mathbb{R}^p,$ différentiable en $x_0\in \Omega$
+
+La matrice jacobienne de l'application linéaire $df_{x_0}$ est donnée par:
+
+\begin{equation*}
+df_{x_0}(h)=
+\begin{pmatrix}
+d f_1(x_0)(h)\\
+\vdots \\
+d f_p(x_0)(h)
+\end{pmatrix}=
+\begin{pmatrix}
+\sum\limits_{i=1}^{n}\frac{\partial f_1}{\partial x_i}(x_0) h_i\\
+\vdots \\
+\sum\limits_{i=1}^{n}\frac{\partial f_p}{\partial x_i}(x_0) h_i
+\end{pmatrix}
+=\begin{pmatrix}
+\frac{\partial f_1}{\partial x_1}(x_0) & \frac{\partial f_1}{\partial x_2}(x_0) & \cdots & \frac{\partial f_1}{\partial x_n}(x_0) \\
+\frac{\partial f_2}{\partial x_1}(x_0) & \frac{\partial f_2}{\partial x_2}(x_0) & \cdots & \frac{\partial f_2}{\partial x_n}(x_0) \\
+\vdots & \vdots & \ddots & \vdots \\
+\frac{\partial f_p}{\partial x_1}(x_0) & \frac{\partial f_p}{\partial x_2}(x_0) & \cdots & \frac{\partial f_p}{\partial x_n}(x_0)
+\end{pmatrix}
+\begin{pmatrix}
+h_1\\
+h_2\\
+\vdots\\
+h_n
+\end{pmatrix}
+\end{equation*}
+Si on note $\frac{\partial f_i}{\partial x_j}(x_0)=\alpha_{ij}(x_0),$ alors $A=(\alpha_{ij})_{1\leq i\leq p,\,1\leq j\leq n}$ est la matrice à $p$ ligne et à $n$ colonnes de l'application linéaire $df(x_0),$ appelée \textbf{matrice jacobienne} de $f$ au point $x_0$ et qu'on note $Jf(x_0)$
+
+Lorsque $n=p,\;\det Jf(x_0)$ s'appelle le jacobien de $f$ en $x_0$ et $\frac{D(f_1,...,f_p)}{D(x_1,...,x_n)}(x_0)=\det Jf(x_0)$
+\begin{ex}
+Soit
+\begin{align*}
+f:[0,+\infty[\times [0,2\pi]\times [-\frac{\pi}{2},\frac{\pi}{2}]\subset\mathbb{R}^3\rightarrow \mathbb{R}^3\\
+(r,\theta,\varphi)\mapsto f(r,\theta,\varphi)=(r\cos \theta \cos\varphi,\,r\sin\theta\cos\varphi,\,r\sin\varphi)
+\end{align*}
+
+\begin{equation*}
+Jf=\begin{pmatrix}
+\cos \theta \cos\varphi & -r\sin \theta \cos \varphi & -r\cos \theta \sin \varphi \\
+\sin \theta \cos \varphi & r\cos \theta \cos \varphi & -r\sin \theta \sin \varphi\\
+\sin \varphi & 0 & r\cos \varphi
+\end{pmatrix}
+\end{equation*}
+
+$\det Jf=r^2\cos \varphi$
+\end{ex}
+\section{Extremum local}
+\subsection{Condition nécessaire}
+Soit $f$ une fonction numérique définie dans un ouvert $\Omega$ de $\mathbb{R}^n.$
+
+$f$ admet un \textbf{extremum local} au point $x_0$ si, et seulement si, il existe un voisinage $V_{x_0}$ de $x_0$ tel que pour tout $x\in V_{x_0},\,f(x)-f(x_0)$ a un signe constant.
+
+Si ce signe est positif (resp. négatif) on a un minimum (resp. un minimum).
+
+\begin{ex}
+La fonction numérique $f$ définie sur $\mathbb{R}^2$ par $f(x,y)=x^4 y^2$ présente un minimum au point $(0,0):$
+
+$$\forall(x,y)\in \mathbb{R}^2\quad f(x,y)\geq f(0,0)=0$$
+\end{ex}
+\begin{remarque}
+Si $f$ admet un extremum en $x_0,$ alors pour tout $i\in \{1,...,n\}$ les fonctions $x_i\mapsto f(x_{0}^{1},...,x_{0}^{i},...,x_{0}^{n}$ admettent un extremum au point $x_{0}^{i}.$
+\end{remarque}
+\begin{theorem}
+Soit $f$ une fonction numérique définie dans un ouvert $\Omega$ de $\mathbb{R}^n,$ différentiable au point $x_0$ de $\Omega.$
+
+Si $f$ admet un extremum au point $x_0,$ alors $df_{x_0}=0$ c'est à dire
+$$\forall i\in\{1,...,n\},\quad\frac{\partial f}{\partial x_i}(x_0)=0$$
+\end{theorem}
+La réciproque est fausse, en général, comme on peut le voir dans l'exemple suivant:
+
+Soit $f(x,y)=x^2 y^3$
+
+On a $\frac{\partial f}{\partial x}(0,0)=0=\frac{\partial f}{\partial y}(0,0)$
+
+Pourtant $(0,0)$ n'est pas un extremum. En effet soit $V$ un voisinage de $(0,0).$ Pour tout $(x,y)\in V,\;f(x,y)$ et $f(x,-y)$ sont des signes contraires.
+
+$\bullet$ Les points $x_0$ de $\Omega\subset\mathbb{R}^n$ tels que $df_{x_0}=0$ sont dits points stationnaires ou points critiques de $f.$
+
+\subsection{Condition suffisante $(n=2)$}
+Soit $f$ une fonction numérique, de classe $\mathscr{C}^2$ dans un ouvert $\Omega$ de $\mathbb{R}^2$ et telle que $df(x_0,y_0)=0,$ on a alors $\frac{\partial f}{\partial x}(x_0,y_0)=0=\frac{\partial f}{\partial y}(x_0,y_0).$
+
+Posons $r=\frac{\partial^2 f}{\partial x^2}(x_0,y_0),\; s=\frac{\partial^2 f}{\partial x \partial y}(x_0,y_0),\; t=\frac{\partial^2 f}{\partial y^2}(x_0,y_0)$
+
+La formule de Taylor jusqu'à l'ordre 2 de $f$ donne
+
+$$f(x_0+h,y_0+k)-f(x_0,y_0)=\frac{1}{2}(h^2 r+2 h k s+k^2 t)+\|(h,k)\|\varepsilon(h,k)$$
+
+Le signe de $f(x_0+h,y_0+k)-f(x_0,y_0)$ est celui de la forme quadratique
+$$q(h,k)=\frac{1}{2}(h^2 r+ 2hk s+k^2 t)$$
+
+Quatres cas se présentent:
+
+$\bullet$ $s^2-rt>0,$ il n' y a pas d'extremum car $q(h,k)$ est non définie (de signe variable).
+
+$\bullet$ $s^2-rt<0,\,r>0$ ou $t>0,$ $f$ admet un minimum en $(x_0,y_0)$ car la forme $q(h,k)$ est définie positive.
+
+$\bullet$ $s^2-rt<0,\,r<0$ ou $t<0,$ $f$ admet un maximum en $(x_0,y_0)$ car la forme $q(h,k)$ est définie négative.
+
+$\bullet$ $s^2-rt=0,$ on ne peut pas conclure car la forme $q(h,k)$ est dégénérée. Il faut la formule de Taylor à l'ordre $p>0$ ou procéder à un changement de variable.
+
+\begin{ex}
+Soit la fonction numérique $f$ définie sur $\Omega=\{(x,y)\in \mathbb{R}^2\mid x<0\}$ par:
+
+$$f(x,y)=x\ln^2 x+y^2$$
+
+Si $(x_0,y_0)$ est un extremum, alors $\frac{\partial f}{\partial x}(x_0,y_0)=0=\frac{\partial f}{\partial x}(x_0,y_0)$
+
+On obtient le système
+%\left\{
+
+\begin{equation*}
+\begin{cases}
+\ln^2 x_0+2\ln x_0+y_{0}^{2}=0\\
+2 x_0 y_0=0
+\end{cases}
+\end{equation*}
+%\right
+
+D'où
+%\left\{
+\begin{equation*}
+\begin{cases}
+x_0=1\\
+y_0=0
+\end{cases}
+\mbox{ou}\quad x_0=e^{-2}
+\end{equation*}
+%\right
+
+
+Les points critiques sont $M(1,0)$ et $P(e^{-2},0).$
+
+Au point $M,$ $s^2-rt=-4<0$ et $r>0.$ $M$ est un minimum
+
+Au point $P,$ $s^2-rt>0,$ $P$ n'est pas un extremum.
+\end{ex}
+
+\section{Exercices}
+
+\begin{exo}
+Calculer, si elles existent les limites suivantes:
+
+i) $\lim\limits_{\substack{x \rightarrow \infty \\ y\rightarrow \infty\\ z \rightarrow \infty}}\frac{x+2y+z}{x^2+y^2+z^2},$ \quad  ii) $\lim\limits_{\substack{(x,y) \rightarrow (0,0) }}xy\frac{x^2-y^2}{x^4+y^4}$
+\end{exo}
+\begin{exo}
+Calculer
+$$\lim\limits_{\substack{(x,y) \rightarrow (0,0) \\ xy>0}}\frac{\sin \sqrt{xy}-\sqrt{xy}}{xy}$$
+\end{exo}
+\begin{exo}
+Soit $f$ la fonction numérique définie sur $\mathbb{R}^2$ par:
+$$\begin{cases}
+f(x,y)=xy+\frac{y^2}{2}+\cos\frac{1}{x}\sin\frac{1}{y}\quad\mbox{si}\;xy\neq0; \\
+f(x,y)=0 \quad\mbox{si}\;xy\neq0
+\end{cases}$$
+
+Calculer $\lim\limits_{\substack{(x,y) \rightarrow (0,0) }}f(x,y)$ et $\lim\limits_{\substack{x\rightarrow 0}}\lim\limits_{\substack{y\rightarrow 0}}f(x,y)$
+
+Peut-on calculer $\lim\limits_{\substack{y\rightarrow 0}}\lim\limits_{\substack{x\rightarrow 0}}f(x,y)$?
+\end{exo}
+\begin{exo}
+
+1. Déterminer l'ensemble de définition de la fonction numérique $f$ définie par:
+$$f(x,y)=\frac{x}{y^2-2ye^{-x/2}+1}$$
+
+2. $f$ admet-elle une limite au point $(0,0)$?
+\end{exo}
+\begin{exo}
+Etudier la continuité au point $(0,0)$ de la fonction numérique $f,$ définie sur $\mathbb{R}^2$ par:
+$$\begin{cases}
+f(x,y)=\frac{x}{y}\ln\frac{x^2}{x^2+y^2}; \quad\mbox{si}\;x\neq0;\\
+f(0,y)=0
+\end{cases}$$
+\end{exo}
+\begin{exo}
+Montrer que la fonction numérique $f$ définie sur $\mathbb{R}^2$ par:
+$$\begin{cases}
+f(x,y)=\frac{(2x+y)(y^2-x^2)}{x^2+y^2}; \quad\mbox{si}\;(x,y)\neq(0,0);\\
+f(0,0)=0
+\end{cases}$$
+
+est continue en $(0,0).$
+\end{exo}
+\begin{exo}
+Soit $f$ la fonction numérique définie sur $\mathbb{R}^2$ par:
+$$\begin{cases}
+f(x,y)=-\frac{y^2}{x}; \quad\mbox{si}\;x<-|y|;\\
+f(x,y)=y ; \quad\mbox{si}\;-|y|\leq x\leq |y|;\\
+f(x,y)=\frac{y^2}{x}; \quad\mbox{si}\;x>|y|;
+\end{cases}$$
+
+1. Etudier la continuité de $f$ au point $(0,0).$
+
+2. Calculer $\frac{\partial f}{\partial x}(0,0)$ et $\frac{\partial f}{\partial y}(0,0).$
+\end{exo}
+
+\begin{exo}
+Soit $f$ la fonction numérique définie sur $\mathbb{R}^2$ par:
+$$\begin{cases}
+f(x,y)=\frac{x^2 y^n}{x^2+xy+y^2}; \quad\mbox{si}\;(x,y)\in \mathbb{R}^2\setminus \{(0,0)\},\,n\in \mathbb{N};\\
+f(0,0)=0;
+\end{cases}$$
+
+Donner une condition nécessaire et suffisante sur l'entier $n$ pour que l'une de ces deux conditions soit satisfaite:
+
+1. $f$ est continue en $(0,0)$
+
+2. Les dérivées partielles $\frac{\partial f}{\partial x}$ et $\frac{\partial f}{\partial x}$ sont continues en $(0,0).$
+\end{exo}
+\begin{exo}
+Soit $f$ une application de $\mathbb{R}^3$ dans $\mathbb{R},$ différentiable sur $\mathbb{R}^3$ et telle que sa différentielle soit définie par:
+$$df(x,y,z)(h,k,l)=2axh+k\sin y+b l$$
+où $a$ et $b$ sont deux réels.
+
+Expliciter la fonction $f.$
+\end{exo}
+\begin{exo}
+Calculer la valeur approchée du réel $u=\cos 61^{\circ}.\sin 29^{\circ}$
+\end{exo}
+\begin{exo}
+Soit $f$ la fonction numérique définie sur $\mathbb{R}^2$ par: $f(x,y)=\sin \sqrt{x^2+y^2}$ où $y=h(x),\quad h$ dérivable sur $\mathbb{R}.$
+
+Calculer $\frac{\partial f}{\partial x}$ et $\frac{d f}{dx}$ sur $\mathbb{R}^2\setminus\{(0,0)\}$
+\end{exo}
+\begin{exo}
+Etudier la différentiabilité de la fonction numérique $f$ définie sur $\mathbb{R}^2$ par: $f(x,y)=\sqrt{x^2+y^2}\cosh xy$
+\end{exo}
+\begin{exo}
+Soit $f$ la fonction numérique définie sur $\mathbb{R}^2$ par:
+$f(x,y)=\sqrt{|xy|}$
+
+Montrer que $f$ n'est pas différentiable au point $(0,0).$
+\end{exo}
+\begin{exo}
+Soit $f$ la fonction numérique définie sur $\mathbb{R}^2$ par:
+$$\begin{cases}
+f(x,y)=x^2\cos\frac{1}{x}+y^2\sin\frac{1}{y}; \quad\mbox{si}\;xy\neq0;\\
+f(x,y)=x^2\cos\frac{1}{x} ; \quad\mbox{si}\;x\neq0\;\mbox{et}\;y=0;\\
+f(x,y)=y^2\sin\frac{1}{y}; \quad\mbox{si}\;x=0\;\mbox{et}\;y\neq0;\\
+f(x,y)=0 \quad\mbox{si}\;x=y=0,
+\end{cases}$$
+Montrer que $f$ est de classe $C^1$ sur $\mathbb{R}^2\setminus\{(0,0)\}.$
+
+Etudier la différentiabilité de $f$ au point $(0,0).$
+\end{exo}
+\begin{exo}
+Soit $f$ la fonction numérique définie sur $\mathbb{R}^2$ par:
+$$\begin{cases}
+f(x,y)=\frac{yx^2}{y-x}; \quad\mbox{si}\;x\neq y;\\
+f(x,x)=0
+\end{cases}$$
+Calculer $\frac{\partial^2 f}{\partial x \partial y}(0,0)$ et $\frac{\partial^2 f}{\partial y \partial x}(0,0).$ Que peut-on déduire?
+\end{exo}
+\begin{exo}
+Soit $f$ la fonction numérique définie sur $\mathbb{R}^2$ par:
+$$\begin{cases}
+f(x,y)=xy\frac{x^3+y^2}{x^2+y^2}; \quad\mbox{si}\;(x,y)\in\mathbb{R}^2\setminus\{(0,0)\};\\
+f(0,0)=0
+\end{cases}$$
+Calculer $\frac{\partial^2 f}{\partial x \partial y}(0,0)$ et $\frac{\partial^2 f}{\partial y \partial x}(0,0).$
+\end{exo}
+\begin{exo}
+numérique définie sur $\mathbb{R}^2$ par:
+
+$$f(x,y)=e^y \cos x$$
+
+Développer la fonction $f:$
+
+1. Par la formule de Mac-Laurin jusu'à l'ordre 3 au voisinage de $(0,0).$
+
+2. Par la formule de Taylor jusqu'à l'ordre 3, au voisinage de $(-\frac{\pi}{2},0)$
+\end{exo}
+\begin{exo}
+Déterminer toutes les applications $f$ de $\mathbb{R}^2$ dans $\mathbb{R},$ da classe $\mathcal{C}^2,$ vérifiant chacune des équations:
+
+$$i)\;\frac{\partial^2 f}{\partial x\partial y}=y\sinh x,\quad ii)\frac{\partial^2 f}{\partial x\partial y}-\frac{\partial f}{\partial y}=0 $$
+\end{exo}
+\begin{exo}
+Déterminer toutes les applications $f$ de $\mathbb{R}^2$ dans $\mathbb{R},$ da classe $\mathcal{C}^3,$ vérifiant l'équation:
+$$\frac{\partial^3 f}{\partial y^2\partial x}=0$$
+\end{exo}
+\begin{exo}
+
+Soient $f$ l'application de $\mathbb{R}^2$ définie par:
+$$f(x,y,z)=(x^2-2z,y\sinh(x-z))$$
+
+et $g$ l'application de $\mathbb{R}^2$ dans $\mathbb{R}^2$ définie par:
+$$g(x,y)=(x-y,y)$$
+
+Déterminer la matrice jacobienne de $f,\,g$ et $g\circ f.$
+
+\end{exo}
+\begin{exo}
+Soient $f$ l'application de $\mathbb{R}^2$ dans $\mathbb{R}^3$ définie par:
+$$f(x,y)=(e^{xy},x^2 y,y)$$
+et $g$ l'application de $\mathbb{R}^2$ dans $\mathbb{R}^2$ définie par:
+$$g(u,v)=(w^2,u-w,uvw)$$
+
+Calculer par deux méthodes différentes, la matrice jacobienne de $g\circ f.$
+\end{exo}
+\begin{exo}
+Montrer que la fonction numérique $f$ définie sur $\mathbb{R}^2$ par:
+$$f(x,y)=(y^2-x)(y^2-2x)$$
+ne possède pas d'extremum au point $(0,0).$
+
+Qu'arrive-t-il si on se restreint à l'un des axes $x'ox$ ou $y'oy)?$
+\end{exo}
+\begin{exo}
+Etudier les extremums, s'ils existent, de la fonction numérique $f$ définie sur $\mathbb{R}^2$ par:
+$$f(x,y)=y^3+3x^2y+6y-18x$$
+\end{exo}
+\begin{exo}
+Etudier les extremums de la fonction numérique $f$ définie sur $\mathbb{R}^2$ par:
+$$f(x,y)=x^4+y^4-16xy+64$$
+\end{exo}
+\begin{exo}
+Etudier les extremums de la fonction numérique définie sur $\mathbb{R}^2$ par:
+$$f(x,y)=y^2 e^x (x+y+1)$$
+\end{exo}
+\section{Corrigé des exercices}
+\begin{exo}
+
+i) On a
+$$|\frac{x+2y+z}{x^2+y^2+z^2}|\leq\frac{|x|+2|y|+|z|}{x^2+y^2+z^2}\leq\frac{4\sqrt{x^2+y^2+z^2}}{x^2+y^2+z^2}=\frac{4}{\sqrt{x^2+y^2+z^2}},$$
+
+donc $0\leq \lim\limits_{\substack{(x,y,z) \rightarrow (\infty,\infty,\infty)}}|\frac{x+2y+z}{x^2+y^2+z^2}|\leq 4\lim\limits_{\substack{(x,y,z) \rightarrow (\infty,\infty,\infty)}}\frac{1}{\sqrt{x^2+y^2+z^2}}=0,$
+
+c-à-d, $\lim\limits_{\substack{(x,y,z) \rightarrow (\infty,\infty,\infty)}}\frac{x+2y+z}{x^2+y^2+z^2}=0$
+
+ii) Posons $y=\alpha x$ où $\alpha\in \mathbb{R}^{*}$
+
+Alors $xy\frac{x^2-y^2}{x^4+y^4}=\frac{\alpha(1-\alpha^2)}{1+\alpha^4}$
+
+Si on fait varier le réel $\alpha,$ la limite de $xy\frac{x^2-y^2}{x^4+y^4}$ aura des valeurs différentes. Autrement dit, cette limite dépend de $\alpha,$ donc elle n'existe pas.
+\end{exo}
+\begin{exo}
+Soit $u\in \mathbb{R}_{+}^{*},$ la formule de Taylor à l'ordre 3 appliquée à la fonction sinus sur l'intervalle $[0,u],$ donne:
+$$\sin u=u-\frac{u^3}{3!}\cos\theta\quad\mbox{où}\quad 0<\theta<u$$
+
+D'où $|\sin u-u|\leq \frac{u^3}{6}$
+
+Pour tout $(x,y)\in \mathbb{R}^2$ tel que $xy>0$ et $u=\sqrt{xy},$ on a:
+
+$$|\frac{\sin\sqrt{xy}-\sqrt{xy}}{xy}|\leq\frac{\sqrt{xy}}{6}$$
+
+Par suite, $\lim\limits_{\substack{(x,y) \rightarrow (0,0)\\ xy>0}}\frac{\sin\sqrt{xy}-\sqrt{xy}}{xy}=0$
+\end{exo}
+\begin{exo}
+On a l'inégalité $|xy|\leq \frac{1}{2}(x^2+y^2),$ cela provient du fait que:
+
+$(|x|-|y|)^2=x^2-2|xy|+y^2\geq0$
+
+On en déduit que: $\forall (x,y)\in \mathbb{R}^2$ tel que $xy\neq0$
+
+$$|f(x,y)|\leq |xy|+\frac{y^2}{2}\leq \frac{1}{2}(x^2+y^2)+\frac{1}{2}(x^2+y^2)$$
+
+D'où $\lim\limits_{\substack{(x,y) \rightarrow (0,0)}}f(x,y)=0$
+
+Comme $|\frac{y^2}{2}\cos\frac{1}{x}\sin\frac{1}{y}|\leq \frac{y^2}{2},$ alors $\lim\limits_{\substack{y \rightarrow 0}}\frac{y^2}{2}\cos\frac{1}{x}\sin\frac{1}{y}=0$
+
+Par suite $\lim\limits_{\substack{x \rightarrow 0}}\lim\limits_{\substack{y \rightarrow 0}}f(x,y)=0=\lim\limits_{\substack{(x,y) \rightarrow (0,0)}}f(x,y)$
+
+La fonction $x\mapsto\frac{y^2}{2}\cos\frac{1}{x}\sin\frac{1}{y}$ n'a pas de limite en $0$ (car $\cos\frac{1}{x}$ n'as pas de limite en $0$).
+
+Donc $\lim\limits_{\substack{y \rightarrow 0}}\lim\limits_{\substack{x \rightarrow 0}}f(x,y)$ n'existe pas.
+\end{exo}
+\begin{exo}
+1. $f$ est définie si, et seulement si, $y^2-2ye^{-x/2}+1\neq0$
+
+Considérons l'équation en $y:$ $y^2-2ye^{-x/2}+1=0$
+
+$\Delta'=e^{-x}-1,\quad \Delta'\geq0\Leftrightarrow x\leq0$ et $\Delta'<0\Leftrightarrow x>0$
+
+Lorsque $x\leq 0,$ on obtient $y=e^{-x/2}\pm \sqrt{e^{-x}-1}$
+
+Par conséquent $f$ est définie sur l'ensemble $D$ suivant:
+
+$$D=\mathbb{R}^2\setminus\{(x,y)\mid x\leq0\;\mbox{et}\;y=e^{-x/2}\pm \sqrt{e^{-x}-1}\}$$
+
+2. Pour $y\in \mathbb{R}\setminus\{1\},$ on a $f(0,y)=0$ ($f$ n'est pas définie au point $(0,1)$)
+
+Donc $\lim\limits_{\substack{y \rightarrow 1\\ \neq}}f(0,y)=0$
+
+D'autre part, $f(x,1)=\frac{x}{2(1-e^{-x/2})},\quad x\in \mathbb{R}_{+}^{*},$
+
+alors $\lim\limits_{\substack{x \rightarrow 0}}f(x,1)=1$ (utilier la règle de l'Hospital)
+
+Si $f$ admet une limite $\ell$ au point $(0,1)$ on aura, $\ell=\lim\limits_{\substack{y \rightarrow 1}}f(0,y)=\lim\limits_{\substack{x \rightarrow 0}}f(x,1)$
+
+comme $\lim\limits_{\substack{y \rightarrow 1}}f(0,y)=\lim\limits_{\substack{x \rightarrow 0}}f(x,1),$ $f$ n'a pas de limite au point $(0,1).$
+\end{exo}
+\begin{exo}
+La restriction de $f$ à l'ensemble $\{(x,y)\in\mathbb{R}^2\mid y=x\}$ donne:
+$f(x,x)=-\ln 2$ si $x\neq0$
+
+D'où $\lim\limits_{\substack{x \rightarrow 0}}f(x,x)=-\ln2\neq f(0,0)$
+
+Donc $f$ n'est pas continue au point $(0,0).$
+\end{exo}
+\begin{exo}
+$\forall(x,y)\in \mathbb{R}^2\setminus\{(0,0)\}$
+
+$$|\frac{y^2- x^2}{x^2+y^2}|\leq\frac{y^2+x^2}{x^2+y^2}=1$$
+
+Par suite, pour tout $(x,y)\in\mathbb{R}^2\setminus\{(0,0)\} $
+$$\lim\limits_{\substack{(x,y) \rightarrow (0,0)}}f(x,y)=0=f(0,0)$$
+
+Autrement dit, $f$ est continue au point $(0,0).$
+\end{exo}
+\begin{exo}
+Remarquons d'abord que $f(0,0)=0$ car $f(x,y)=y$ si $-|y|\leq x\leq |y|$
+
+Montrons que: $\forall(x,y)\in\mathbb{R}^2,\quad |f(x,y)|\leq|y|$
+
+En effet, si $x<-|y|$ alors $|x|>|y|$
+
+Et $|f(x,y)|=\frac{|y|}{|x|}|y|<|y|$
+
+Si $-|y|\leq x\leq |y|,\quad |f(x,y)|=|y|$
+
+Si $x>|y|$ alors $|x|>|y|$
+
+D'où $|f(x,y)|=\frac{|y|}{|x|}|y|<|y|$
+
+Par conséquent, $\lim\limits_{\substack{(x,y) \rightarrow (0,0)}}f(x,y)=0=f(0,0)$
+
+Donc $f$ est continue en $(0,0).$
+
+D'autre part, $f(0,y)=y$ et $f(x,0)=0$
+
+On a alors, $\frac{\partial f}{\partial x}(0,0)=\lim\limits_{\substack{x\rightarrow0}}\frac{f(x,0)-f(0,0)}{x}=\lim\limits_{\substack{x\rightarrow0}}\frac{0}{x}=0$
+
+$\frac{\partial f}{\partial y}(0,0)=\lim\limits_{\substack{y\rightarrow0}}\frac{f(0,y)-f(0,0)}{y}=1$
+\end{exo}
+\begin{exo}
+$f$ est bien définie sur $\mathbb{R}^2$ car $x^2+xy+y^2$ est non nul pour tout $(x,y)$ de $\mathbb{R}^2\setminus\{(0,0)\}.$
+
+Pour cela on pose $x=r\cos \theta$ et $y=r\sin\theta$ où $r>0$ et $\theta\in [0,2\pi[.$
+
+$x^2+xy+y^2=r^2(1+\sin\theta\cos\theta)=r^2(1+\frac{1}{2}\sin2\theta)$
+
+Or $-1\leq \sin 2\theta \leq1$
+
+Donc $\frac{1}{2}\leq 1+\frac{1}{2}\sin 2\theta\frac{3}{2}$
+
+Par suite $1+\frac{1}{2}\sin 2\theta\neq0$
+
+Plus précisément, $x^2+xy+y^2$ ne s'annule que pour $(x,y)=(0,0)$
+
+En effet, $x^2+xy+y^2=\frac{1}{2}(x+y)^2+\frac{1}{2}(x^2+y^2),$ donc
+$$x^2+xy+y^2=0\Leftrightarrow x+y=0\quad\mbox{et}\quad x^2+y^2=0\Leftrightarrow x=y=0$$
+
+1. En coordonnées polaires ($x=r\cos \theta$ et $y=r\sin\theta$ où $r>0$ et $\theta\in [0,2\pi[$),
+
+$f(x,y)=\frac{r^{n+2}\cos^2\theta \sin^n\theta}{r^2 (1+\frac{1}{2}\sin2\theta)}$
+
+comme $1+\frac{1}{2}\sin2\theta\geq\frac{1}{2},$ alors $|f(x,y)|\leq 2r^n.$
+
+Si $n\in \mathbb{N}^{*},\;\lim\limits_{\substack{(x,y) \rightarrow (0,0)}}f(x,y)=0=f(0,0)$
+
+Donc, $f$ est continue en $(0,0).$
+
+Supposons que $f$ soit continue en $(0,0).$ Alors la restriction de $f$ à la droite d'équation $y=x$ est continue en $(0,0).$
+
+On pose $\varphi(x)=f(x,x)=\frac{1}{3}x^n$ si $x\neq0$ et $\varphi(0)=0$
+
+$\varphi$ est continue en $0,$ et $\lim\limits_{\substack{x\rightarrow0}}\varphi(x)=\lim\limits_{\substack{x\rightarrow0}}\frac{1}{3}x^n=0$
+
+ce qui implique que $n\in \mathbb{N}^{*}.$
+
+2. On a:
+
+$\frac{\partial f}{\partial x}(0,0)=\lim\limits_{\substack{x\rightarrow0}}\frac{f(x,0)-f(0,0)}{x}=\lim\limits_{\substack{x\rightarrow0}}\frac{0}{x}=0$
+
+$\frac{\partial f}{\partial y}(0,0)=\lim\limits_{\substack{y\rightarrow0}}\frac{f(0,y)-f(0,0)}{y}=\lim\limits_{\substack{y\rightarrow0}}\frac{0}{y}=0$
+
+Pour tout $(x,y)\in\mathbb{R}^2\setminus\{(0,0)\}$
+
+\begin{eqnarray*}
+\frac{\partial f}{\partial x}(x,y)
+&=&\frac{2xy^n(x^2+xy+y^2)-(2x+y)x^2 y^n}{(x^2+xy+y^2)^2}\\
+&=& \frac{xy^n(xy+2y^2}{(x^2+xy+y^2)^2}\\
+&=& \frac{r^{n+1}\cos\theta \sin^n \theta r^2 (\cos \theta\sin \theta+2\sin^2\theta)}{r^4 (1+\frac{1}{2}\sin2\theta)^2}
+\end{eqnarray*}
+
+Par suite, $|\frac{\partial f}{\partial x}(x,y)|\leq 12 r^{n-1}$
+
+\begin{eqnarray*}
+\frac{\partial f}{\partial y}(x,y)
+&=&\frac{n y^{n-1}x^2 (x^2+xy+y^2)-(x+2y)x^2 y^n}{(x^2+xy+y^2)^2}\\
+&=&\frac{x^2 y^{n-1}[nx^2+(n-1)xy+(n-2)y^2]}{(x^2+xy+y^2)^2}\\
+&=& \frac{r^{n+1}\cos^2\theta \sin^{n-1}\theta r^2[n\cos^2\theta+(n-1)\sin\theta\cos\theta+(n-2)\sin^2\theta]}{r^4(1+\frac{1}{2}\sin2\theta)^2}
+\end{eqnarray*}
+
+Et $|\frac{\partial f}{\partial y}(x,y)|\leq12(n-1)r^{n-1}$
+
+Si $n>1$ alors $\frac{\partial f}{\partial x}$ et $\frac{\partial f}{\partial y}$ sont continues en $(0,0)$
+
+Si $\frac{\partial f}{\partial x}$ et $\frac{\partial f}{\partial y}$ sont continues en $(0,0)$
+
+on pose $\Phi(x)=\frac{\partial f}{\partial x}(x,x)=\frac{1}{3}x^{n-1}$ si $x\neq0,$ $\Phi(0)=0$ et $\Psi(x)=\frac{\partial f}{\partial y}(x,x)=\frac{1}{3}(n-1)x^{n-1},$ si $x\neq0,$ $\Psi(0)=0$
+
+$\Phi$ et $\Psi$ sont continues en $0.$
+
+$\lim\limits_{\substack{x\rightarrow0}}\Phi(x)=\lim\limits_{\substack{x\rightarrow0}}\frac{1}{3}x^{n-1}=0$
+
+
+$\lim\limits_{\substack{x\rightarrow0}}\Psi(x)=\lim\limits_{\substack{x\rightarrow0}}\frac{1}{3}(n-1)x^{n-1}=0$
+
+Ce qui implique $n>1.$
+
+\end{exo}
+
+\begin{exo}
+Comme $f$ est différentiable sur $\mathbb{R}^3,$ elle admet des dérivées partielles en tout point de $\mathbb{R}^3$ et on a:
+
+$\frac{\partial f}{\partial x}(x,y,z)=2ax,\;\frac{\partial f}{\partial y}(x,y,z)=\sin y,$ et $\frac{\partial f}{\partial z}(x,y,z)=b$
+
+La première égalité nous donne $f(x,y,z)=ax^2+\varphi(y,z)$ où $\varphi$ est une application différentiable de $\mathbb{R}^2$ dans $\mathbb{R}$
+
+D'autre part $\frac{\partial f}{\partial y}=\sin y=\frac{\partial \varphi}{\partial y}(y,z)$
+
+D'où $\varphi(y,z)=-\cos y+\psi(z)$ avec $\psi$ une application dérivable de $\mathbb{R}$ dans $\mathbb{R}.$
+
+Enfin, $\frac{\partial f}{\partial z}=b=\psi'(z)$ implique $\psi(z)=bz+c$
+
+Par suite la fonction $f$ est définie sur $\mathbb{R}^3$ par:
+$$f(x,y,z)=ax^2-\cos y+bz+c$$ où $c$ est un réel.
+\end{exo}
+\begin{exo}
+Soit
+\begin{align*}
+f:\mathbb{R}^2 &\rightarrow \mathbb{R}\\
+(x,y)&\mapsto \cos x\sin y
+\end{align*}
+
+On pose $(x_0,y_0)=(60^{\circ},30^{\circ})=(\frac{\pi}{3},\frac{\pi}{6})$ et $h=1^{\circ}=\frac{\pi}{180}=-k$
+
+On a alors $u=f(x_0+h,y_0+k)$
+
+La valeur approchée de $u$ est égale à $f(x_0,y_0)+df_{(x_0,y_0)}(h,k)$
+
+Or $df_{(x,y)}(h,k)=-\sin x\sin y dx+\cos x\cos y dy$
+
+D'où $df_{(x_0,y_0)}(h,k)=-\sin x_0\sin y_0 h+\cos x_0\cos y_0 k=-\frac{\sqrt{3}}{4}.\frac{\pi}{180}-\frac{\sqrt{3}}{4}.\frac{\pi}{180}$
+
+Ainsi la valeur approchée de $u$ est représentée par le réel $\frac{1}{4}-\frac{\pi\sqrt{3}}{360}$
+\end{exo}
+\begin{exo}
+$\forall(x,y)\in\mathbb{R}^2\setminus\{(0,0)\}$
+
+$\frac{\partial f}{\partial x}=\frac{x}{\sqrt{x^2+y^2}}\cos\sqrt{x^2+y^2}$
+
+Comme $df=\frac{\partial f}{\partial x}dx+\frac{\partial f}{\partial y}dy,$ alors $\frac{df}{dx}=\frac{\partial f}{\partial x}+\frac{\partial f}{\partial y}\frac{dy}{dx}=\frac{\partial f}{\partial x}+\frac{\partial f}{\partial y}h'(x)$
+
+Or $\frac{\partial f}{\partial y}=\frac{y}{\sqrt{x^2+y^2}}\cos\sqrt{x^2+y^2}$
+
+Par conséquent, $\frac{df}{dx}=\frac{x+yh'(x)}{\sqrt{x^2+y^2}}\cos\sqrt{x^2+y^2}$
+\end{exo}
+\begin{exo}
+Etudions d'abord la différentiabilité de $f$ au point $(0,0).$
+
+On a: $f(0,0)=0,\;f(x,0)=|x|,$ et $f(0,y)=|y|$
+
+$\frac{\partial f}{\partial x}(0,0)=\lim\limits_{\substack{x\rightarrow0}}\frac{f(x,0)-f(0,0)}{x}=\lim\limits_{\substack{x\rightarrow0}}\frac{|x|}{x}$
+
+$\frac{\partial f}{\partial y}(0,0)=\lim\limits_{\substack{y\rightarrow0}}\frac{f(0,y)-f(0,0)}{y}=\lim\limits_{\substack{y\rightarrow0}}\frac{|y|}{y}$
+
+On voit que les dérivées partielles de $f$ en $(0,0)$ n'existent pas, par conséquent $f$ n'est pas différentiable au point $(0,0).$
+
+D'autre part, pour tout $(x,y)$ de $\mathbb{R}^2\setminus\{(0,0)\}$ on a:
+
+$$\frac{\partial f}{\partial x}=\frac{x}{\sqrt{x^2+y^2}}\cosh xy+y\sqrt{x^2+y^2}\sinh xy$$
+
+$$\frac{\partial f}{\partial y}=\frac{y}{\sqrt{x^2+y^2}}\cosh xy+x\sqrt{x^2+y^2}\sinh xy$$
+
+On en déduit que les dérivées partielles premières de $f$ sont continues sur $\mathbb{R}^2\setminus\{(0,0)\},$ par conséquent $f$ est différentiable sur $\mathbb{R}^2\setminus\{(0,0)\}.$
+\end{exo}
+\begin{exo}
+Comme $f(0,0)=f(x,0)=f(0,y)=0,$ on a:
+
+$\frac{\partial f}{\partial x}(0,0)=\lim\limits_{\substack{x\rightarrow0}}\frac{f(x,0)-f(0,0)}{x}=\lim\limits_{\substack{x\rightarrow0}}\frac{0}{x}=0$
+
+$\frac{\partial f}{\partial y}(0,0)=\lim\limits_{\substack{y\rightarrow0}}\frac{f(0,y)-f(0,0)}{y}=\lim\limits_{\substack{y\rightarrow0}}\frac{0}{y}=0$
+
+Supposons que $f$ est différentiable au point $(0,0),$ alors sa différentielle en ce point est nulle:
+
+$$df_{(0,0)}(h,k)=\frac{\partial f}{\partial x}(0,0)h+\frac{\partial f}{\partial y}(0,0)k=0$$
+
+On aura alors:
+
+$(*)\;f(h,k)=f(0,0)+df_{(0,0)}+df_{(0,0)}(h,k)+\|(h,k)\|\varepsilon(h,k)$
+
+où $\lim\limits_{\substack{(h,k)\rightarrow(0,0)}}\varepsilon(h,k)=0$ et $\|(h,k)\|=\sqrt{h^2+k^2}$
+
+Pour $h=k\neq0,$ l'inégalité $(*)$ devient:
+
+$\sqrt{h^2}=\sqrt{2}\sqrt{h^2}\varepsilon(h,h)$
+
+Par suite $\varepsilon(h,h)=\frac{2}{2}$
+
+D'où la contradiction avec $\lim\limits_{\substack{(h,k)\rightarrow(0,0)}}=0.$
+\end{exo}
+\begin{exo}
+$f$ est continue sur $\mathbb{R}^2\setminus\{(0,0)\},$ comme composée de fonctions continues sur $\mathbb{R}^2\setminus\{(0,0)\}.$
+
+L'égalité $\lim\limits_{\substack{(x,y)\rightarrow(0,0)}}f(x,y)=0=f(0,0),$ assure que $f$ est continue en $(0,0).$ Cela provient du fait que $|f(x,y)|\leq x^2+y^2.$
+
+$f$ est donc continue sur $\mathbb{R}^2.$
+
+D'autre part, on a:
+
+$\frac{\partial f}{\partial x}(0,0)=\lim\limits_{\substack{x\rightarrow0}}\frac{f(x,0)-f(0,0)}{x}=\lim\limits_{\substack{x\rightarrow0}}x\cos \frac{1}{x}=0$ car $|x\cos\frac{1}{x}|\leq |y|$
+
+$\frac{\partial f}{\partial y}(0,0)=\lim\limits_{\substack{y\rightarrow0}}\frac{f(0,y)-f(0,0)}{y}=\lim\limits_{\substack{y\rightarrow0}}y\sin \frac{1}{y}=0$
+ car $|y\sin\frac{1}{y}|\leq |y|$
+
+ Les dérivées partielles de $f$ sont définies sur $\mathbb{R}^2$ par:
+
+$$\begin{cases}
+\frac{\partial f}{\partial x}(x,y)=2x\cos\frac{1}{x}+\sin\frac{1}{x}\quad\mbox{si}\;x\neq0 \\
+\frac{\partial f}{\partial x}(0,y)=0 \;
+\end{cases}$$
+
+$$\begin{cases}
+\frac{\partial f}{\partial y}(x,y)=2y\sin\frac{1}{y}-\cos\frac{1}{y}\quad\mbox{si}\;y\neq0 \\
+\frac{\partial f}{\partial y}(x,0)=0 \;
+\end{cases}$$
+
+Ces dérivées partielles sont des fonctions continues sur $\mathbb{R}^2\setminus\{(0,0)\},$ $f$ est donc de classe $C^1$ sur $\mathbb{R}^2\setminus\{(0,0)\}.$
+
+Si $f$ est différentiable au point $(0,0),$ sa différentielle est nulle en ce point.
+
+Il ne reste plus qu'à vérifier si $f(x,y)=\|(x,y)\|\varepsilon(x,y)$ où $\|(x,y)\|=|x|+|y|$ et $\lim\limits_{\substack{x\rightarrow0}}\varepsilon(x,y)=0$
+
+$\frac{f(x,y)}{\|(x,y)\|}=|\frac{x^2\cos\frac{1}{x}+y^2\sin\frac{1}{y}}{|x|+|y|}|\leq\frac{|x^2 \cos\frac{1}{x}|}{|x|}+\frac{|y^2\sin \frac{1}{y}|}{|y|}\leq |x|+|y|$
+
+Plus précisément $\lim\limits_{\substack{(x,y)\rightarrow(0,0)}}\frac{f(x,y)}{\|(x,y)\|}=0$
+
+On en déduit que $f$ est différentiable sur $\mathbb{R}^2.$
+\end{exo}
+\begin{exo}
+Comme $f(x,0)=0=f(0,y),$ alors $\frac{\partial f}{\partial x}(0,0)=0=\frac{\partial f}{\partial y}(0,0)$
+
+D'autre part, pour tout $(x,y)\in\mathbb{R}^2$ tel que $x\neq y,$ on a:
+
+$\frac{\partial f}{\partial x}(x,y)=\frac{2xy^2-x^2 y}{(y-x)^2}$ et $\frac{\partial f}{\partial y}(x,y)=-\frac{x^3}{(y-x)^2}$
+
+D'où $\frac{\partial f}{\partial x}(0,y)=0$ pour $y\neq 0$
+
+et $\frac{\partial f}{\partial y}(x,0)=-x$ pour $x\neq0$
+
+Par suite,
+
+$$\frac{\partial^2 f}{\partial x \partial y}(0,0)=\lim\limits_{\substack{x\rightarrow0}}\frac{\frac{\partial f}{\partial y}(x,0)-\frac{\partial f}{\partial y}(0,0)}{x}=-1$$
+
+$$\frac{\partial^2 f}{\partial y \partial x}(0,0)=\lim\limits_{\substack{y\rightarrow0}}\frac{\frac{\partial f}{\partial x}(0,y)-\frac{\partial f}{\partial x}(0,0)}{y}=0$$
+
+Le résultat $\frac{\partial^2 f}{\partial x \partial y}(0,0)\neq\frac{\partial^2 f}{\partial y \partial x}(0,0)$ nous assure, grâce au théorème de Schwarz, que l'une au moins des dérivées partielles $\frac{\partial^2 f}{\partial x \partial y},\,\frac{\partial^2 f}{\partial y \partial x}$ n'est pas continue au point $(0,0).$
+\end{exo}
+\begin{exo}
+On a:
+$f(x,0)=0=f(0,y),$
+
+$\frac{\partial f}{\partial x}(0,y)=\lim\limits_{\substack{x\rightarrow0}}\frac{f(x,y)-f(0,y)}{x}=\lim\limits_{\substack{x\rightarrow0}}y\frac{x^3+y^2}{x^2+y^2}=y$
+
+$\frac{\partial f}{\partial y}(x,0)=\lim\limits_{\substack{y\rightarrow0}}\frac{f(x,y)-f(x,0)}{y}=\lim\limits_{\substack{y\rightarrow0}}x\frac{x^3+y^2}{x^2+y^2}=x^2$
+
+D'autre part, on a immédiatement $\frac{\partial f}{\partial x}(0,0)=0=\frac{\partial f}{\partial y}(0,0)$
+
+On peut alors calculer les deux dérivées partielles secondes, au point $(0,0).$
+
+$$\frac{\partial^2 f}{\partial x \partial y}(0,0)=\lim\limits_{\substack{x\rightarrow0}}\frac{\frac{\partial f}{\partial y}(x,0)-\frac{\partial f}{\partial y}(0,0)}{x}=\lim\limits_{\substack{x\rightarrow0}}x=0$$
+
+$$\frac{\partial^2 f}{\partial y \partial x}(0,0)=\lim\limits_{\substack{y\rightarrow0}}\frac{\frac{\partial f}{\partial x}(0,y)-\frac{\partial f}{\partial x}(0,0)}{y}=\lim\limits_{\substack{y\rightarrow0}}\frac{y}{y}=1$$
+
+Donc $\frac{\partial^2 f}{\partial x \partial y}(0,0)\neq\frac{\partial^2 f}{\partial y \partial x}(0,0).$ Même conclusion que l'exercice précédent.
+
+
+\end{exo}
+
+\begin{exo}
+
+1. Remarquons que $f$ est, en particulier, de classe $\mathcal{C}^3$ au voisinage de $(0,0).$
+
+Pour $(x,y)$ appartenant au voisinage de $(0,0),$ la formule de Mac-Laurin donne:
+
+$f(x,y)=f(0,0)+\frac{1}{1!}[x\frac{\partial f}{\partial x}+y\frac{\partial f}{\partial y}]f(0,0)+\frac{1}{2!}[x\frac{\partial f}{\partial x}+y\frac{\partial f}{\partial y}]^{(2)}f(0,0)+\frac{1}{3!}[x\frac{\partial f}{\partial x}+y\frac{\partial f}{\partial y}]^{(3)}f(\theta x,\theta y)$ où $\theta\in ]0,1[$
+
+Rappelons que:
+$$[x\frac{\partial f}{\partial x}+y\frac{\partial f}{\partial y}]^{(2)}=x^2\frac{\partial^2 f}{\partial x^2}+2xy\frac{\partial^2 f}{\partial x\partial y}+y^2\frac{\partial^2 f}{\partial y^2}$$
+
+$$[x\frac{\partial f}{\partial x}+y\frac{\partial f}{\partial y}]^{(3)}=x^3\frac{\partial^3 f}{\partial x^3}+3x^2 y\frac{\partial^3 f}{\partial x^2\partial y}+3x y^2\frac{\partial^3 f}{\partial x\partial y^2}+y^3\frac{\partial^3 f}{\partial y^3}$$
+
+D'autre part, on a:
+
+$f'_x=-\sin x e^y,\;f'_y=e^y \cos x,\;f''_{xx}=-\cos x e^y$
+
+$f''_{xy}=-\sin x e^y,\;f''_{yy}=\cos x e^y,\;f_{xy^2}^{(3)}$
+
+$f_{xxx}^{(3)}=\sin x e^y,\;f_{x^2 y}^{(3)}=-\cos x e^y,\;f_{yyy}^{(3)}=\cos x e^y.$
+
+On obtient alors le développement voulu:
+
+$f(x,y)=1+y+\frac{1}{2}(y^2-x^2)+\frac{e^{\theta y}}{6}[x^3\sin \theta x-3x^2 y\cos \theta x-3xy^2\sin \theta x+y^3\cos \theta x]$ où $\theta\in ]0,1[$
+
+2. $f$ est de classe $\mathcal{C}^3$ au voisinage du point $(-\frac{\pi}{2},0)$
+
+Pour $(x,y)$ appartenant à ce voisinage, la formule de Taylor donne:
+
+$f(x,y)=f(-\frac{\pi}{2},0)+[(x+\frac{\pi}{2})f'_x (-\frac{\pi}{2},0)+yf'_y(-\frac{\pi}{2},0)]+\frac{1}{2!}[(x+\frac{\pi}{2})^2f''_{xx}(-\frac{\pi}{2},0)+2(x+\frac{\pi}{2})yf''_{xy}(-\frac{\pi}{2},0)+y^2.f''_{yy}(-\frac{\pi}{2},0)]+\frac{1}{3!}[(x+\frac{\pi}{2})^3f_{xxx}^{(3)}+3(x+\frac{\pi}{2})^2 y f_{xxy}^{(3)}+3(x+\frac{\pi}{2})y^2 f_{xyy}^{(3)}+y^3 f_{yyy}^{(3)}](-\frac{\pi}{2}+\theta(x+\frac{\pi}{2}),\theta y)$ où $\theta\in ]0,1[$\\
+
+Par suite,
+
+$
+f(x,y)=x+\frac{\pi}{2}+(x+\frac{\pi}{2})y+\frac{1}{6}[-(x+\frac{\pi}{2})^3 \cos (\theta(x+\frac{\pi}{2}))e^{\theta y}\\
+-\sin (\theta(x+\frac{\pi}{2})).3y (x+\frac{\pi}{2})^2 e^{\theta y}+3(x+\frac{\pi}{2})y^2\cos (\theta(x+\frac{\pi}{2}))e^{\theta y}+y^3 \sin (\theta(x+\frac{\pi}{2}))e^{\theta y}]\\
+=(x+\frac{\pi}{2})(1+y)+\frac{e^{\theta y}}{6}[[3(x+\frac{\pi}{2})]y^2-(x+\frac{\pi}{2})^3]\cos(\theta(x+\frac{\pi}{2}))\\
++[y^3-3y(x+\frac{\pi}{2})^2]\sin \theta(x+\frac{\pi}{2})]$
+
+
+\end{exo}
+\begin{exo}
+L'équation $\frac{\partial^2 f}{\partial x\partial y}=y\sinh x$ implique $\frac{\partial f}{\partial y}=y\cosh x+\varphi(y)$
+
+On intègre encore une fois, on obtient
+
+$f(x,y)=\frac{y^2}{2}\cosh x+\Phi(y)+\psi(x)\quad(\Phi'=\varphi)$ où $\Phi$ et $\psi$ sont deux fonctions arbitraires, de classe $\mathcal{C}^2.$
+
+ii) On pose $F=\frac{\partial f}{\partial y},$ l'équation sécrit alors: $\frac{\partial F}{\partial x}=F$
+
+On a alors $F=\frac{\partial f}{\partial y}=\varphi(y)e^x$
+
+Par suite, $f(x,y)=\Phi(y)e^x+\psi(x)\quad (\Phi'=\varphi)$ où $\Phi$ et $\psi$ sont deux fonctions continues, de classe $\mathcal{C}^2.$
+\end{exo}
+\begin{exo}
+On intègre l'équation trois fois de suite:
+
+$$\frac{\partial}{\partial y}(\frac{\partial^2 f}{\partial y \partial x})=0\Rightarrow\frac{\partial^2 f}{\partial y \partial x}=\varphi(x)\Rightarrow\frac{\partial f}{\partial x}=y\varphi(x)+\psi(x)$$
+
+Enfin, $f(x,y)=y\Phi(x)+\omega(x)+\theta(y)$ où $\Phi,\,\omega,\,\theta$ sont des fonctions arbitraires de classe $\mathcal{C}^3$ (avec $\Phi'=\varphi$ et $\omega'=\psi$).
+
+La fonction $f$ obtenue vérifie bien l'équation donnée.
+\end{exo}
+\begin{exo}
+Il est clair que les applications $f$ et $g$ sont différentiables comme composées de fonctions différentiables.
+
+$J(f)(x,y,z)$ est une matrice  de taile $(2,3)$ (2 lignes et 3 colonnes) de la forme
+
+\begin{equation*}
+J(f)(x,y,z)=\begin{pmatrix}
+2x & 0 & -2 \\
+y\cosh(x-z) & \sinh(x-z) & -y\cosh(x-z)
+\end{pmatrix}
+\end{equation*}
+
+$J(g)(x,y)$ est une matrice d'ordre $2:$
+
+\begin{equation*}
+J(g)(x,y)=\begin{pmatrix}
+1 &-1 \\
+0 & 1
+\end{pmatrix}
+\end{equation*}
+
+Comme $d(g\circ f)(x,y,z)=dg(f(x,y,z)\circ df(x,y,z),$ alors
+\begin{eqnarray*}
+J(g\circ f)(x,y,z)
+&=& J(g)(f(x,y,z))J(f)(x,y,z)\\
+&=&\begin{pmatrix}
+1 &-1 \\
+0 & 1
+\end{pmatrix}
+\begin{pmatrix}
+2x & 0 & -2 \\
+y\cosh(x-z) & \sinh(x-z) & -y\cosh(x-z)
+\end{pmatrix}\\
+&=&\begin{pmatrix}
+2x-y\cosh(x-z) & -\sinh(x-z) & -2+y\cosh(x-z) \\
+y\cosh(x-z) & \sinh(x-z) & -y\cosh(x-z)
+\end{pmatrix}
+\end{eqnarray*}
+Remarque: On peut aussi déterminer l'application $g\circ f$ et calculer directement la matrice jacobienne de $g\circ f.$
+
+\begin{eqnarray*}
+g\circ f
+&=& g(x^2-2z,y\sinh(x-z))\\
+&=& (x^2-2z-y\sinh(x-z),y\sinh(x-z))
+\end{eqnarray*}
+
+D'où
+\begin{equation*}
+J(g\circ f)(x,y,z)=\begin{pmatrix}
+2x-y\cosh(x-z) & -\sinh(x-z) & -2+y\cosh(x-z) \\
+y\cosh(x-z) & \sinh(x-z) & -y\cosh(x-z)
+\end{pmatrix}
+\end{equation*}
+\end{exo}
+\begin{exo}
+$f$ et $g$ sont différentiables comme composées de fonctions différentiables.
+
+La matrice jacobienne de $g$ est de type $(3,2).$
+\begin{equation*}
+J(f)(x,y,z)=\begin{pmatrix}
+ye^{xy} & xe^{xy} \\
+2xy & x^2\\
+0 & 1
+\end{pmatrix}
+\end{equation*}
+
+La matrice jacobienne de $g$ est d'ordre 3:
+\begin{equation*}
+J(g)(u,v,w)=\begin{pmatrix}
+0 & 0 & w\\
+1 & 0 & -1\\
+vw & uw & uv
+\end{pmatrix}
+\end{equation*}
+$g\circ f$ est differentiable dans $\mathbb{R}^2$ et on a:
+\end{exo}
+%\chapter{Intégrales multiples}
+%\chapter{Intégrales généralisées}
+
+
+\end{document} 

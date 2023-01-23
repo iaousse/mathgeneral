@@ -1,0 +1,6 @@
+https://www.bibmath.net/ressources/index.php?action=affiche&quoi=mathspe/cours/evn.html#:~:text=E%20d%C3%A9signe%20un%20espace%20vectoriel,corps%20K%3DR%20ou%20C%20.&text=Une%20application%20%E2%88%A5%E2%8B%85%E2%88%A5,%3D%200%20%E2%9F%BA%20x%20%3D%200%20.
+https://www.bibmath.net/ressources/index.php?action=affiche&quoi=mathspe/feuillesexo/evn&type=fexo
+https://www.bibmath.net/ressources/index.php?action=affiche&quoi=bde/analyse/topologie/evn&type=fexo
+https://www.maths-france.fr/MathSpe/Cours/13-topologie.pdf
+https://webusers.imj-prg.fr/~patrick.polo/2M216/216ch2-13mai16.pdf
+https://bremy.perso.math.cnrs.fr/MAT311-2017-SlidesAmphi3-Completude-Video.pdf
