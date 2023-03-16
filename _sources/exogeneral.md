@@ -5,7 +5,7 @@
 Soient $(X,d)$ un espace métrique et $A$ un sous-ensemble de $X$.
 
 - Montrer qu'il existe un ouvert qui est le plus grands (au sens de l'inclusion) ouvert contenu dans $A$. Montrer qu'il est unique. Cet ouvert est dit **intérieur** de $A$ et il est note $\mathring{A}$.
-- Montrer qu'il existe un fermé qui est le plus petit (au sens de l'inclusion) fermé contenant dans $A$. Montrer qu'il est unique. Ce fermé est dit **adhérence (ou fermeture) ** de $A$ et il est note $\bar{A}$.
+- Montrer qu'il existe un fermé qui est le plus petit (au sens de l'inclusion) fermé contenant dans $A$. Montrer qu'il est unique. Ce fermé est dit **adhérence (ou fermeture)** de $A$ et il est note $\bar{A}$.
 
 ## Exercice 2
 
