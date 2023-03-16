@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Topologie des espaces métriques &#8212; Cours Complément de Mathématiques Générales</title>
+    <title>Exercices &#8212; Cours Complément de Mathématiques Générales</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -50,8 +50,11 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
+    <link rel="prev" title="Exercices" href="exo_fctplsvar.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -88,7 +91,7 @@
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="metric-norme.html">
    Topologie des espaces métriques
@@ -111,16 +114,16 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="convconttopo.html">
    Convergence et Continuite
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="convergence.html">
      Convergence
@@ -141,8 +144,8 @@
      Exercices
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="exogeneral.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Exercices
     </a>
    </li>
@@ -189,7 +192,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/fctnvar.md"><button type="button"
+        <a class="dropdown-buttons" href="_sources/exogeneral.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Télécharger le fichier source" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -209,7 +212,7 @@
                 data-toggle="tooltip" data-placement="left" title="Dépôt source"><i
                     class="fab fa-github"></i>dépôt</button></a>
         <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ffctnvar.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fexogeneral.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Ouvrez un problème"><i class="fas fa-lightbulb"></i>signaler un problème</button></a>
         
@@ -230,6 +233,54 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contenu
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-1">
+   Exercice 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-2">
+   Exercice 2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-3">
+   Exercice 3
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-4">
+   Exercice 4
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-5">
+   Exercice 5
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-6">
+   Exercice 6
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-7">
+   Exercice 7
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercice-8">
+   Exercice 8
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -238,8 +289,52 @@
         
               <div>
                 
-  <div class="section" id="topologie-des-espaces-metriques">
-<h1>Topologie des espaces métriques<a class="headerlink" href="#topologie-des-espaces-metriques" title="Lien permanent vers ce titre">¶</a></h1>
+  <div class="section" id="exercices">
+<h1>Exercices<a class="headerlink" href="#exercices" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="exercice-1">
+<h2>Exercice 1<a class="headerlink" href="#exercice-1" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Soient <span class="math notranslate nohighlight">\((X,d)\)</span> un espace métrique et <span class="math notranslate nohighlight">\(A\)</span> un sous-ensemble de <span class="math notranslate nohighlight">\(X\)</span>.</p>
+<ul class="simple">
+<li><p>Montrer qu’il existe un ouvert qui est le plus grands (au sens de l’inclusion) ouvert contenu dans <span class="math notranslate nohighlight">\(A\)</span>. Montrer qu’il est unique. Cet ouvert est dit <strong>intérieur</strong> de <span class="math notranslate nohighlight">\(A\)</span> et il est note <span class="math notranslate nohighlight">\(\mathring{A}\)</span>.</p></li>
+<li><p>Montrer qu’il existe un fermé qui est le plus petit (au sens de l’inclusion) fermé contenant dans <span class="math notranslate nohighlight">\(A\)</span>. Montrer qu’il est unique. Ce fermé est dit **adhérence (ou fermeture) ** de <span class="math notranslate nohighlight">\(A\)</span> et il est note <span class="math notranslate nohighlight">\(\bar{A}\)</span>.</p></li>
+</ul>
+</div>
+<div class="section" id="exercice-2">
+<h2>Exercice 2<a class="headerlink" href="#exercice-2" title="Lien permanent vers ce titre">¶</a></h2>
+<p>1- Montrer que une partie <span class="math notranslate nohighlight">\(A\)</span> de <span class="math notranslate nohighlight">\((X, d)\)</span> est un ouvert si, et seulement si, <span class="math notranslate nohighlight">\(\mathring{A}=A\)</span></p>
+<p>2- Montrer que une partie <span class="math notranslate nohighlight">\(A\)</span> de <span class="math notranslate nohighlight">\((X, d)\)</span> est un fermé si, et seulement si, <span class="math notranslate nohighlight">\(\bar{A}=A\)</span></p>
+</div>
+<div class="section" id="exercice-3">
+<h2>Exercice 3<a class="headerlink" href="#exercice-3" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Dans <span class="math notranslate nohighlight">\(E = \mathbb R^n\)</span>, montrer que <span class="math notranslate nohighlight">\(\|.\|_1\)</span>, <span class="math notranslate nohighlight">\(\|.\|_2\)</span> et <span class="math notranslate nohighlight">\(\|.\|_\infty\)</span> sont des normes deux à deux équivalentes.</p>
+</div>
+<div class="section" id="exercice-4">
+<h2>Exercice 4<a class="headerlink" href="#exercice-4" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Dans un espace vectoriel normé <span class="math notranslate nohighlight">\((E, \mathcal N)\)</span>, montrer que <span class="math notranslate nohighlight">\(B(x, r) = x + B(0, r) = x + rB(0, 1)\)</span></p>
+</div>
+<div class="section" id="exercice-5">
+<h2>Exercice 5<a class="headerlink" href="#exercice-5" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Montrer que si <span class="math notranslate nohighlight">\(x_n \to x\)</span> dans <span class="math notranslate nohighlight">\((X, d)\)</span> alors <span class="math notranslate nohighlight">\(d(x_n,y) \to d(x,y)\)</span> pour tout <span class="math notranslate nohighlight">\(y\in X\)</span>. Généralement, si <span class="math notranslate nohighlight">\(x_n \to x\)</span> et <span class="math notranslate nohighlight">\(y_n \to y\)</span>, montrer que <span class="math notranslate nohighlight">\(d(x_n,y_n) \to d(x,y)\)</span>.</p>
+</div>
+<div class="section" id="exercice-6">
+<h2>Exercice 6<a class="headerlink" href="#exercice-6" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Soit l’espace métrique <span class="math notranslate nohighlight">\((X, d)\)</span> avec <span class="math notranslate nohighlight">\(X =]0, 1[\)</span> et <span class="math notranslate nohighlight">\(d\)</span> la distance usuelle (associée à la valeur absolue).</p>
+<p>On considère la suite <span class="math notranslate nohighlight">\((a_n)\)</span> définie par <span class="math notranslate nohighlight">\(a_n=\dfrac{1}{n}\)</span> pour tout <span class="math notranslate nohighlight">\(n\geq 1\)</span>. La suite est-elle bornée ? Est-elle de Cauchy ? Est-elle convergente dans <span class="math notranslate nohighlight">\(X\)</span>?</p>
+</div>
+<div class="section" id="exercice-7">
+<h2>Exercice 7<a class="headerlink" href="#exercice-7" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Soit l’espace métrique <span class="math notranslate nohighlight">\((\mathbb R^2, d)\)</span> avec <span class="math notranslate nohighlight">\(d\)</span> est définie pour tout <span class="math notranslate nohighlight">\( X = (x_1, x_2), Y= (y_1, y_2) \in \mathbb R^2\)</span> par <span class="math notranslate nohighlight">\(d(X, Y) = |x_1 - y_1| + |x_2 - y_2|\)</span>.</p>
+<p>Vérifier que <span class="math notranslate nohighlight">\(d\)</span> est bel est bien une distance sur <span class="math notranslate nohighlight">\(\mathbb R^2\)</span>.</p>
+<p>Considérons la suite <span class="math notranslate nohighlight">\((u_n)_n\)</span> d’éléments de <span class="math notranslate nohighlight">\(\mathbb R^2\)</span> telle que pour tout <span class="math notranslate nohighlight">\(n \geq 1, u_n = (\dfrac{1}{n}, \dfrac{2n+1}{n+1})\)</span>.</p>
+<p>Montrer que <span class="math notranslate nohighlight">\(u_n \to (0, 2)\)</span></p>
+</div>
+<div class="section" id="exercice-8">
+<h2>Exercice 8<a class="headerlink" href="#exercice-8" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Soit l’espace métrique <span class="math notranslate nohighlight">\((\mathbb R^2, d)\)</span> avec <span class="math notranslate nohighlight">\(d\)</span> définie dans l’exercice 3.
+Soit <span class="math notranslate nohighlight">\(x_n = (a_n , b_n)\)</span> une suite d’éléments de3 <span class="math notranslate nohighlight">\(\mathbb R^2\)</span>.
+Montrer que <span class="math notranslate nohighlight">\(x_n \to l=(l_1, l_2)\)</span> si, et seulement si, les suites réelles
+<span class="math notranslate nohighlight">\(a_n \to l_1\)</span> et <span class="math notranslate nohighlight">\(b_n \to l_2\)</span>.</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -267,6 +362,7 @@
         
         <div class='prev-next-bottom'>
             
+    <a class='left-prev' id="prev-link" href="exo_fctplsvar.html" title="previous page">Exercices</a>
 
         </div>
         
