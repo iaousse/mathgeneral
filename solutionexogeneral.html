@@ -1,0 +1,616 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solutions des Exercices F &#8212; Cours Complément de Mathématiques Générales</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" />
+    <link rel="prev" title="Exercices F" href="exogeneral.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Cours Complément de Mathématiques Générales</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Rechercher dans ce livre ..." aria-label="Rechercher dans ce livre ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Complément de Mathématiques Générales
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="metric-norme.html">
+   Topologie des espaces métriques
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="mnspace.html">
+     Espaces vectoriels normés - Espaces métriques
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exo_metric.html">
+     Exercices
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="convconttopo.html">
+   Convergence et Continuite
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="convergence.html">
+     Convergence
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="complet.html">
+     Complétude
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="continue.html">
+     Continuité
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exo_fctplsvar.html">
+     Exercices
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exogeneral.html">
+     Exercices F
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Solutions des Exercices F
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Basculer la navigation" aria-controls="site-navigation"
+                title="Basculer la navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Téléchargez cette page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/solutionexogeneral.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Télécharger le fichier source" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimer au format PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Dépôt source"><i
+                    class="fab fa-github"></i>dépôt</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fsolutionexogeneral.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Ouvrez un problème"><i class="fas fa-lightbulb"></i>signaler un problème</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Mode plein écran"
+        title="Mode plein écran"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contenu
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#solution-de-l-exercice-1">
+   Solution de l’exercice 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#solution-de-l-exercice-2">
+   Solution de l’exercice 2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#solution-de-l-exercice-3">
+   Solution de l’exercice 3
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#solution-de-l-exercice-4">
+   Solution de l’exercice 4
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#solution-de-l-exercice-5">
+   Solution de l’exercice 5
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#partie-1">
+     Partie 1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#partie-2">
+     Partie 2
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#solution-de-l-exercice-6">
+   Solution de l’exercice 6
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#la-suite-est-elle-bornee">
+     La suite est-elle bornée ?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#la-suite-est-elle-de-cauchy">
+     La suite est-elle de Cauchy ?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#la-suite-est-elle-convergente-dans-x">
+     La suite est-elle convergente dans
+     <span class="math notranslate nohighlight">
+      \(X\)
+     </span>
+     ?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#solution-de-l-exercice-7">
+   Solution de l’exercice 7
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#verifier-que-d-est-bel-est-bien-une-distance-sur-mathbb-r-2">
+     Vérifier que
+     <span class="math notranslate nohighlight">
+      \(d\)
+     </span>
+     est bel est bien une distance sur
+     <span class="math notranslate nohighlight">
+      \(\mathbb R^2\)
+     </span>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#considerons-la-suite-u-n-n-d-elements-de-mathbb-r-2-telle-que-pour-tout-n-geq-1-u-n-dfrac-1-n-dfrac-2n-1-n-1">
+     Considérons la suite
+     <span class="math notranslate nohighlight">
+      \((u_n)_n\)
+     </span>
+     d’éléments de
+     <span class="math notranslate nohighlight">
+      \(\mathbb R^2\)
+     </span>
+     telle que pour tout
+     <span class="math notranslate nohighlight">
+      \(n \geq 1, u_n = (\dfrac{1}{n}, \dfrac{2n+1}{n+1})\)
+     </span>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#solution-de-l-exercice-8">
+   Solution de l’exercice 8
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="solutions-des-exercices-f">
+<h1>Solutions des Exercices F<a class="headerlink" href="#solutions-des-exercices-f" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="solution-de-l-exercice-1">
+<h2>Solution de l’exercice 1<a class="headerlink" href="#solution-de-l-exercice-1" title="Lien permanent vers ce titre">¶</a></h2>
+<ul class="simple">
+<li><p>L’ensemble des ouverts contenus dans <span class="math notranslate nohighlight">\(A\)</span> est non vide puisqu’il contient l’ensemble vide. Soit <span class="math notranslate nohighlight">\(\mathcal{O}\)</span> l’ensemble des ouverts contenus dans <span class="math notranslate nohighlight">\(A\)</span>. On définit <span class="math notranslate nohighlight">\(\mathring{A} = \bigcup_{U \in \mathcal{O}} U\)</span>. Montrons que <span class="math notranslate nohighlight">\(\mathring{A}\)</span> est un ouvert contenu dans <span class="math notranslate nohighlight">\(A\)</span> et que c’est le plus grand ouvert contenu dans <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(\mathring{A} \subseteq A\)</span> car tout ouvert <span class="math notranslate nohighlight">\(U \in \mathcal{O}\)</span> est contenu dans <span class="math notranslate nohighlight">\(A\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mathring{A}\)</span> est un ouvert car c’est une union d’ouverts.</p></li>
+<li><p>Si <span class="math notranslate nohighlight">\(V\)</span> est un ouvert contenu dans <span class="math notranslate nohighlight">\(A\)</span>, alors <span class="math notranslate nohighlight">\(V \in \mathcal{O}\)</span> et donc <span class="math notranslate nohighlight">\(V \subseteq \mathring{A}\)</span>.</p></li>
+<li><p>L’unicité découle du fait que tout autre ouvert contenu dans <span class="math notranslate nohighlight">\(A\)</span> doit être inclus dans <span class="math notranslate nohighlight">\(\mathring{A}\)</span>.</p></li>
+</ul>
+</li>
+<li><p>L’ensemble des fermés contenant <span class="math notranslate nohighlight">\(A\)</span> est non vide puisqu’il contient <span class="math notranslate nohighlight">\(X\)</span>. Soit <span class="math notranslate nohighlight">\(\mathcal{F}\)</span> l’ensemble des fermés contenant <span class="math notranslate nohighlight">\(A\)</span>. On définit <span class="math notranslate nohighlight">\(\bar{A} = \bigcap_{F \in \mathcal{F}} F\)</span>. Montrons que <span class="math notranslate nohighlight">\(\bar{A}\)</span> est un fermé contenant <span class="math notranslate nohighlight">\(A\)</span> et que c’est le plus petit fermé contenant <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(A \subseteq \bar{A}\)</span> car tout fermé <span class="math notranslate nohighlight">\(F \in \mathcal{F}\)</span> contient <span class="math notranslate nohighlight">\(A\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\bar{A}\)</span> est un fermé car c’est une intersection de fermés.</p></li>
+<li><p>Si <span class="math notranslate nohighlight">\(V\)</span> est un fermé contenant <span class="math notranslate nohighlight">\(A\)</span>, alors <span class="math notranslate nohighlight">\(V \in \mathcal{F}\)</span> et donc <span class="math notranslate nohighlight">\(\bar{A} \subseteq V\)</span>.</p></li>
+<li><p>L’unicité découle du fait que tout autre fermé contenant <span class="math notranslate nohighlight">\(A\)</span> doit contenir <span class="math notranslate nohighlight">\(\bar{A}\)</span>.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="solution-de-l-exercice-2">
+<h2>Solution de l’exercice 2<a class="headerlink" href="#solution-de-l-exercice-2" title="Lien permanent vers ce titre">¶</a></h2>
+<p>1- Si <span class="math notranslate nohighlight">\(A\)</span> est un ouvert, alors <span class="math notranslate nohighlight">\(\mathring{A} \subseteq A\)</span>. Par définition de l’intérieur, <span class="math notranslate nohighlight">\(A\)</span> est inclus dans tout ouvert contenant <span class="math notranslate nohighlight">\(A\)</span>. Donc <span class="math notranslate nohighlight">\(A \subseteq \mathring{A}\)</span> et donc <span class="math notranslate nohighlight">\(\mathring{A} = A\)</span>.</p>
+<p>Réciproquement, si <span class="math notranslate nohighlight">\(\mathring{A} = A\)</span>, alors <span class="math notranslate nohighlight">\(A\)</span> est un ouvert.</p>
+<p>2- Si <span class="math notranslate nohighlight">\(A\)</span> est un fermé, alors <span class="math notranslate nohighlight">\(\bar{A} \supseteq A\)</span>. Par définition de l’adhérence, <span class="math notranslate nohighlight">\(A\)</span> est contenu dans tout fermé contenant <span class="math notranslate nohighlight">\(A\)</span>. Donc <span class="math notranslate nohighlight">\(\bar{A} \subseteq A\)</span> et donc <span class="math notranslate nohighlight">\(\bar{A} = A\)</span>.</p>
+<p>Réciproquement, si <span class="math notranslate nohighlight">\(\bar{A} = A\)</span>, alors <span class="math notranslate nohighlight">\(A\)</span> est un fermé.</p>
+</div>
+<div class="section" id="solution-de-l-exercice-3">
+<h2>Solution de l’exercice 3<a class="headerlink" href="#solution-de-l-exercice-3" title="Lien permanent vers ce titre">¶</a></h2>
+<p>deja fait durant la seance de td. Pour ceux qui n’ont pas assiste, consulter cette <a class="reference external" href="https://www.google.com/search?q=montrer+que+les+norme+1%2C+2%2C+infini+sont+equivalentes&amp;oq=montrer+que+les+norme+1%2C+2%2C+infini+sont+equivalentes&amp;aqs=chrome..69i57.14881j0j7&amp;sourceid=chrome&amp;ie=UTF-8#fpstate=ive&amp;vld=cid:3cc13405,vid:RwijQhUx7zc">video</a></p>
+</div>
+<div class="section" id="solution-de-l-exercice-4">
+<h2>Solution de l’exercice 4<a class="headerlink" href="#solution-de-l-exercice-4" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Dans un espace vectoriel normé <span class="math notranslate nohighlight">\((E, \mathcal N)\)</span>, on veut montrer que <span class="math notranslate nohighlight">\(B(x, r) = x + B(0, r) = x + rB(0, 1)\)</span>.
+Dans l’exercice 4, les ensembles <span class="math notranslate nohighlight">\(B(x, r)\)</span>, <span class="math notranslate nohighlight">\(x + B(0, r)\)</span> et <span class="math notranslate nohighlight">\(x + rB(0, 1)\)</span> sont définis comme suit :</p>
+<ol>
+<li><p><span class="math notranslate nohighlight">\(B(x, r)\)</span> est la boule ouverte centrée en <span class="math notranslate nohighlight">\(x\)</span> et de rayon <span class="math notranslate nohighlight">\(r\)</span>. C’est l’ensemble des points <span class="math notranslate nohighlight">\(y\)</span> de l’espace vectoriel normé <span class="math notranslate nohighlight">\((E, \mathcal N)\)</span> tels que la distance entre <span class="math notranslate nohighlight">\(x\)</span> et <span class="math notranslate nohighlight">\(y\)</span> (selon la norme <span class="math notranslate nohighlight">\(\mathcal N\)</span>) est strictement inférieure à <span class="math notranslate nohighlight">\(r\)</span> :</p>
+<div class="math notranslate nohighlight">
+\[B(x, r) = \{y \in E \mid \|y - x\| &lt; r\}\]</div>
+</li>
+<li><p><span class="math notranslate nohighlight">\(x + B(0, r)\)</span> est l’ensemble obtenu en ajoutant le vecteur <span class="math notranslate nohighlight">\(x\)</span> à chaque élément de la boule ouverte centrée en <span class="math notranslate nohighlight">\(0\)</span> et de rayon <span class="math notranslate nohighlight">\(r\)</span>. Cela revient à translater la boule ouverte <span class="math notranslate nohighlight">\(B(0, r)\)</span> de sorte que son centre devienne <span class="math notranslate nohighlight">\(x\)</span> :</p>
+<div class="math notranslate nohighlight">
+\[x + B(0, r) = \{x + y \mid y \in B(0, r)\}\]</div>
+</li>
+<li><p><span class="math notranslate nohighlight">\(x + rB(0, 1)\)</span> est l’ensemble obtenu en multipliant chaque élément de la boule ouverte centrée en <span class="math notranslate nohighlight">\(0\)</span> et de rayon <span class="math notranslate nohighlight">\(1\)</span> par le facteur <span class="math notranslate nohighlight">\(r\)</span>, puis en ajoutant le vecteur <span class="math notranslate nohighlight">\(x\)</span>. Cela revient à dilater la boule ouverte <span class="math notranslate nohighlight">\(B(0, 1)\)</span> par un facteur <span class="math notranslate nohighlight">\(r\)</span> et la translater de sorte que son centre devienne <span class="math notranslate nohighlight">\(x\)</span> :</p>
+<div class="math notranslate nohighlight">
+\[x + rB(0, 1) = \{x + ry \mid y \in B(0, 1)\}\]</div>
+</li>
+</ol>
+<p>L’exercice demande de montrer que ces trois ensembles sont en réalité les mêmes,
+c’est-à-dire que <span class="math notranslate nohighlight">\(B(x, r) = x + B(0, r) = x + rB(0, 1)\)</span>.</p>
+<p>Soit <span class="math notranslate nohighlight">\(y \in B(x, r)\)</span>. Alors, on a <span class="math notranslate nohighlight">\(\mathcal N(y - x) &lt; r\)</span>. Posons <span class="math notranslate nohighlight">\(z = y - x\)</span>, on a donc <span class="math notranslate nohighlight">\(\mathcal N(z) &lt; r\)</span>. Ceci signifie que <span class="math notranslate nohighlight">\(z \in B(0, r)\)</span>. Ainsi, <span class="math notranslate nohighlight">\(y = x + z \in x + B(0, r)\)</span>, et donc <span class="math notranslate nohighlight">\(B(x, r) \subseteq x + B(0, r)\)</span>.</p>
+<p>Réciproquement, soit <span class="math notranslate nohighlight">\(y \in x + B(0, r)\)</span>. Alors, il existe <span class="math notranslate nohighlight">\(z \in B(0, r)\)</span> tel que <span class="math notranslate nohighlight">\(y = x + z\)</span>. On a <span class="math notranslate nohighlight">\(\mathcal N(z) &lt; r\)</span>, donc <span class="math notranslate nohighlight">\(\mathcal N(y - x) &lt; r\)</span>, ce qui signifie que <span class="math notranslate nohighlight">\(y \in B(x, r)\)</span>. Ainsi, <span class="math notranslate nohighlight">\(x + B(0, r) \subseteq B(x, r)\)</span>.</p>
+<p>Par conséquent, <span class="math notranslate nohighlight">\(B(x, r) = x + B(0, r)\)</span>.</p>
+<p>De plus, soit <span class="math notranslate nohighlight">\(y \in B(0, r)\)</span>. Alors, <span class="math notranslate nohighlight">\(\mathcal N(y) &lt; r\)</span>. Posons <span class="math notranslate nohighlight">\(z = \frac{1}{r} y\)</span>, on a donc <span class="math notranslate nohighlight">\(\mathcal N(z) &lt; 1\)</span>. Ceci signifie que <span class="math notranslate nohighlight">\(z \in B(0, 1)\)</span>. Ainsi, <span class="math notranslate nohighlight">\(y = r z \in rB(0, 1)\)</span>, et donc <span class="math notranslate nohighlight">\(B(0, r) \subseteq rB(0, 1)\)</span>.</p>
+<p>Réciproquement, soit <span class="math notranslate nohighlight">\(y \in rB(0, 1)\)</span>. Alors, il existe <span class="math notranslate nohighlight">\(z \in B(0, 1)\)</span> tel que <span class="math notranslate nohighlight">\(y = r z\)</span>. On a <span class="math notranslate nohighlight">\(\mathcal N(z) &lt; 1\)</span>, donc <span class="math notranslate nohighlight">\(\mathcal N(y) = \mathcal N(rz) = r \mathcal N(z) &lt; r\)</span>, ce qui signifie que <span class="math notranslate nohighlight">\(y \in B(0, r)\)</span>. Ainsi, <span class="math notranslate nohighlight">\(rB(0, 1) \subseteq B(0, r)\)</span>.</p>
+<p>Par conséquent, <span class="math notranslate nohighlight">\(B(0, r) = rB(0, 1)\)</span>.</p>
+<p>En combinant les deux résultats, on obtient :</p>
+<div class="math notranslate nohighlight">
+\[B(x, r) = x + B(0, r) = x + rB(0, 1)\]</div>
+</div>
+<div class="section" id="solution-de-l-exercice-5">
+<h2>Solution de l’exercice 5<a class="headerlink" href="#solution-de-l-exercice-5" title="Lien permanent vers ce titre">¶</a></h2>
+<p>On doit montrer deux choses dans cet exercice :</p>
+<ol class="simple">
+<li><p>Si <span class="math notranslate nohighlight">\(x_n \to x\)</span> dans <span class="math notranslate nohighlight">\((X, d)\)</span>, alors <span class="math notranslate nohighlight">\(d(x_n, y) \to d(x, y)\)</span> pour tout <span class="math notranslate nohighlight">\(y \in X\)</span>.</p></li>
+<li><p>Si <span class="math notranslate nohighlight">\(x_n \to x\)</span> et <span class="math notranslate nohighlight">\(y_n \to y\)</span>, alors <span class="math notranslate nohighlight">\(d(x_n, y_n) \to d(x, y)\)</span>.</p></li>
+</ol>
+<div class="section" id="partie-1">
+<h3>Partie 1<a class="headerlink" href="#partie-1" title="Lien permanent vers ce titre">¶</a></h3>
+<p>On sait que <span class="math notranslate nohighlight">\(x_n \to x\)</span> dans <span class="math notranslate nohighlight">\((X, d)\)</span>. Donc, pour tout <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>, il existe un entier <span class="math notranslate nohighlight">\(N\)</span> tel que pour tout <span class="math notranslate nohighlight">\(n \geq N\)</span>, <span class="math notranslate nohighlight">\(d(x_n, x) &lt; \epsilon\)</span>.</p>
+<p>On veut montrer que <span class="math notranslate nohighlight">\(d(x_n, y) \to d(x, y)\)</span> pour tout <span class="math notranslate nohighlight">\(y \in X\)</span>. Soit <span class="math notranslate nohighlight">\(y \in X\)</span>.</p>
+<p>On utilise l’inégalité triangulaire : <span class="math notranslate nohighlight">\(|d(x_n, y) - d(x, y)| \leq d(x_n, x)\)</span>. Alors, pour tout <span class="math notranslate nohighlight">\(n \geq N\)</span>, on a :</p>
+<div class="math notranslate nohighlight">
+\[|d(x_n, y) - d(x, y)| \leq d(x_n, x) &lt; \epsilon\]</div>
+<p>Donc, <span class="math notranslate nohighlight">\(d(x_n, y) \to d(x, y)\)</span> pour tout <span class="math notranslate nohighlight">\(y \in X\)</span>.</p>
+</div>
+<div class="section" id="partie-2">
+<h3>Partie 2<a class="headerlink" href="#partie-2" title="Lien permanent vers ce titre">¶</a></h3>
+<p>On sait que <span class="math notranslate nohighlight">\(x_n \to x\)</span> et <span class="math notranslate nohighlight">\(y_n \to y\)</span> dans <span class="math notranslate nohighlight">\((X, d)\)</span>. Donc, pour tout <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>, il existe des entiers <span class="math notranslate nohighlight">\(N_1\)</span> et <span class="math notranslate nohighlight">\(N_2\)</span> tels que pour tout <span class="math notranslate nohighlight">\(n \geq N_1\)</span>, <span class="math notranslate nohighlight">\(d(x_n, x) &lt; \frac{\epsilon}{2}\)</span> et pour tout <span class="math notranslate nohighlight">\(n \geq N_2\)</span>, <span class="math notranslate nohighlight">\(d(y_n, y) &lt; \frac{\epsilon}{2}\)</span>.</p>
+<p>On veut montrer que <span class="math notranslate nohighlight">\(d(x_n, y_n) \to d(x, y)\)</span>. On utilise à nouveau l’inégalité triangulaire :</p>
+<div class="math notranslate nohighlight">
+\[|d(x_n, y_n) - d(x, y)| \leq |d(x_n, y_n) - d(x_n, y)| + |d(x_n, y) - d(x, y)|\]</div>
+<p>On utilise encore l’inégalité triangulaire pour la première partie de la somme :</p>
+<div class="math notranslate nohighlight">
+\[|d(x_n, y_n) - d(x_n, y)| \leq d(y_n, y)\]</div>
+<p>Alors, pour tout <span class="math notranslate nohighlight">\(n \geq \max(N_1, N_2)\)</span>, on a :</p>
+<div class="math notranslate nohighlight">
+\[|d(x_n, y_n) - d(x, y)| \leq d(x_n, x) + d(y_n, y) &lt; \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon\]</div>
+<p>Donc, <span class="math notranslate nohighlight">\(d(x_n, y_n) \to d(x, y)\)</span>.</p>
+</div>
+</div>
+<div class="section" id="solution-de-l-exercice-6">
+<h2>Solution de l’exercice 6<a class="headerlink" href="#solution-de-l-exercice-6" title="Lien permanent vers ce titre">¶</a></h2>
+<p>On considère l’espace métrique <span class="math notranslate nohighlight">\((X, d)\)</span> avec <span class="math notranslate nohighlight">\(X = ]0, 1[\)</span> et <span class="math notranslate nohighlight">\(d\)</span> la distance usuelle (associée à la valeur absolue). On étudie la suite <span class="math notranslate nohighlight">\((a_n)\)</span> définie par <span class="math notranslate nohighlight">\(a_n = \dfrac{1}{n}\)</span> pour tout <span class="math notranslate nohighlight">\(n \geq 1\)</span>.</p>
+<div class="section" id="la-suite-est-elle-bornee">
+<h3>La suite est-elle bornée ?<a class="headerlink" href="#la-suite-est-elle-bornee" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Une suite est bornée si et seulement si elle admet une borne supérieure et une borne inférieure. Dans notre cas, pour tout <span class="math notranslate nohighlight">\(n \geq 1\)</span>, on a <span class="math notranslate nohighlight">\(0 &lt; a_n = \dfrac{1}{n} &lt; 1\)</span>. Donc, la suite <span class="math notranslate nohighlight">\((a_n)\)</span> est bornée.</p>
+</div>
+<div class="section" id="la-suite-est-elle-de-cauchy">
+<h3>La suite est-elle de Cauchy ?<a class="headerlink" href="#la-suite-est-elle-de-cauchy" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Une suite est de Cauchy si et seulement si, pour tout <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>, il existe un entier <span class="math notranslate nohighlight">\(N\)</span> tel que pour tous les entiers <span class="math notranslate nohighlight">\(p, q \geq N\)</span>, on a <span class="math notranslate nohighlight">\(d(a_p, a_q) &lt; \epsilon\)</span>. Dans notre cas, la distance est la distance usuelle, donc <span class="math notranslate nohighlight">\(d(a_p, a_q) = |a_p - a_q| = \left|\dfrac{1}{p} - \dfrac{1}{q}\right|\)</span>.</p>
+<p>Soit <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>. On cherche un entier <span class="math notranslate nohighlight">\(N\)</span> tel que pour tous les entiers <span class="math notranslate nohighlight">\(p, q \geq N\)</span>, on a <span class="math notranslate nohighlight">\(\left|\dfrac{1}{p} - \dfrac{1}{q}\right| &lt; \epsilon\)</span>. Prenons <span class="math notranslate nohighlight">\(N = \left\lceil\dfrac{2}{\epsilon}\right\rceil\)</span>. Alors, pour tous les entiers <span class="math notranslate nohighlight">\(p, q \geq N\)</span>, on a :</p>
+<div class="math notranslate nohighlight">
+\[\left|\dfrac{1}{p} - \dfrac{1}{q}\right| \leq \dfrac{1}{p} + \dfrac{1}{q} \leq \dfrac{1}{N} + \dfrac{1}{N} = \dfrac{2}{N} &lt; \epsilon\]</div>
+<p>Donc, la suite <span class="math notranslate nohighlight">\((a_n)\)</span> est de Cauchy.</p>
+</div>
+<div class="section" id="la-suite-est-elle-convergente-dans-x">
+<h3>La suite est-elle convergente dans <span class="math notranslate nohighlight">\(X\)</span> ?<a class="headerlink" href="#la-suite-est-elle-convergente-dans-x" title="Lien permanent vers ce titre">¶</a></h3>
+<p>On sait que la suite <span class="math notranslate nohighlight">\((a_n)\)</span> est de Cauchy et bornée. Comme la distance est la distance usuelle, on peut conclure que la suite <span class="math notranslate nohighlight">\((a_n)\)</span> est convergente dans <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>.</p>
+<p>Cependant, la limite de la suite <span class="math notranslate nohighlight">\((a_n)\)</span> dans <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> est 0, et <span class="math notranslate nohighlight">\(0 \notin X\)</span>. Donc, la suite <span class="math notranslate nohighlight">\((a_n)\)</span> n’est pas convergente dans <span class="math notranslate nohighlight">\(X\)</span>.</p>
+</div>
+</div>
+<div class="section" id="solution-de-l-exercice-7">
+<h2>Solution de l’exercice 7<a class="headerlink" href="#solution-de-l-exercice-7" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Soit l’espace métrique <span class="math notranslate nohighlight">\((\mathbb R^2, d)\)</span> avec <span class="math notranslate nohighlight">\(d\)</span> définie pour tout <span class="math notranslate nohighlight">\(X = (x_1, x_2), Y= (y_1, y_2) \in \mathbb R^2\)</span> par <span class="math notranslate nohighlight">\(d(X, Y) = |x_1 - y_1| + |x_2 - y_2|\)</span>.</p>
+<div class="section" id="verifier-que-d-est-bel-est-bien-une-distance-sur-mathbb-r-2">
+<h3>Vérifier que <span class="math notranslate nohighlight">\(d\)</span> est bel est bien une distance sur <span class="math notranslate nohighlight">\(\mathbb R^2\)</span><a class="headerlink" href="#verifier-que-d-est-bel-est-bien-une-distance-sur-mathbb-r-2" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Pour montrer que <span class="math notranslate nohighlight">\(d\)</span> est une distance sur <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>, on doit vérifier les trois propriétés suivantes pour tous les points <span class="math notranslate nohighlight">\(X, Y, Z \in \mathbb{R}^2\)</span> :</p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(d(X, Y) \geq 0\)</span> et <span class="math notranslate nohighlight">\(d(X, Y) = 0 \Leftrightarrow X = Y\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(d(X, Y) = d(Y, X)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(d(X, Z) \leq d(X, Y) + d(Y, Z)\)</span> (inégalité triangulaire)</p></li>
+</ol>
+<p>Alors</p>
+<ol class="simple">
+<li><p>La somme des valeurs absolues est toujours non négative, donc <span class="math notranslate nohighlight">\(d(X, Y) \geq 0\)</span>. Si <span class="math notranslate nohighlight">\(d(X, Y) = 0\)</span>, alors <span class="math notranslate nohighlight">\(|x_1 - y_1| + |x_2 - y_2| = 0\)</span>, ce qui implique que <span class="math notranslate nohighlight">\(x_1 = y_1\)</span> et <span class="math notranslate nohighlight">\(x_2 = y_2\)</span>, donc <span class="math notranslate nohighlight">\(X = Y\)</span>. Réciproquement, si <span class="math notranslate nohighlight">\(X = Y\)</span>, alors <span class="math notranslate nohighlight">\(d(X, Y) = |x_1 - x_1| + |x_2 - x_2| = 0\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(d(X, Y) = |x_1 - y_1| + |x_2 - y_2| = |y_1 - x_1| + |y_2 - x_2| = d(Y, X)\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(d(X, Z) = |x_1 - z_1| + |x_2 - z_2| \leq |x_1 - y_1| + |y_1 - z_1| + |x_2 - y_2| + |y_2 - z_2| = d(X, Y) + d(Y, Z)\)</span>.</p></li>
+</ol>
+<p>Donc, <span class="math notranslate nohighlight">\(d\)</span> est bien une distance sur <span class="math notranslate nohighlight">\(\mathbb R^2\)</span>.</p>
+</div>
+<div class="section" id="considerons-la-suite-u-n-n-d-elements-de-mathbb-r-2-telle-que-pour-tout-n-geq-1-u-n-dfrac-1-n-dfrac-2n-1-n-1">
+<h3>Considérons la suite <span class="math notranslate nohighlight">\((u_n)_n\)</span> d’éléments de <span class="math notranslate nohighlight">\(\mathbb R^2\)</span> telle que pour tout <span class="math notranslate nohighlight">\(n \geq 1, u_n = (\dfrac{1}{n}, \dfrac{2n+1}{n+1})\)</span><a class="headerlink" href="#considerons-la-suite-u-n-n-d-elements-de-mathbb-r-2-telle-que-pour-tout-n-geq-1-u-n-dfrac-1-n-dfrac-2n-1-n-1" title="Lien permanent vers ce titre">¶</a></h3>
+<p>On veut montrer que <span class="math notranslate nohighlight">\(u_n \to (0, 2)\)</span>.</p>
+<p>Pour montrer que la suite <span class="math notranslate nohighlight">\((u_n)_n\)</span> converge vers <span class="math notranslate nohighlight">\((0, 2)\)</span>, on doit montrer que pour tout <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>, il existe un entier <span class="math notranslate nohighlight">\(N\)</span> tel que pour tout <span class="math notranslate nohighlight">\(n \geq N\)</span>, on ait <span class="math notranslate nohighlight">\(d(u_n, (0, 2)) &lt; \epsilon\)</span>.</p>
+<p>Soit <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>. On a :</p>
+<div class="math notranslate nohighlight">
+\[
+d(u_n, (0, 2)) = | \frac{1}{n} - 0| + | \frac{2n+1}{n+1} - 2 | = | \frac{1}{n} | + | \frac{-1}{n+1} | = \frac{1}{n} + \frac{1}{n+1}
+\]</div>
+<p>On veut montrer que pour un <span class="math notranslate nohighlight">\(n\)</span> suffisamment grand, cette expression est inférieure à <span class="math notranslate nohighlight">\(\epsilon\)</span>. Pour cela, on cherche <span class="math notranslate nohighlight">\(N\)</span> tel que pour <span class="math notranslate nohighlight">\(n \geq N\)</span> :</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{1}{n} + \frac{1}{n+1} &lt; \epsilon
+\]</div>
+<p>Comme <span class="math notranslate nohighlight">\(\frac{1}{n} \geq \frac{1}{n+1}\)</span> pour tout <span class="math notranslate nohighlight">\(n \geq 1\)</span>, on a :</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{1}{n} + \frac{1}{n+1} &lt; 2 \cdot \frac{1}{n}
+\]</div>
+<p>Alors, on peut choisir <span class="math notranslate nohighlight">\(N\)</span> tel que <span class="math notranslate nohighlight">\(2 \cdot \frac{1}{N} \leq \epsilon\)</span>.
+Par exemple, on peut prendre
+<span class="math notranslate nohighlight">\(N = \left\lceil \frac{2}{\epsilon} \right\rceil+1\)</span>, où <span class="math notranslate nohighlight">\(\lceil \cdot \rceil\)</span> désigne la partie entiere.</p>
+<p>Donc, pour tout <span class="math notranslate nohighlight">\(n \geq N\)</span>, on a :</p>
+<div class="math notranslate nohighlight">
+\[
+d(u_n, (0, 2)) = \frac{1}{n} + \frac{1}{n+1} &lt; 2 \cdot \frac{1}{n} \leq 2 \cdot \frac{1}{N} \leq \epsilon
+\]</div>
+<p>Cela montre que la suite <span class="math notranslate nohighlight">\((u_n)_n\)</span> converge bien vers <span class="math notranslate nohighlight">\((0, 2)\)</span>.</p>
+</div>
+</div>
+<div class="section" id="solution-de-l-exercice-8">
+<h2>Solution de l’exercice 8<a class="headerlink" href="#solution-de-l-exercice-8" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pour montrer que la suite <span class="math notranslate nohighlight">\(x_n \to l = (l_1, l_2)\)</span> si, et seulement si, les suites réelles <span class="math notranslate nohighlight">\(a_n \to l_1\)</span> et <span class="math notranslate nohighlight">\(b_n \to l_2\)</span>, on doit montrer que la convergence de la suite <span class="math notranslate nohighlight">\(x_n\)</span> vers <span class="math notranslate nohighlight">\(l\)</span> implique la convergence des suites <span class="math notranslate nohighlight">\(a_n\)</span> vers <span class="math notranslate nohighlight">\(l_1\)</span> et <span class="math notranslate nohighlight">\(b_n\)</span> vers <span class="math notranslate nohighlight">\(l_2\)</span>, et vice versa.</p>
+<p>(i) Supposons que <span class="math notranslate nohighlight">\(x_n \to l = (l_1, l_2)\)</span>. Alors, pour tout <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>, il existe un entier <span class="math notranslate nohighlight">\(N\)</span> tel que pour tout <span class="math notranslate nohighlight">\(n \geq N\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[
+d(x_n, l) = |a_n - l_1| + |b_n - l_2| &lt; \epsilon
+\]</div>
+<p>Si on prend <span class="math notranslate nohighlight">\(0 &lt; \epsilon' = \frac{\epsilon}{2}\)</span>, on voit que pour <span class="math notranslate nohighlight">\(n \geq N\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[
+|a_n - l_1| &lt; \epsilon'
+\]</div>
+<p>Ceci montre que la suite <span class="math notranslate nohighlight">\(a_n\)</span> converge vers <span class="math notranslate nohighlight">\(l_1\)</span>.</p>
+<p>De manière similaire, en prenant également <span class="math notranslate nohighlight">\(0 &lt; \epsilon'' = \frac{\epsilon}{2}\)</span>, on obtient que pour <span class="math notranslate nohighlight">\(n \geq N\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[
+|b_n - l_2| &lt; \epsilon''
+\]</div>
+<p>Ceci montre que la suite <span class="math notranslate nohighlight">\(b_n\)</span> converge vers <span class="math notranslate nohighlight">\(l_2\)</span>.</p>
+<p>(ii) Supposons maintenant que les suites <span class="math notranslate nohighlight">\(a_n \to l_1\)</span> et <span class="math notranslate nohighlight">\(b_n \to l_2\)</span>. Pour tout <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>, il existe un entier <span class="math notranslate nohighlight">\(N_1\)</span> tel que pour tout <span class="math notranslate nohighlight">\(n \geq N_1\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[
+|a_n - l_1| &lt; \frac{\epsilon}{2}
+\]</div>
+<p>De même, il existe un entier <span class="math notranslate nohighlight">\(N_2\)</span> tel que pour tout <span class="math notranslate nohighlight">\(n \geq N_2\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[
+|b_n - l_2| &lt; \frac{\epsilon}{2}
+\]</div>
+<p>En prenant <span class="math notranslate nohighlight">\(N = \max(N_1, N_2)\)</span>, on a pour tout <span class="math notranslate nohighlight">\(n \geq N\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[
+d(x_n, l) = |a_n - l_1| + |b_n - l_2| &lt; \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon
+\]</div>
+<p>Ceci montre que la suite <span class="math notranslate nohighlight">\(x_n\)</span> converge vers <span class="math notranslate nohighlight">\(l = (l_1, l_2)\)</span>.</p>
+<p>Donc, on a montré que <span class="math notranslate nohighlight">\(x_n \to l = (l_1, l_2)\)</span> si, et seulement si, les suites réelles <span class="math notranslate nohighlight">\(a_n \to l_1\)</span> et <span class="math notranslate nohighlight">\(b_n \to l_2\)</span>.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="exogeneral.html" title="previous page">Exercices F</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          Par Iaousse M'barek<br/>
+        
+            &copy; droits d'auteur 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
