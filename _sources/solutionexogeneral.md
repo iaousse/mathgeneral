@@ -114,7 +114,7 @@ On considère l'espace métrique $(X, d)$ avec $X = ]0, 1[$ et $d$ la distance u
 
 ### La suite est-elle bornée ?
 
-Une suite est bornée si et seulement si elle admet une borne supérieure et une borne inférieure. Dans notre cas, pour tout $n \geq 1$, on a $0 < a_n = \dfrac{1}{n} < 1$. Donc, la suite $(a_n)$ est bornée.
+Une suite est bornée si et seulement si elle admet un majorant et un minorant. Dans notre cas, pour tout $n \geq 1$, on a $0 < a_n = \dfrac{1}{n} < 1$. Donc, la suite $(a_n)$ est bornée.
 
 ### La suite est-elle de Cauchy ?
 
